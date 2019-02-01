@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fon 55.png-91c4d53c756f0830ba2f9fc28c850ebd.stex"
+path="res://.import/tree0.png-b1545363db470c4d73a7504148cfe9cd.stex"
 
 [deps]
 
-source_file="res://Textures/maps/Fon 55.png"
-dest_files=[ "res://.import/Fon 55.png-91c4d53c756f0830ba2f9fc28c850ebd.stex" ]
+source_file="res://Textures/maps/tree0.png"
+dest_files=[ "res://.import/tree0.png-b1545363db470c4d73a7504148cfe9cd.stex" ]
 
 [params]
 
@@ -27,5 +27,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

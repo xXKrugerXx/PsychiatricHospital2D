@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fon 4.png-78e5628065a53b6dabbe6522b050947c.stex"
+path="res://.import/tree1.png-387b0c22c8af5796cb027379ea6e01fb.stex"
 
 [deps]
 
-source_file="res://Textures/maps/Fon 4.png"
-dest_files=[ "res://.import/Fon 4.png-78e5628065a53b6dabbe6522b050947c.stex" ]
+source_file="res://Textures/maps/tree1.png"
+dest_files=[ "res://.import/tree1.png-387b0c22c8af5796cb027379ea6e01fb.stex" ]
 
 [params]
 
