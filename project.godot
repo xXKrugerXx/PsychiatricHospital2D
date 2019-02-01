@@ -37,6 +37,10 @@ _global_script_class_icons={
 
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [locale]
 
 translations=PoolStringArray( "res://Language.en.translation", "res://Language.ru.translation" )
