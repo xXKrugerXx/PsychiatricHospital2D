@@ -16,7 +16,7 @@ length = 16.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("ParallaxBackground0:offset")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -28,7 +28,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("ParallaxBackground1:offset")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -40,7 +40,7 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("ParallaxBackground2:offset")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
@@ -52,7 +52,7 @@ tracks/2/keys = {
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("ParallaxBackground3:offset")
-tracks/3/interp = 1
+tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
@@ -64,7 +64,7 @@ tracks/3/keys = {
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("ParallaxBackground4:offset")
-tracks/4/interp = 1
+tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
@@ -87,8 +87,8 @@ __meta__ = {
 [node name="ParallaxBackground0" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 1
-offset = Vector2( -20, 0 )
-transform = Transform2D( 1, 0, 0, 1, -20, 0 )
+offset = Vector2( -20.9375, 0 )
+transform = Transform2D( 1, 0, 0, 1, -20.9375, 0 )
 
 [node name="tree0" type="Sprite" parent="ParallaxBackground0"]
 position = Vector2( 970, 352 )
@@ -109,8 +109,8 @@ texture = ExtResource( 3 )
 [node name="ParallaxBackground1" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 2
-offset = Vector2( -12, 0 )
-transform = Transform2D( 1, 0, 0, 1, -12, 0 )
+offset = Vector2( -12.5625, 0 )
+transform = Transform2D( 1, 0, 0, 1, -12.5625, 0 )
 
 [node name="clouds" type="Sprite" parent="ParallaxBackground1"]
 position = Vector2( 740, 450 )
@@ -125,8 +125,8 @@ texture = ExtResource( 5 )
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 3
-offset = Vector2( 12, 0 )
-transform = Transform2D( 1, 0, 0, 1, 12, 0 )
+offset = Vector2( 12.5625, 0 )
+transform = Transform2D( 1, 0, 0, 1, 12.5625, 0 )
 
 [node name="clouds3" type="Sprite" parent="ParallaxBackground2"]
 position = Vector2( 780, 188 )
@@ -136,8 +136,8 @@ texture = ExtResource( 5 )
 [node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 4
-offset = Vector2( -24, 0 )
-transform = Transform2D( 1, 0, 0, 1, -24, 0 )
+offset = Vector2( -25.125, 0 )
+transform = Transform2D( 1, 0, 0, 1, -25.125, 0 )
 
 [node name="tree" type="Sprite" parent="ParallaxBackground3"]
 position = Vector2( 788, 351 )
@@ -146,8 +146,8 @@ texture = ExtResource( 6 )
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 4
-offset = Vector2( -36, 0 )
-transform = Transform2D( 1, 0, 0, 1, -36, 0 )
+offset = Vector2( -37.6875, 0 )
+transform = Transform2D( 1, 0, 0, 1, -37.6875, 0 )
 
 [node name="tree" type="Sprite" parent="ParallaxBackground4"]
 position = Vector2( 1068, 341 )
