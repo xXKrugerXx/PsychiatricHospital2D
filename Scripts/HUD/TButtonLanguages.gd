@@ -9,5 +9,4 @@ func _ready() -> void:
 
 
 func fclick():
-	print(clickindex)
 	emit_signal('indexlg', clickindex)
