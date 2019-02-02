@@ -3,6 +3,9 @@ extends Node
 onready var clicklg : Array = [$HUDclickLE/Panel/VBoxContainer/TButtonLanguages,
 		$HUDclickLE/Panel/VBoxContainer/TButtonLanguages2]
 
+
+const start_scene : = preload("res://Screens/Maps/Room23st.tscn")
+
 func _ready() -> void:
 	$ScreenColor/AnimationPlayer.play('screen_st')
 	$HUDclickLE/AnimationPlayer.play('mhstopst')
@@ -30,3 +33,11 @@ func fanimPsHeng():
 	$ScreenColor/AnimationPlayer.play('screen_end')
 	yield($ScreenColor/AnimationPlayer,"animation_finished")
 	print('ready game')
+	get_tree().change_scene_to(start_scene)
+	
+	
+	
+	
+	
+	
+	
