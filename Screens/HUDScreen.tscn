@@ -87,8 +87,6 @@ __meta__ = {
 [node name="ParallaxBackground0" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 1
-offset = Vector2( -20.9375, 0 )
-transform = Transform2D( 1, 0, 0, 1, -20.9375, 0 )
 
 [node name="tree0" type="Sprite" parent="ParallaxBackground0"]
 position = Vector2( 970, 352 )
@@ -109,8 +107,6 @@ texture = ExtResource( 3 )
 [node name="ParallaxBackground1" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 2
-offset = Vector2( -12.5625, 0 )
-transform = Transform2D( 1, 0, 0, 1, -12.5625, 0 )
 
 [node name="clouds" type="Sprite" parent="ParallaxBackground1"]
 position = Vector2( 740, 450 )
@@ -125,8 +121,6 @@ texture = ExtResource( 5 )
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 3
-offset = Vector2( 12.5625, 0 )
-transform = Transform2D( 1, 0, 0, 1, 12.5625, 0 )
 
 [node name="clouds3" type="Sprite" parent="ParallaxBackground2"]
 position = Vector2( 780, 188 )
@@ -136,8 +130,6 @@ texture = ExtResource( 5 )
 [node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 layer = 4
-offset = Vector2( -25.125, 0 )
-transform = Transform2D( 1, 0, 0, 1, -25.125, 0 )
 
 [node name="tree" type="Sprite" parent="ParallaxBackground3"]
 position = Vector2( 788, 351 )
@@ -145,8 +137,6 @@ texture = ExtResource( 6 )
 
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
 layer = 4
-offset = Vector2( -37.6875, 0 )
-transform = Transform2D( 1, 0, 0, 1, -37.6875, 0 )
 
 [node name="tree" type="Sprite" parent="ParallaxBackground4"]
 position = Vector2( 1068, 341 )
