@@ -6,20 +6,27 @@ onready var clicklg : Array = [$HUDclickLE/Panel/VBoxContainer/TButtonLanguages,
 func _ready() -> void:
 	$ScreenColor/AnimationPlayer.play('screen_st')
 	$HUDclickLE/AnimationPlayer.play('mhstopst')
-	
+	$HUDclickLE/ControlLgshow.hide()
+	$HUDclickLE/ControlLgshow/Panel/TButtonAcceptLg.connect("pressed",self,'fButtonAcLg')
+	$HUDclickLE.connect('animPsHeng',self,'fanimPsHeng')
 	for i in clicklg:
 		i.connect('indexlg',self,'fclicklg')
-
-
-
 
 func anim_screen_st_time_end():
 	$HUDclickLE/AnimationPlayer.play('mhstart')
 
-
 func fclicklg(indexlg):
-	print('click ',indexlg)
+	if indexlg == 0:
+		TranslationServer.set_locale('eng')
+	else:
+		TranslationServer.set_locale('rus')
+	$HUDclickLE/ControlLgshow.show()
+	$HUDclickLE/ControlLgshow/Panel2/RichTextLabel.text = tr('Main_Menu_0')
 
+func fButtonAcLg():
+	$HUDclickLE/AnimationPlayer.play('mhend')
 
-func new_game():
-	pass
+func fanimPsHeng():
+	$ScreenColor/AnimationPlayer.play('screen_end')
+	yield($ScreenColor/AnimationPlayer,"animation_finished")
+	print('ready game')
