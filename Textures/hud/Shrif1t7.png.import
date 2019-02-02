@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_laug.png-d6f29d22053158d21037e417f51b9f59.stex"
+path="res://.import/Shrif1t7.png-8710dc829bdfc5751c528250959cd2a5.stex"
 
 [deps]
 
-source_file="res://Textures/hud/ui_laug.png"
-dest_files=[ "res://.import/ui_laug.png-d6f29d22053158d21037e417f51b9f59.stex" ]
+source_file="res://Textures/hud/Shrif1t7.png"
+dest_files=[ "res://.import/Shrif1t7.png-8710dc829bdfc5751c528250959cd2a5.stex" ]
 
 [params]
 
@@ -17,7 +17,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
