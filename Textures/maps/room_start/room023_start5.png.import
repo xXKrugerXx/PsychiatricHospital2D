@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Roo12m6.png-515c6442b8fa06f424ca5f417d99294b.stex"
+path="res://.import/room023_start5.png-d4449d4f0a9adde46a5d394cb8f326a9.stex"
 
 [deps]
 
-source_file="res://Textures/maps/room_start/Roo12m6.png"
-dest_files=[ "res://.import/Roo12m6.png-515c6442b8fa06f424ca5f417d99294b.stex" ]
+source_file="res://Textures/maps/room_start/room023_start5.png"
+dest_files=[ "res://.import/room023_start5.png-d4449d4f0a9adde46a5d394cb8f326a9.stex" ]
 
 [params]
 
