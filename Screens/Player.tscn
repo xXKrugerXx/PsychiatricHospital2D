@@ -1,0 +1,273 @@
+[gd_scene load_steps=60 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=2]
+[ext_resource path="res://Textures/player/idle_0.png" type="Texture" id=3]
+[ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=4]
+[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=5]
+[ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=6]
+[ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=7]
+[ext_resource path="res://Textures/player/idle_flashlight_0.png" type="Texture" id=8]
+[ext_resource path="res://Textures/player/idle_flashlight_1.png" type="Texture" id=9]
+[ext_resource path="res://Textures/player/idle_flashlight_2.png" type="Texture" id=10]
+[ext_resource path="res://Textures/player/idle_flashlight_3.png" type="Texture" id=11]
+[ext_resource path="res://Textures/player/idle_flashlight_4.png" type="Texture" id=12]
+[ext_resource path="res://Textures/player/idle_flashlight_5.png" type="Texture" id=13]
+[ext_resource path="res://Textures/player/walk_0.png" type="Texture" id=14]
+[ext_resource path="res://Textures/player/walk_1.png" type="Texture" id=15]
+[ext_resource path="res://Textures/player/walk_2.png" type="Texture" id=16]
+[ext_resource path="res://Textures/player/walk_3.png" type="Texture" id=17]
+[ext_resource path="res://Textures/player/walk_4.png" type="Texture" id=18]
+[ext_resource path="res://Textures/player/walk_5.png" type="Texture" id=19]
+[ext_resource path="res://Textures/player/walk_6.png" type="Texture" id=20]
+[ext_resource path="res://Textures/player/walk_7.png" type="Texture" id=21]
+[ext_resource path="res://Textures/player/walk_flashlight_0.png" type="Texture" id=22]
+[ext_resource path="res://Textures/player/walk_flashlight_1.png" type="Texture" id=23]
+[ext_resource path="res://Textures/player/walk_flashlight_2.png" type="Texture" id=24]
+[ext_resource path="res://Textures/player/walk_flashlight_3.png" type="Texture" id=25]
+[ext_resource path="res://Textures/player/walk_flashlight_4.png" type="Texture" id=26]
+[ext_resource path="res://Textures/player/walk_flashlight_5.png" type="Texture" id=27]
+[ext_resource path="res://Textures/player/walk_flashlight_6.png" type="Texture" id=28]
+[ext_resource path="res://Textures/player/walk_flashlight_7.png" type="Texture" id=29]
+[ext_resource path="res://Textures/player/run_0.png" type="Texture" id=30]
+[ext_resource path="res://Textures/player/run_1.png" type="Texture" id=31]
+[ext_resource path="res://Textures/player/run_2.png" type="Texture" id=32]
+[ext_resource path="res://Textures/player/run_3.png" type="Texture" id=33]
+[ext_resource path="res://Textures/player/run_4.png" type="Texture" id=34]
+[ext_resource path="res://Textures/player/run_5.png" type="Texture" id=35]
+[ext_resource path="res://Textures/player/run_6.png" type="Texture" id=36]
+[ext_resource path="res://Textures/player/run_7.png" type="Texture" id=37]
+[ext_resource path="res://Textures/player/run_8.png" type="Texture" id=38]
+[ext_resource path="res://Textures/player/run_9.png" type="Texture" id=39]
+[ext_resource path="res://Textures/player/run_10.png" type="Texture" id=40]
+[ext_resource path="res://Textures/player/run_11.png" type="Texture" id=41]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+radius = 28.6642
+height = 165.818
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "idle"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+
+resource_name = "idle_lightlantern"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "left_walk"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "left_walk_lightlantern"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "right_walk"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+
+resource_name = "right_walk_lightlantern"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "run"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+
+animation = "run"
+
+[sub_resource type="AnimationNodeAnimation" id=39]
+
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=40]
+
+animation = "idle_lightlantern"
+
+[sub_resource type="AnimationNodeAnimation" id=41]
+
+animation = "left_walk"
+
+[sub_resource type="AnimationNodeAnimation" id=42]
+
+animation = "right_walk"
+
+[sub_resource type="AnimationNodeAnimation" id=43]
+
+animation = "left_walk_lightlantern"
+
+[sub_resource type="AnimationNodeAnimation" id=44]
+
+animation = "right_walk_lightlantern"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=45]
+
+blend_point_0/node = SubResource( 39 )
+blend_point_0/pos = Vector2( 0, 0 )
+blend_point_1/node = SubResource( 40 )
+blend_point_1/pos = Vector2( 0, 1 )
+blend_point_2/node = SubResource( 41 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 42 )
+blend_point_3/pos = Vector2( 1, 0 )
+blend_point_4/node = SubResource( 43 )
+blend_point_4/pos = Vector2( -1, 1 )
+blend_point_5/node = SubResource( 44 )
+blend_point_5/pos = Vector2( 1, 1 )
+min_space = Vector2( -1, 0 )
+snap = Vector2( 1, 1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeBlend2" id=28]
+
+
+[sub_resource type="AnimationNodeBlendTree" id=38]
+
+graph_offset = Vector2( -73.0698, 62.25 )
+nodes/Animation/node = SubResource( 27 )
+nodes/Animation/position = Vector2( 300, 220 )
+nodes/idle_walk/node = SubResource( 45 )
+nodes/idle_walk/position = Vector2( 120, 80 )
+nodes/output/position = Vector2( 800, 80 )
+nodes/run/node = SubResource( 28 )
+nodes/run/position = Vector2( 500, 80 )
+node_connections = [ "output", 0, "run", "run", 0, "idle_walk", "run", 1, "Animation" ]
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 1, 0 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -90 )
+current = true
+zoom = Vector2( 0.9, 0.9 )
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 2 )
+anims/idle_lightlantern = SubResource( 15 )
+anims/left_walk = SubResource( 4 )
+anims/left_walk_lightlantern = SubResource( 5 )
+anims/right_walk = SubResource( 7 )
+anims/right_walk_lightlantern = SubResource( 14 )
+anims/run = SubResource( 3 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 38 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/idle_walk/blend_position = Vector2( 0.0529915, 0.25431 )
+parameters/run/blend_amount = 0.0
+

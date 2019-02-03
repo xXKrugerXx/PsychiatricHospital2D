@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Textures/flash lightning/001_01.png" type="Texture" id=1]
 [ext_resource path="res://Textures/flash lightning/001_00.png" type="Texture" id=2]
 [ext_resource path="res://Textures/particles/pain.png" type="Texture" id=3]
 [ext_resource path="res://Textures/maps/Room001.png" type="Texture" id=4]
+[ext_resource path="res://Screens/Player.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SpriteFrames" id=3]
 
@@ -16,31 +17,31 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=1]
 
-extents = Vector2( 10, 217.047 )
+extents = Vector2( 10, 300.681 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
-extents = Vector2( 717.159, 10 )
+extents = Vector2( 1044.87, 10 )
 
 [node name="RoomMaster" type="Node"]
 
 [node name="ASpriteflashlighning" type="AnimatedSprite" parent="."]
-position = Vector2( 576, 105 )
-scale = Vector2( 1.5, 1.5 )
+position = Vector2( 960, 175 )
+scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 3 )
 animation = "loop"
-frame = 3
+frame = 5
 playing = true
 
 [node name="Pain2D" type="CPUParticles2D" parent="."]
-position = Vector2( 196.042, 26.0506 )
+position = Vector2( 327.142, 52.6506 )
 scale = Vector2( 0.1, 0.5 )
 amount = 50
-lifetime = 1.2
+lifetime = 1.4
 speed_scale = 2.0
 texture = ExtResource( 3 )
 emission_shape = 2
-emission_rect_extents = Vector2( 600, 1 )
+emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
@@ -48,14 +49,14 @@ scale_amount = 0.5
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
 [node name="Pain2D2" type="CPUParticles2D" parent="."]
-position = Vector2( 444.042, 26.0506 )
+position = Vector2( 734.142, 52.6506 )
 scale = Vector2( 0.1, 0.5 )
 amount = 50
-lifetime = 1.2
+lifetime = 1.4
 speed_scale = 2.0
 texture = ExtResource( 3 )
 emission_shape = 2
-emission_rect_extents = Vector2( 600, 1 )
+emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
@@ -63,14 +64,14 @@ scale_amount = 0.5
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
 [node name="Pain2D3" type="CPUParticles2D" parent="."]
-position = Vector2( 713.042, 26.0506 )
+position = Vector2( 1185.14, 52.6506 )
 scale = Vector2( 0.1, 0.5 )
 amount = 50
-lifetime = 1.2
+lifetime = 1.4
 speed_scale = 2.0
 texture = ExtResource( 3 )
 emission_shape = 2
-emission_rect_extents = Vector2( 600, 1 )
+emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
@@ -78,14 +79,14 @@ scale_amount = 0.5
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
 [node name="Pain2D4" type="CPUParticles2D" parent="."]
-position = Vector2( 958.042, 26.0506 )
+position = Vector2( 1589.14, 52.6506 )
 scale = Vector2( 0.1, 0.5 )
 amount = 50
-lifetime = 1.2
+lifetime = 1.4
 speed_scale = 2.0
 texture = ExtResource( 3 )
 emission_shape = 2
-emission_rect_extents = Vector2( 600, 1 )
+emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
@@ -93,7 +94,7 @@ scale_amount = 0.5
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
 [node name="Room" type="Sprite" parent="."]
-scale = Vector2( 1.5, 1.5 )
+scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 4 )
 centered = false
 __meta__ = {
@@ -102,7 +103,7 @@ __meta__ = {
 
 [node name="StaticBody2DL" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( -8.23151, 122.7 )
+position = Vector2( -8.23151, 242.7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -112,7 +113,7 @@ shape = SubResource( 1 )
 
 [node name="StaticBody2DR" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 1159.9, 148.047 )
+position = Vector2( 1929.9, 238.047 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -122,7 +123,7 @@ shape = SubResource( 1 )
 
 [node name="StaticBody2Dtop" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 628.052, 297.394 )
+position = Vector2( 947.868, 490.05 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -132,4 +133,7 @@ shape = SubResource( 2 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.247059, 0.247059, 0.247059, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 203.724, 252.319 )
 
