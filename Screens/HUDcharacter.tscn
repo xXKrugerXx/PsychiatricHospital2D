@@ -1,0 +1,139 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Textures/touch/Left_Arrow_0.png" type="Texture" id=1]
+[ext_resource path="res://Textures/touch/Left_Arrow_1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/touch/Right_Arrow_0.png" type="Texture" id=3]
+[ext_resource path="res://Textures/touch/Right_Arrow_1.png" type="Texture" id=4]
+[ext_resource path="res://Textures/touch/Use_0.png" type="Texture" id=5]
+[ext_resource path="res://Textures/touch/Use_1.png" type="Texture" id=6]
+[ext_resource path="res://Textures/touch/Flashlight_0.png" type="Texture" id=7]
+[ext_resource path="res://Textures/touch/Run_0.png" type="Texture" id=8]
+[ext_resource path="res://Textures/touch/Run_1.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+resource_name = "ui_run"
+extents = Vector2( 32, 32 )
+
+[node name="HUDcharacter" type="CanvasLayer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0.509804 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 70.0
+margin_top = -124.0
+margin_right = 266.0
+margin_bottom = -60.0
+
+[node name="L" type="Control" parent="HBoxContainer"]
+editor/display_folded = true
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="TSButtonL" type="TouchScreenButton" parent="HBoxContainer/L"]
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+action = "ui_left"
+
+[node name="Container" type="Container" parent="HBoxContainer"]
+margin_left = 68.0
+margin_right = 128.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 60, 0 )
+
+[node name="R" type="Control" parent="HBoxContainer"]
+editor/display_folded = true
+margin_left = 132.0
+margin_right = 196.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="TSButtonR" type="TouchScreenButton" parent="HBoxContainer/R"]
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+shape = SubResource( 1 )
+action = "ui_right"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0.509804 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
+margin_top = -196.0
+margin_right = -20.0
+margin_bottom = -20.0
+alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 236.0
+margin_bottom = 64.0
+alignment = 1
+
+[node name="Pickup" type="Control" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 86.0
+margin_right = 150.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="TSButtonKeys" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer2/Pickup"]
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
+shape = SubResource( 2 )
+action = "ui_pickup"
+
+[node name="Container" type="Container" parent="VBoxContainer"]
+margin_top = 68.0
+margin_right = 236.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 0, 40 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 112.0
+margin_right = 236.0
+margin_bottom = 176.0
+
+[node name="Flashlight" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="TSButtonF" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer/Flashlight"]
+normal = ExtResource( 7 )
+shape = SubResource( 3 )
+action = "ui_flashlight"
+
+[node name="Container" type="Container" parent="VBoxContainer/HBoxContainer"]
+margin_left = 68.0
+margin_right = 168.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="run" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 172.0
+margin_right = 236.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="TSButtonRun" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer/run"]
+normal = ExtResource( 8 )
+pressed = ExtResource( 9 )
+shape = SubResource( 4 )
+
