@@ -76,19 +76,27 @@ tracks/4/keys = {
 }
 
 [node name="HUDScreen" type="CanvasLayer"]
-editor/display_folded = true
 
 [node name="sky" type="Sprite" parent="."]
 position = Vector2( 300, 340 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="sky2" type="Sprite" parent="."]
 position = Vector2( 1324, 340 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="sky3" type="Sprite" parent="."]
 position = Vector2( 2348, 340 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ParallaxBackground0" type="ParallaxBackground" parent="."]
 editor/display_folded = true
