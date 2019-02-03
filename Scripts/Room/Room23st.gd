@@ -7,11 +7,4 @@ var dialogtext : Array = [tr('Player_message_place_023_0'),
 
 
 func _ready():
-	print(dialogtext)
-
-
-
-func _input(event):
-	var asd = event in InputEventScreenTouch
-	if asd:
-		$Label.text = 'click touch'
+	pass

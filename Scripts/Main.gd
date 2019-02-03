@@ -4,7 +4,8 @@ onready var clicklg : Array = [$HUDclickLE/Panel/VBoxContainer/TButtonLanguages,
 		$HUDclickLE/Panel/VBoxContainer/TButtonLanguages2]
 
 
-const start_scene : = preload("res://Screens/Maps/Room23st.tscn")
+const start_game_sc : = preload('res://Screens/Maps/Room23st.tscn')
+
 
 func _ready() -> void:
 	$ScreenColor/AnimationPlayer.play('screen_st')
@@ -14,6 +15,7 @@ func _ready() -> void:
 	$HUDclickLE.connect('animPsHeng',self,'fanimPsHeng')
 	for i in clicklg:
 		i.connect('indexlg',self,'fclicklg')
+	pass
 
 func anim_screen_st_time_end():
 	$HUDclickLE/AnimationPlayer.play('mhstart')
@@ -33,7 +35,7 @@ func fanimPsHeng():
 	$ScreenColor/AnimationPlayer.play('screen_end')
 	yield($ScreenColor/AnimationPlayer,"animation_finished")
 	print('ready game')
-	get_tree().change_scene_to(start_scene)
+	get_tree().change_scene_to(start_game_sc)
 	
 	
 	
