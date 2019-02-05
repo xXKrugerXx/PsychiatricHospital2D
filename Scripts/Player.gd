@@ -3,6 +3,9 @@ extends KinematicBody2D
 export(int) var walk_speed = 200
 export(int) var run_speed = 320
 
+const tex_arr_flaslight : Array = [preload("res://Textures/touch/Flashlight_0.png"),
+				preload("res://Textures/touch/Flashlight_1.png")]
+
 
 var lightning : int
 var speed : float = 0
@@ -20,11 +23,9 @@ func _ready():
 	indexspeed = 2
 	lightning = 0
 	amountrun = 0
-	
-	
 	isactiverun = false
 	
-	isflashlight = false
+	isflashlight = true
 
 
 
@@ -34,22 +35,8 @@ func _physics_process(delta):
 	motion.x = speed
 	
 	
-#	if iswalk_run:
-#		if indexspeed == 0:
-#			speed = -walk_speed
-#			$Sprite.flip_h = true
-#		elif indexspeed == 1:
-#			speed = walk_speed
-#			$Sprite.flip_h = false
-#		else:
-#			speed = 0
-#	else:
-#		if indexspeed == 0:
-#			speed = -run_speed
-#			$Sprite.flip_h = true
-#		elif indexspeed == 1:
-#			speed = run_speed
-#			$Sprite.flip_h = false
+	
+	walk_run(isactiverun)
 	
 	
 	
@@ -62,13 +49,13 @@ func _physics_process(delta):
 
 func _input(event):
 	if event.is_action_pressed("ui_left"):
-		pass
+		indexspeed = 0
 	elif event.is_action_released("ui_left"):
-		pass
+		indexspeed = 2
 	elif event.is_action_pressed('ui_right'):
-		pass
+		indexspeed = 1
 	elif event.is_action_released("ui_right"):
-		pass
+		indexspeed = 2
 	
 	if event.is_action_pressed("ui_run"):
 		isactiverun = true
@@ -78,12 +65,35 @@ func _input(event):
 	if event.is_action_pressed("ui_pickup"):
 		pass
 	if event.is_action_pressed("ui_flashlight"):
-		pass
+		if isflashlight:
+			isflashlight = false
+			$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[1]
+		else:
+			isflashlight = true
+			$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[0]
 
 
 
 func walk_run(boo):
-	pass
+	if !boo:
+		if indexspeed == 0:
+			speed = -walk_speed
+			$Sprite.flip_h = true
+		elif indexspeed == 1:
+			speed = walk_speed
+			$Sprite.flip_h = false
+		else:
+			speed = 0
+		amountrun = 0
+	else:
+		if indexspeed == 0:
+			amountrun = 1
+			speed = -run_speed
+			$Sprite.flip_h = true
+		elif indexspeed == 1:
+			amountrun = 1
+			speed = run_speed
+			$Sprite.flip_h = false
 
 
 
