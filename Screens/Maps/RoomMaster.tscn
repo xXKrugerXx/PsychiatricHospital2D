@@ -34,7 +34,7 @@ position = Vector2( 960, 175 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 1 )
 animation = "loop"
-frame = 21
+frame = 9
 playing = true
 
 [node name="Pain2D" type="CPUParticles2D" parent="."]
