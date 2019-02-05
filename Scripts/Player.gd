@@ -4,7 +4,7 @@ export(int) var walk_speed = 200
 export(int) var run_speed = 320
 
 const tex_arr_flaslight : Array = [preload("res://Textures/touch/Flashlight_0.png"),
-				preload("res://Textures/touch/Flashlight_1.png")]
+						preload("res://Textures/touch/Flashlight_1.png")]
 
 
 var lightning : int
@@ -65,16 +65,9 @@ func _input(event):
 	if event.is_action_pressed("ui_pickup"):
 		pass
 	if event.is_action_pressed("ui_flashlight"):
-		if isflashlight:
-			isflashlight = false
-			$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[1]
-		else:
-			isflashlight = true
-			$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[0]
+		flashlight()
 
-
-
-func walk_run(boo):
+func walk_run(boo : bool) -> void:
 	if !boo:
 		if indexspeed == 0:
 			speed = -walk_speed
@@ -96,7 +89,13 @@ func walk_run(boo):
 			$Sprite.flip_h = false
 
 
-
+func flashlight() -> void:
+	if isflashlight:
+		isflashlight = false
+		$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[1]
+	else:
+		isflashlight = true
+		$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[0]
 
 
 
