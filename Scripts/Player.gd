@@ -1,15 +1,31 @@
 extends KinematicBody2D
 
 export(int) var walk_speed = 200
-#export(int) var run_speed = 300
+export(int) var run_speed = 320
 
 
+var lightning : int
 var speed : float = 0
+var amountrun : int
 var motion : Vector2
 
+var indexspeed : int
+
+var isrun : bool
+var isflashlight : bool
+
+var isactiverun : bool
+
 func _ready():
-	$AnimationTree['parameters/run/blend_amount'] = 0
+	indexspeed = 2
+	lightning = 0
+	amountrun = 0
 	
+	
+	isactiverun = false
+	
+	isflashlight = false
+
 
 
 
@@ -18,43 +34,56 @@ func _physics_process(delta):
 	motion.x = speed
 	
 	
-	$AnimationTree['parameters/idle_walk/blend_position'] = Vector2(motion.x,0)
+#	if iswalk_run:
+#		if indexspeed == 0:
+#			speed = -walk_speed
+#			$Sprite.flip_h = true
+#		elif indexspeed == 1:
+#			speed = walk_speed
+#			$Sprite.flip_h = false
+#		else:
+#			speed = 0
+#	else:
+#		if indexspeed == 0:
+#			speed = -run_speed
+#			$Sprite.flip_h = true
+#		elif indexspeed == 1:
+#			speed = run_speed
+#			$Sprite.flip_h = false
+	
+	
+	
+	
+	$AnimationTree['parameters/run/blend_amount'] = amountrun
+	$AnimationTree['parameters/idle_walk/blend_position'] = Vector2(motion.x,lightning)
 #	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,32))
 	motion = move_and_slide(motion,Vector2(0,-1))
 
 
 func _input(event):
 	if event.is_action_pressed("ui_left"):
-		charspeed(0)
+		pass
 	elif event.is_action_released("ui_left"):
-		charspeed(2)
+		pass
 	elif event.is_action_pressed('ui_right'):
-		charspeed(1)
+		pass
 	elif event.is_action_released("ui_right"):
-		charspeed(2)
+		pass
 	
-	if event.is_action_pressed("ui_pickup"):
-		pass
 	if event.is_action_pressed("ui_run"):
-		pass
+		isactiverun = true
 	elif event.is_action_released("ui_run"):
+		isactiverun = false
+		
+	if event.is_action_pressed("ui_pickup"):
 		pass
 	if event.is_action_pressed("ui_flashlight"):
 		pass
 
 
-func charspeed(indexspeed):
-	if indexspeed == 0:
-		speed = -walk_speed
-		$Sprite.flip_h = true
-	elif indexspeed == 1:
-		speed = walk_speed
-		$Sprite.flip_h = false
-	else:
-		speed = 0
 
-
-
+func walk_run(boo):
+	pass
 
 
 
