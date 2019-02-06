@@ -24,10 +24,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4, 5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 5, 23, 25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Camera2D:position")
@@ -156,10 +156,10 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 17.8, 18, 18.2, 18.4, 18.6, 18.8, 19 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 17.8, 18, 18.2, 18.4, 18.6, 18.8, 19 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ]
+"values": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ]
 }
 
 [node name="RoomReadyStart" type="Node"]
@@ -186,7 +186,7 @@ emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
-scale_amount = 0.105714
+scale_amount = 0.122857
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -205,7 +205,7 @@ emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
-scale_amount = 0.105714
+scale_amount = 0.122857
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -224,7 +224,7 @@ emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
-scale_amount = 0.105714
+scale_amount = 0.122857
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -255,7 +255,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.222682, 0.222682, 0.222682, 1 )
+color = Color( 0.220986, 0.220986, 0.220986, 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
