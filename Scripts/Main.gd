@@ -3,7 +3,7 @@ extends Node
 onready var clicklg : Array = [$HUDclickLE/Panel/VBoxContainer/TButtonLanguages,
 		$HUDclickLE/Panel/VBoxContainer/TButtonLanguages2]
 
-const start_game_sc : = preload('res://Screens/Maps/RoomMaster.tscn')
+const start_game_sc : = preload("res://Screens/Maps/RoomReadyStart.tscn")
 
 func _ready() -> void:
 	$ScreenColor/AnimationPlayer.play('screen_st')
