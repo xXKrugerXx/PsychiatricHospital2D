@@ -16,6 +16,7 @@ extents = Vector2( 10, 1527.67 )
 [node name="WorldMap00" type="Node"]
 
 [node name="map" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 2048, 1372 )
 scale = Vector2( 2, 2 )
 __meta__ = {

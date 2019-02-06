@@ -17,10 +17,8 @@ var amountrun : int
 var motion : Vector2
 
 var indexspeed : int
-
 var isrun : bool
 var isflashlight : bool
-
 var isactiverun : bool
 
 func _ready():
@@ -28,23 +26,13 @@ func _ready():
 	lightning = 0
 	amountrun = 0
 	isactiverun = false
-	
 	isflashlight = true
-
-
 
 
 func _physics_process(delta):
 	motion.y += 10
 	motion.x = speed
-	
-	
-	
 	walk_run(isactiverun)
-	
-	
-	
-	
 	$AnimationTree['parameters/run/blend_amount'] = amountrun
 	$AnimationTree['parameters/idle_walk/blend_position'] = Vector2(motion.x,lightning)
 #	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,32))
@@ -106,10 +94,6 @@ func flashlight() -> void:
 		isflashlight = true
 		$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[0]
 		lightning = 0
-
-
-
-
 
 
 
