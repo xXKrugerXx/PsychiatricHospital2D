@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export(int) var walk_speed = 200
-export(int) var run_speed = 320
+export(int) var run_speed = 380
 
 const tex_arr_flaslight : Array = [preload("res://Textures/touch/Flashlight_0.png"),
 						preload("res://Textures/touch/Flashlight_1.png")]

@@ -21,16 +21,13 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4 ]
 }
 
-[node name="Room043" index="0" instance=ExtResource( 1 )]
+[node name="Room043" instance=ExtResource( 1 )]
 
 [node name="ASpriteflashlighning" parent="." index="0"]
-frame = 19
+frame = 17
 
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 2 )
-
-[node name="CanvasModulate" parent="." index="9"]
-color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="10"]
 position = Vector2( 960, 240 )
