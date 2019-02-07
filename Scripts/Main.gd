@@ -18,9 +18,9 @@ func anim_screen_st_time_end():
 
 func fclicklg(indexlg : int):
 	if indexlg == 0:
-		TranslationServer.set_locale('eng')
+		TranslationServer.set_locale('en')
 	else:
-		TranslationServer.set_locale('rus')
+		TranslationServer.set_locale('ru')
 	$HUDclickLE/ControlLgshow.show()
 	$HUDclickLE/ControlLgshow/Panel2/RichTextLabel.text = tr('Main_Menu_0')
 
