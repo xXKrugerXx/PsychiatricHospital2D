@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Barendurance.png-70ee0bb610c4b46b113870cedbcea5ea.stex"
+path="res://.import/Endurance1.png-5b25ad4833fc97a8d170a327842285bc.stex"
 
 [deps]
 
-source_file="res://Textures/hud/Barendurance.png"
-dest_files=[ "res://.import/Barendurance.png-70ee0bb610c4b46b113870cedbcea5ea.stex" ]
+source_file="res://Textures/hud/Endurance1.png"
+dest_files=[ "res://.import/Endurance1.png-5b25ad4833fc97a8d170a327842285bc.stex" ]
 
 [params]
 

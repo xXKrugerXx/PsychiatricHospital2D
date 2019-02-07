@@ -2,6 +2,10 @@ extends KinematicBody2D
 
 export(int) var walk_speed = 200
 export(int) var run_speed = 380
+export(float, 0, 5,0.1) var regspeedstamina = 1.1
+export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
+
+onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
 
 const tex_arr_flaslight : Array = [preload("res://Textures/touch/Flashlight_0.png"),
 						preload("res://Textures/touch/Flashlight_1.png")]
@@ -27,16 +31,19 @@ func _ready():
 	amountrun = 0
 	isactiverun = false
 	isflashlight = true
+	Bar_run.value = s_globals.currentstamina
 
 
-func _physics_process(delta):
+func _physics_process(delta : float):
 	motion.y += 10
 	motion.x = speed
+	s_globals.currentstamina = clamp(s_globals.currentstamina,Bar_run.get_min(),Bar_run.get_max())
 	walk_run(isactiverun)
 	$AnimationTree['parameters/run/blend_amount'] = amountrun
 	$AnimationTree['parameters/idle_walk/blend_position'] = Vector2(motion.x,lightning)
 #	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,32))
 	motion = move_and_slide(motion,Vector2(0,-1))
+	stamina_run(delta)
 
 
 func _input(event) -> void:
@@ -58,6 +65,21 @@ func _input(event) -> void:
 		pass
 	if event.is_action_pressed("ui_flashlight"):
 		flashlight()
+
+
+func stamina_run(delta : float) -> void:
+	if s_globals.currentstamina < Bar_run.get_max() and !isactiverun and indexspeed < 2:
+		s_globals.currentstamina += regspeedstamina * delta
+	elif s_globals.currentstamina < Bar_run.get_max() and !isactiverun and indexspeed == 2:
+		s_globals.currentstamina += (regspeedstamina * 2) * delta
+	elif isactiverun:
+		s_globals.currentstamina -= minuscurrentstamina
+		if s_globals.currentstamina < 0:
+			isactiverun = false
+	Bar_run.value = s_globals.currentstamina
+
+
+
 
 func walk_run(boo : bool) -> void:
 	if !boo:
@@ -94,6 +116,12 @@ func flashlight() -> void:
 		isflashlight = true
 		$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[0]
 		lightning = 0
+
+
+
+
+
+
 
 
 
