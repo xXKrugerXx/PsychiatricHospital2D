@@ -20,16 +20,16 @@ func textready() -> void:
 	if indextext != null:
 		$Timer.wait_time = timespeed
 		timenexttext = 0
-		$TextureRect/RichTextLabel.text = ''
+		$TextureRect/Label.text = ''
 		$Tween.interpolate_property(self,'modulate', Color(1,1,1,0), Color(1,1,1,1), st_tweenspeed,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 		$Tween.start()
 		yield($Tween,"tween_completed")
-		$TextureRect/RichTextLabel.show()
+		$TextureRect/Label.show()
 		$Timer.start()
 
 func textend() -> void:
 	if indextext != null:
-		$TextureRect/RichTextLabel.hide()
+		$TextureRect/Label.hide()
 		$Tween.interpolate_property(self,'modulate', Color(1,1,1,1), Color(1,1,1,0), end_tweenspeed,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 		$Tween.start()
 
@@ -37,7 +37,7 @@ func textend() -> void:
 func _on_Timer_timeout():
 	if indextext != null:
 		if timenexttext < indextext.size():
-			$TextureRect/RichTextLabel.text = str(tr(indextext[timenexttext]))
+			$TextureRect/Label.text = str(tr(indextext[timenexttext]))
 		else:
 			if is_exit_end_dialog:
 				$Timer.stop()
