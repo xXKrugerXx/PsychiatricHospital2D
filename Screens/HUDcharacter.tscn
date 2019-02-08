@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Textures/touch/Left_Arrow_0.png" type="Texture" id=1]
 [ext_resource path="res://Textures/touch/Left_Arrow_1.png" type="Texture" id=2]
@@ -11,7 +11,31 @@
 [ext_resource path="res://Textures/touch/Run_1.png" type="Texture" id=9]
 [ext_resource path="res://Fonts/3572.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://Textures/keys/Key001.png" type="Texture" id=11]
-[ext_resource path="res://Screens/BarRun.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Textures/keys/Key002.png" type="Texture" id=12]
+[ext_resource path="res://Textures/keys/Key003.png" type="Texture" id=13]
+[ext_resource path="res://Textures/keys/Key004.png" type="Texture" id=14]
+[ext_resource path="res://Textures/keys/Key005.png" type="Texture" id=15]
+[ext_resource path="res://Textures/keys/Key011.png" type="Texture" id=16]
+[ext_resource path="res://Textures/keys/Key012.png" type="Texture" id=17]
+[ext_resource path="res://Textures/keys/Key013.png" type="Texture" id=18]
+[ext_resource path="res://Textures/keys/Key014.png" type="Texture" id=19]
+[ext_resource path="res://Textures/keys/Key015.png" type="Texture" id=20]
+[ext_resource path="res://Textures/keys/Key021.png" type="Texture" id=21]
+[ext_resource path="res://Textures/keys/Key022.png" type="Texture" id=22]
+[ext_resource path="res://Textures/keys/Key023.png" type="Texture" id=23]
+[ext_resource path="res://Textures/keys/Key024.png" type="Texture" id=24]
+[ext_resource path="res://Textures/keys/Key025.png" type="Texture" id=25]
+[ext_resource path="res://Textures/keys/Key031.png" type="Texture" id=26]
+[ext_resource path="res://Textures/keys/Key032.png" type="Texture" id=27]
+[ext_resource path="res://Textures/keys/Key033.png" type="Texture" id=28]
+[ext_resource path="res://Textures/keys/Key034.png" type="Texture" id=29]
+[ext_resource path="res://Textures/keys/Key035.png" type="Texture" id=30]
+[ext_resource path="res://Textures/keys/Key041.png" type="Texture" id=31]
+[ext_resource path="res://Textures/keys/Key042.png" type="Texture" id=32]
+[ext_resource path="res://Textures/keys/Key043.png" type="Texture" id=33]
+[ext_resource path="res://Textures/keys/Key044.png" type="Texture" id=34]
+[ext_resource path="res://Textures/keys/Key045.png" type="Texture" id=35]
+[ext_resource path="res://Screens/BarRun.tscn" type="PackedScene" id=36]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -29,9 +53,14 @@ extents = Vector2( 32, 32 )
 
 extents = Vector2( 32, 32 )
 
+[sub_resource type="DynamicFont" id=7]
+
+size = 18
+font_data = ExtResource( 10 )
+
 [sub_resource type="StyleBoxFlat" id=5]
 
-bg_color = Color( 0.105882, 0.105882, 0.105882, 0.552941 )
+bg_color = Color( 0.337255, 0.337255, 0.337255, 0.560784 )
 
 [sub_resource type="DynamicFont" id=6]
 
@@ -153,180 +182,723 @@ pressed = ExtResource( 9 )
 shape = SubResource( 4 )
 action = "ui_run"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="Control" type="Control" parent="."]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -97.0
-margin_top = -226.0
-margin_right = -22.0
-margin_bottom = 49.0
+margin_left = -201.0
+margin_top = -191.0
+margin_bottom = 123.0
+
+[node name="Panel" type="Panel" parent="Control"]
+self_modulate = Color( 0.466667, 0.466667, 0.466667, 0.192157 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LabelKeys" type="Label" parent="Control"]
+anchor_right = 1.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+clip_text = true
+
+[node name="HUDTableKeys" type="ScrollContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -84.0
+margin_top = -293.0
+margin_right = 84.0
 custom_styles/bg = SubResource( 5 )
 scroll_horizontal_enabled = false
 
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
-margin_right = 75.0
-margin_bottom = 248.0
+[node name="GridContainer" type="GridContainer" parent="Control/HUDTableKeys"]
+margin_right = 162.0
+margin_bottom = 464.0
+columns = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/GridContainer"]
+[node name="001" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-modulate = Color( 0.215686, 0.215686, 0.215686, 1 )
-margin_right = 75.0
+modulate = Color( 0.235294, 0.235294, 0.235294, 1 )
+margin_right = 79.0
 margin_bottom = 32.0
 alignment = 1
 
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/HBoxContainer2"]
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/001"]
 margin_left = 1.0
+margin_right = 1.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/001"]
+margin_left = 5.0
 margin_top = 2.0
-margin_right = 37.0
+margin_right = 41.0
 margin_bottom = 30.0
 custom_fonts/font = SubResource( 6 )
 text = "001"
 align = 1
 valign = 1
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/HBoxContainer2"]
-margin_left = 41.0
-margin_right = 73.0
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/001"]
+margin_left = 45.0
+margin_right = 77.0
 margin_bottom = 32.0
 texture = ExtResource( 11 )
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/GridContainer"]
+[node name="002" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_top = 36.0
-margin_right = 75.0
-margin_bottom = 68.0
+margin_left = 83.0
+margin_right = 162.0
+margin_bottom = 32.0
 alignment = 1
 
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/HBoxContainer3"]
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/002"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/002"]
+margin_left = 4.0
 margin_top = 2.0
-margin_right = 39.0
+margin_right = 43.0
 margin_bottom = 30.0
 custom_fonts/font = SubResource( 6 )
 text = "002"
 align = 1
 valign = 1
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/HBoxContainer3"]
-margin_left = 43.0
-margin_right = 75.0
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/002"]
+margin_left = 47.0
+margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/GridContainer"]
+[node name="003" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-modulate = Color( 0.235294, 0.235294, 0.235294, 1 )
-margin_top = 72.0
-margin_right = 75.0
-margin_bottom = 104.0
+margin_top = 36.0
+margin_right = 79.0
+margin_bottom = 68.0
 alignment = 1
 
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/HBoxContainer4"]
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/003"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/003"]
+margin_left = 4.0
 margin_top = 2.0
-margin_right = 39.0
+margin_right = 43.0
 margin_bottom = 30.0
 custom_fonts/font = SubResource( 6 )
 text = "003"
 align = 1
 valign = 1
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/HBoxContainer4"]
-margin_left = 43.0
-margin_right = 75.0
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/003"]
+margin_left = 47.0
+margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="ScrollContainer/GridContainer"]
+[node name="004" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-modulate = Color( 0.235294, 0.235294, 0.235294, 1 )
-margin_top = 108.0
-margin_right = 75.0
-margin_bottom = 140.0
+margin_left = 83.0
+margin_top = 36.0
+margin_right = 162.0
+margin_bottom = 68.0
 alignment = 1
 
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/HBoxContainer5"]
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/004"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/004"]
+margin_left = 4.0
 margin_top = 2.0
-margin_right = 39.0
+margin_right = 43.0
 margin_bottom = 30.0
 custom_fonts/font = SubResource( 6 )
 text = "004"
 align = 1
 valign = 1
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/HBoxContainer5"]
-margin_left = 43.0
-margin_right = 75.0
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/004"]
+margin_left = 47.0
+margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="ScrollContainer/GridContainer"]
+[node name="005" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_top = 144.0
-margin_right = 75.0
-margin_bottom = 176.0
+margin_top = 72.0
+margin_right = 79.0
+margin_bottom = 104.0
 alignment = 1
 
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/HBoxContainer6"]
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/005"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/005"]
+margin_left = 4.0
 margin_top = 2.0
-margin_right = 39.0
+margin_right = 43.0
 margin_bottom = 30.0
 custom_fonts/font = SubResource( 6 )
 text = "005"
 align = 1
 valign = 1
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/HBoxContainer6"]
-margin_left = 43.0
-margin_right = 75.0
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/005"]
+margin_left = 47.0
+margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 11 )
+texture = ExtResource( 15 )
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="ScrollContainer/GridContainer"]
+[node name="011" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 72.0
+margin_right = 162.0
+margin_bottom = 104.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/011"]
+margin_left = 3.0
+margin_right = 3.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/011"]
+margin_left = 7.0
+margin_top = 2.0
+margin_right = 40.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "011"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/011"]
+margin_left = 44.0
+margin_right = 76.0
+margin_bottom = 32.0
+texture = ExtResource( 16 )
+
+[node name="012" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 108.0
+margin_right = 79.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/012"]
+margin_left = 1.0
+margin_right = 1.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/012"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 41.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "012"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/012"]
+margin_left = 45.0
+margin_right = 77.0
+margin_bottom = 32.0
+texture = ExtResource( 17 )
+
+[node name="013" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 108.0
+margin_right = 162.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/013"]
+margin_left = 1.0
+margin_right = 1.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/013"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 41.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "013"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/013"]
+margin_left = 45.0
+margin_right = 77.0
+margin_bottom = 32.0
+texture = ExtResource( 18 )
+
+[node name="014" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 144.0
+margin_right = 79.0
+margin_bottom = 176.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/014"]
+margin_left = 1.0
+margin_right = 1.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/014"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 41.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "015"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/014"]
+margin_left = 45.0
+margin_right = 77.0
+margin_bottom = 32.0
+texture = ExtResource( 19 )
+
+[node name="015" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 144.0
+margin_right = 162.0
+margin_bottom = 176.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/015"]
+margin_left = 1.0
+margin_right = 1.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/015"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 41.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "001"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/015"]
+margin_left = 45.0
+margin_right = 77.0
+margin_bottom = 32.0
+texture = ExtResource( 20 )
+
+[node name="021" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 180.0
-margin_right = 75.0
+margin_right = 79.0
 margin_bottom = 212.0
 alignment = 1
 
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/HBoxContainer7"]
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/021"]
+margin_left = 1.0
+margin_right = 1.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/021"]
+margin_left = 5.0
 margin_top = 2.0
-margin_right = 39.0
+margin_right = 41.0
 margin_bottom = 30.0
 custom_fonts/font = SubResource( 6 )
-text = "006"
+text = "021"
 align = 1
 valign = 1
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/HBoxContainer7"]
-margin_left = 43.0
-margin_right = 75.0
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/021"]
+margin_left = 45.0
+margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 11 )
+texture = ExtResource( 21 )
 
-[node name="HBoxContainer8" type="HBoxContainer" parent="ScrollContainer/GridContainer"]
+[node name="022" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 180.0
+margin_right = 162.0
+margin_bottom = 212.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/022"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/022"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "022"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/022"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 22 )
+
+[node name="023" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 216.0
-margin_right = 75.0
+margin_right = 79.0
 margin_bottom = 248.0
 alignment = 1
 
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/HBoxContainer8"]
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/023"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/023"]
+margin_left = 4.0
 margin_top = 2.0
-margin_right = 39.0
+margin_right = 43.0
 margin_bottom = 30.0
 custom_fonts/font = SubResource( 6 )
-text = "007"
+text = "023"
 align = 1
 valign = 1
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/HBoxContainer8"]
-margin_left = 43.0
-margin_right = 75.0
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/023"]
+margin_left = 47.0
+margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 11 )
+texture = ExtResource( 23 )
 
-[node name="BarRun" parent="." instance=ExtResource( 12 )]
+[node name="024" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 216.0
+margin_right = 162.0
+margin_bottom = 248.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/024"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/024"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "024"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/024"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 24 )
+
+[node name="025" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 252.0
+margin_right = 79.0
+margin_bottom = 284.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/025"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/025"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "025"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/025"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 25 )
+
+[node name="031" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 252.0
+margin_right = 162.0
+margin_bottom = 284.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/031"]
+margin_left = 1.0
+margin_right = 1.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/031"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 41.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "031"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/031"]
+margin_left = 45.0
+margin_right = 77.0
+margin_bottom = 32.0
+texture = ExtResource( 26 )
+
+[node name="032" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 288.0
+margin_right = 79.0
+margin_bottom = 320.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/032"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/032"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "032"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/032"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 27 )
+
+[node name="033" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 288.0
+margin_right = 162.0
+margin_bottom = 320.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/033"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/033"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "033"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/033"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 28 )
+
+[node name="034" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 324.0
+margin_right = 79.0
+margin_bottom = 356.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/034"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/034"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "034"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/034"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 29 )
+
+[node name="035" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 324.0
+margin_right = 162.0
+margin_bottom = 356.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/035"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/035"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "035"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/035"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 30 )
+
+[node name="041" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 360.0
+margin_right = 79.0
+margin_bottom = 392.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/041"]
+margin_left = 1.0
+margin_right = 1.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/041"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 41.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "041"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/041"]
+margin_left = 45.0
+margin_right = 77.0
+margin_bottom = 32.0
+texture = ExtResource( 31 )
+
+[node name="042" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 360.0
+margin_right = 162.0
+margin_bottom = 392.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/042"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/042"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "042"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/042"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 32 )
+
+[node name="043" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 396.0
+margin_right = 79.0
+margin_bottom = 428.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/043"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/043"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "043"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/043"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 33 )
+
+[node name="044" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 83.0
+margin_top = 396.0
+margin_right = 162.0
+margin_bottom = 428.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/044"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/044"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "044"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/044"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 34 )
+
+[node name="045" type="HBoxContainer" parent="Control/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 432.0
+margin_right = 79.0
+margin_bottom = 464.0
+alignment = 1
+
+[node name="Container" type="Container" parent="Control/HUDTableKeys/GridContainer/045"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Control/HUDTableKeys/GridContainer/045"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "045"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HUDTableKeys/GridContainer/045"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+texture = ExtResource( 35 )
+
+[node name="BarRun" parent="." instance=ExtResource( 36 )]
 margin_left = 43.941
 margin_top = 27.651
 margin_right = 163.941
