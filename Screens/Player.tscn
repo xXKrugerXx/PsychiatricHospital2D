@@ -1,9 +1,9 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Textures/player/idle_0.png" type="Texture" id=2]
-[ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=3]
-[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=4]
+[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=2]
+[ext_resource path="res://Textures/player/idle_0.png" type="Texture" id=3]
+[ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=4]
 [ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=5]
 [ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=6]
 [ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=7]
@@ -64,7 +64,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:enabled")
@@ -475,6 +475,10 @@ nodes/run/node = SubResource( 17 )
 nodes/run/position = Vector2( 240, 60 )
 node_connections = [ "output", 0, "run", "run", 0, "idle_walk", "run", 1, "Animation" ]
 
+[sub_resource type="RectangleShape2D" id=19]
+
+extents = Vector2( 22.6529, 95.9753 )
+
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 1, 0 )
 script = ExtResource( 1 )
@@ -524,4 +528,9 @@ offset = Vector2( 13, -5 )
 energy = 0.9
 shadow_enabled = true
 shadow_gradient_length = 0.1
+
+[node name="Area2DKeys" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeys"]
+shape = SubResource( 19 )
 

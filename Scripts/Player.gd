@@ -5,7 +5,12 @@ export(int) var run_speed = 380
 export(float, 0, 5,0.1) var regspeedstamina = 1.1
 export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
 
+var adasd : float
+
 onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
+
+onready var hudlabelkeys = $HUDcharacter/Control/LabelKeys as Label
+
 
 const tex_arr_flaslight : Array = [preload("res://Textures/touch/Flashlight_0.png"),
 						preload("res://Textures/touch/Flashlight_1.png")]
@@ -21,9 +26,9 @@ var amountrun : int
 var motion : Vector2
 
 var indexspeed : int
-var isrun : bool
 var isflashlight : bool
 var isactiverun : bool
+var ispickup : bool
 
 func _ready():
 	indexspeed = 2
@@ -31,10 +36,20 @@ func _ready():
 	amountrun = 0
 	isactiverun = false
 	isflashlight = true
+	ispickup = false
+	
+	###########HUD####################
 	Bar_run.value = s_globals.currentstamina
+	hudlabelkeys.text = tr('Door_keys')
 
+func _process(delta : float) -> void:
+	for i in $HUDcharacter/Control/HUDTableKeys/GridContainer.get_children():
+		if i.get_name() in s_globals.keys:
+			i.modulate = Color8(255,255,255,255)
+		else:
+			i.modulate = Color8(60,60,60,255)
 
-func _physics_process(delta : float):
+func _physics_process(delta : float) -> void:
 	motion.y += 10
 	motion.x = speed
 	s_globals.currentstamina = clamp(s_globals.currentstamina,Bar_run.get_min(),Bar_run.get_max())
@@ -44,6 +59,12 @@ func _physics_process(delta : float):
 #	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,32))
 	motion = move_and_slide(motion,Vector2(0,-1))
 	stamina_run(delta)
+	
+	for a in $Area2DKeys.get_overlapping_areas():
+		if a.is_in_group('grkeys') and ispickup:
+			a.queue()
+		elif a.is_in_group('door') and ispickup:
+			a.next_map()
 
 
 func _input(event) -> void:
@@ -62,7 +83,9 @@ func _input(event) -> void:
 		isactiverun = false
 		
 	if event.is_action_pressed("ui_pickup"):
-		pass
+		ispickup = true
+	elif event.is_action_released("ui_pickup"):
+		ispickup = false
 	if event.is_action_pressed("ui_flashlight"):
 		flashlight()
 
@@ -116,10 +139,6 @@ func flashlight() -> void:
 		isflashlight = true
 		$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[0]
 		lightning = 0
-
-
-
-
 
 
 
