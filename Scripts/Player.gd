@@ -56,8 +56,7 @@ func _physics_process(delta : float) -> void:
 	walk_run(isactiverun)
 	$AnimationTree['parameters/run/blend_amount'] = amountrun
 	$AnimationTree['parameters/idle_walk/blend_position'] = Vector2(motion.x,lightning)
-#	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,32))
-	motion = move_and_slide(motion,Vector2(0,-1))
+	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,-128))
 	stamina_run(delta)
 	
 	for a in $Area2DKeys.get_overlapping_areas():

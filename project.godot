@@ -70,6 +70,14 @@ ui_flashlight={
 
 pointing/emulate_touch_from_mouse=true
 
+[layer_names]
+
+2d_physics/layer_1="all"
+2d_physics/layer_2="floor"
+2d_physics/layer_3="player"
+2d_physics/layer_4="enemy"
+2d_physics/layer_5="npc"
+
 [locale]
 
 translations=PoolStringArray( "res://Language.en.translation", "res://Language.ru.translation" )
