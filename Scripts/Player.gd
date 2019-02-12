@@ -5,8 +5,6 @@ export(int) var run_speed = 380
 export(float, 0, 5,0.1) var regspeedstamina = 1.1
 export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
 
-var adasd : float
-
 onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
 
 onready var hudlabelkeys = $HUDcharacter/Control/LabelKeys as Label

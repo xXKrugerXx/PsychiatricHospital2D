@@ -1,8 +1,8 @@
 extends Area2D
 
 export(int) var index := 0
-export(int) var size_x = 50
-export(int) var size_y = 100
+export(int) var size_x := 50
+export(int) var size_y := 100
 
 signal signalstairs
 
