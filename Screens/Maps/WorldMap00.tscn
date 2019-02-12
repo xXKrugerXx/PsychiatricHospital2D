@@ -19,45 +19,45 @@ extents = Vector2( 10, 1527.67 )
 
 extents = Vector2( 4246.44, 10 )
 
-[sub_resource type="RectangleShape2D" id=9]
-
-extents = Vector2( 308.239, 10 )
-
-[sub_resource type="RectangleShape2D" id=7]
-
-extents = Vector2( 182.639, 10 )
-
-[sub_resource type="RectangleShape2D" id=12]
-
-extents = Vector2( 3647, 10 )
-
-[sub_resource type="RectangleShape2D" id=8]
-
-extents = Vector2( 494.764, 10 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-extents = Vector2( 468.024, 10 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-extents = Vector2( 3661.56, 10 )
-
 [sub_resource type="RectangleShape2D" id=5]
 
 extents = Vector2( 182.639, 10 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=6]
 
 extents = Vector2( 3647, 10 )
 
+[sub_resource type="RectangleShape2D" id=9]
+
+extents = Vector2( 3661.56, 10 )
+
 [sub_resource type="RectangleShape2D" id=10]
 
-extents = Vector2( 384.771, 10 )
+extents = Vector2( 182.639, 10 )
 
 [sub_resource type="RectangleShape2D" id=11]
 
+extents = Vector2( 3647, 10 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
 extents = Vector2( 384.771, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+extents = Vector2( 308.239, 10 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+extents = Vector2( 384.771, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+extents = Vector2( 494.764, 10 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+extents = Vector2( 468.024, 10 )
 
 [node name="WorldMap00" type="Node"]
 script = ExtResource( 1 )
@@ -142,19 +142,6 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/1f"]
 shape = SubResource( 3 )
 
-[node name="1f_is" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 8566.71, 2246 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/1f_is"]
-shape = SubResource( 9 )
-
 [node name="1f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 9046.71, 2246 )
@@ -166,7 +153,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/1f_r"]
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="2f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -179,32 +166,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/2f"]
-shape = SubResource( 12 )
-
-[node name="2f_is_r" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 8740.71, 1798 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/2f_is_r"]
-shape = SubResource( 8 )
-
-[node name="2f_is_l" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 485.71, 1798 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/2f_is_l"]
 shape = SubResource( 6 )
 
 [node name="3f" type="StaticBody2D" parent="floor"]
@@ -218,7 +179,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/3f"]
-shape = SubResource( 4 )
+shape = SubResource( 9 )
 
 [node name="3f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -231,7 +192,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/3f_r"]
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="3f_l" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -244,33 +205,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/3f_l"]
-shape = SubResource( 5 )
-
-[node name="3f_is_l" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 629.71, 1350 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/3f_is_l"]
-shape = SubResource( 9 )
-
-[node name="3f_is_r" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 8557.71, 1350 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/3f_is_r"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="4f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -283,33 +218,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/4f"]
-shape = SubResource( 13 )
-
-[node name="4f_is_l" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 488.71, 902 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/4f_is_l"]
-shape = SubResource( 6 )
-
-[node name="4f_is_r" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 8738.71, 902 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/4f_is_r"]
-shape = SubResource( 8 )
+shape = SubResource( 11 )
 
 [node name="5f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -322,7 +231,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f"]
-shape = SubResource( 4 )
+shape = SubResource( 9 )
 
 [node name="5f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -335,7 +244,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f_r"]
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="5f_l" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -348,42 +257,14 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f_l"]
-shape = SubResource( 5 )
-
-[node name="5f_is_l" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 632.71, 454 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f_is_l"]
-shape = SubResource( 9 )
-
-[node name="5f_is_r" type="StaticBody2D" parent="floor"]
-editor/display_folded = true
-position = Vector2( 8557.71, 454 )
-collision_layer = 2
-collision_mask = 0
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f_is_r"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="stairs00R" type="StaticBody2D" parent="stairs"]
-editor/display_folded = true
 position = Vector2( 8559.75, 2475.26 )
 rotation = -0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -391,7 +272,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs00R"]
-shape = SubResource( 10 )
+light_mask = 0
+shape = SubResource( 12 )
+
+[node name="stairs01R_is" type="StaticBody2D" parent="stairs"]
+position = Vector2( 8566.71, 2246 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01R_is"]
+shape = SubResource( 4 )
 
 [node name="stairs01R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -405,7 +299,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01R"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
+
+[node name="stairs02R_is" type="StaticBody2D" parent="stairs"]
+editor/display_folded = true
+position = Vector2( 8740.71, 1798 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02R_is"]
+shape = SubResource( 7 )
 
 [node name="stairs02R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -419,7 +326,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02R"]
-shape = SubResource( 10 )
+shape = SubResource( 12 )
+
+[node name="stairs03R_is" type="StaticBody2D" parent="stairs"]
+editor/display_folded = true
+position = Vector2( 8557.71, 1350 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03R_is"]
+shape = SubResource( 4 )
 
 [node name="stairs03R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -433,7 +353,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03R"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
+
+[node name="stairs04R_is" type="StaticBody2D" parent="stairs"]
+editor/display_folded = true
+position = Vector2( 8738.71, 902 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04R_is"]
+shape = SubResource( 7 )
 
 [node name="stairs04R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -447,7 +380,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04R"]
-shape = SubResource( 10 )
+shape = SubResource( 12 )
+
+[node name="stairs05R_is" type="StaticBody2D" parent="stairs"]
+editor/display_folded = true
+position = Vector2( 8557.71, 454 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs05R_is"]
+shape = SubResource( 4 )
 
 [node name="stairs01L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -461,7 +407,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01L"]
-shape = SubResource( 10 )
+shape = SubResource( 12 )
+
+[node name="stairs02L_is" type="StaticBody2D" parent="stairs"]
+editor/display_folded = true
+position = Vector2( 485.71, 1798 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02L_is"]
+shape = SubResource( 8 )
 
 [node name="stairs02L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -475,7 +434,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02L"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
+
+[node name="stairs03L_is" type="StaticBody2D" parent="stairs"]
+editor/display_folded = true
+position = Vector2( 629.71, 1350 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03L_is"]
+shape = SubResource( 4 )
 
 [node name="stairs03L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -489,7 +461,20 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03L"]
-shape = SubResource( 10 )
+shape = SubResource( 12 )
+
+[node name="stairs04L_is" type="StaticBody2D" parent="stairs"]
+editor/display_folded = true
+position = Vector2( 488.71, 902 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04L_is"]
+shape = SubResource( 8 )
 
 [node name="stairs04L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -503,12 +488,25 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04L"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
+
+[node name="stairs05L_is" type="StaticBody2D" parent="stairs"]
+editor/display_folded = true
+position = Vector2( 632.71, 454 )
+collision_layer = 2
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs05L_is"]
+shape = SubResource( 4 )
 
 [node name="signalstairs" type="Node" parent="."]
 
 [node name="Area2DSignalReturn" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 8027.71, 2495.42 )
+position = Vector2( 8039.29, 2496.47 )
 size_x = 200
 size_y = 180
 
