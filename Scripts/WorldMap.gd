@@ -1,18 +1,20 @@
 extends Node
 
-var arrstairs : Array = []
 var arrsignalstairs : Array = []
+var arrstairs : Array = []
 
 func _ready() -> void:
 	for s in $signalstairs.get_children():
 		s.connect('signalstairs',self,'fsignalstairs')
+	
 	for st in $stairs.get_children():
 		arrsignalstairs.append(st)
-	for arstairs in range(arrsignalstairs.size()):
+	
+	for arstairs in range(11):
 		arrstairs.append(0)
 
 
-func fsignalstairs(index : int):
+func fsignalstairs(index : int) -> void:
 	match index:
 		0:
 			if arrstairs[0] == 0:
@@ -99,12 +101,12 @@ func fsignalstairs(index : int):
 		5:
 			if arrstairs[5] == 0:
 				arrstairs[5] += 1
-				arrsignalstairs[8].set_collision_layer_bit(1,true)
-				arrsignalstairs[9].set_collision_layer_bit(1,false)
-			else:
-				arrstairs[5] -= 1
 				arrsignalstairs[8].set_collision_layer_bit(1,false)
 				arrsignalstairs[9].set_collision_layer_bit(1,true)
+			else:
+				arrstairs[5] -= 1
+				arrsignalstairs[8].set_collision_layer_bit(1,true)
+				arrsignalstairs[9].set_collision_layer_bit(1,false)
 		6:
 			if arrstairs[6] == 0:
 				arrstairs[6] += 1
@@ -178,6 +180,44 @@ func fsignalstairs(index : int):
 				arrstairs[10] -= 1
 				arrsignalstairs[16].set_collision_layer_bit(1,true)
 				arrsignalstairs[17].set_collision_layer_bit(1,false)
+		20:
+			arrstairs[1] = 2
+		21:
+			arrstairs[2] = 2
+			arrstairs[1] = 2
+		22:
+			arrstairs[3] = 2
+			arrstairs[2] = 2
+			arrstairs[1] = 2
+		23:
+			arrstairs[4] = 2
+			arrstairs[3] = 2
+			arrstairs[2] = 2
+			arrstairs[1] = 2
+		24:
+			arrstairs[5] = 1
+			arrstairs[4] = 2
+			arrstairs[3] = 2
+			arrstairs[2] = 2
+			arrstairs[1] = 2
+		25:
+			arrstairs[6] = 1
+			arrstairs[7] = 2
+		26:
+			arrstairs[6] = 1
+			arrstairs[7] = 2
+			arrstairs[8] = 2
+		27:
+			arrstairs[6] = 1
+			arrstairs[7] = 2
+			arrstairs[8] = 2
+			arrstairs[9] = 2
+		28:
+			arrstairs[6] = 1
+			arrstairs[7] = 2
+			arrstairs[8] = 2
+			arrstairs[9] = 2
+			arrstairs[10] = 1
 
 
 

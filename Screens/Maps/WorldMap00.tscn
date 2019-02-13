@@ -8,55 +8,42 @@
 [ext_resource path="res://Screens/Area2DSignalReturn.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-
 extents = Vector2( 4723.19, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-
 extents = Vector2( 10, 1527.67 )
 
 [sub_resource type="RectangleShape2D" id=3]
-
 extents = Vector2( 4246.44, 10 )
 
 [sub_resource type="RectangleShape2D" id=4]
-
 extents = Vector2( 182.639, 10 )
 
 [sub_resource type="RectangleShape2D" id=5]
-
 extents = Vector2( 3647, 10 )
 
 [sub_resource type="RectangleShape2D" id=6]
-
 extents = Vector2( 3661.56, 10 )
 
 [sub_resource type="RectangleShape2D" id=7]
-
 extents = Vector2( 182.639, 10 )
 
 [sub_resource type="RectangleShape2D" id=8]
-
 extents = Vector2( 3647, 10 )
 
 [sub_resource type="RectangleShape2D" id=9]
-
 extents = Vector2( 384.771, 10 )
 
 [sub_resource type="RectangleShape2D" id=10]
-
 extents = Vector2( 308.239, 10 )
 
 [sub_resource type="RectangleShape2D" id=11]
-
 extents = Vector2( 384.771, 10 )
 
 [sub_resource type="RectangleShape2D" id=12]
-
 extents = Vector2( 494.764, 10 )
 
 [sub_resource type="RectangleShape2D" id=13]
-
 extents = Vector2( 468.024, 10 )
 
 [node name="WorldMap00" type="Node"]
@@ -83,7 +70,7 @@ position = Vector2( 3072, 0 )
 texture = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 145.082, 2086.13 )
+position = Vector2( 4544.1, 2549.93 )
 collision_layer = 4
 collision_mask = 3
 
@@ -294,7 +281,7 @@ shape = SubResource( 10 )
 editor/display_folded = true
 position = Vector2( 8549.75, 2028.26 )
 rotation = 0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -321,7 +308,7 @@ shape = SubResource( 12 )
 editor/display_folded = true
 position = Vector2( 8558.75, 1580.26 )
 rotation = -0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -348,7 +335,7 @@ shape = SubResource( 10 )
 editor/display_folded = true
 position = Vector2( 8548.75, 1131.26 )
 rotation = 0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -375,7 +362,7 @@ shape = SubResource( 12 )
 editor/display_folded = true
 position = Vector2( 8558.75, 684.264 )
 rotation = -0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -402,7 +389,7 @@ shape = SubResource( 10 )
 editor/display_folded = true
 position = Vector2( 646.749, 2028.26 )
 rotation = -0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -429,7 +416,7 @@ shape = SubResource( 13 )
 editor/display_folded = true
 position = Vector2( 636.749, 1580.26 )
 rotation = 0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -456,7 +443,7 @@ shape = SubResource( 10 )
 editor/display_folded = true
 position = Vector2( 648.749, 1131.26 )
 rotation = -0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -483,7 +470,7 @@ shape = SubResource( 13 )
 editor/display_folded = true
 position = Vector2( 635.749, 684.264 )
 rotation = 0.645772
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -507,6 +494,7 @@ __meta__ = {
 shape = SubResource( 10 )
 
 [node name="signalstairs" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Area2DSignalReturn0" parent="signalstairs" instance=ExtResource( 6 )]
 position = Vector2( 8039.29, 2496.47 )
@@ -514,62 +502,113 @@ size_x = 200
 size_y = 180
 
 [node name="Area2DSignalReturn1" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 9059.29, 2076.47 )
+position = Vector2( 9059.29, 2042.96 )
 index = 1
 size_x = 150
 size_y = 180
 
 [node name="Area2DSignalReturn2" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 8039.29, 1616.47 )
+position = Vector2( 8050.17, 1594.7 )
 index = 2
-size_x = 200
+size_x = 160
 size_y = 180
 
 [node name="Area2DSignalReturn3" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 9059.29, 1166.47 )
+position = Vector2( 9059.29, 1146.94 )
 index = 3
 size_x = 150
 size_y = 180
 
 [node name="Area2DSignalReturn4" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 8039.29, 726.47 )
+position = Vector2( 8050.17, 696.47 )
 index = 4
-size_x = 200
+size_x = 160
 size_y = 180
 
 [node name="Area2DSignalReturn5" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 9059.29, 266.47 )
+position = Vector2( 9059.29, 254 )
 index = 5
 size_x = 150
 size_y = 180
 
 [node name="Area2DSignalReturn6" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 169.29, 2076.47 )
+position = Vector2( 164.29, 2045.47 )
 index = 6
 size_x = 150
 size_y = 180
 
 [node name="Area2DSignalReturn7" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 1179.29, 1616.47 )
+position = Vector2( 1074.83, 1597.13 )
 index = 7
-size_x = 200
 size_y = 180
 
 [node name="Area2DSignalReturn8" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 169.29, 1156.47 )
+position = Vector2( 164.29, 1146.94 )
 index = 8
 size_x = 150
 size_y = 180
 
 [node name="Area2DSignalReturn9" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 1179.29, 696.47 )
+position = Vector2( 1074.82, 700.47 )
 index = 9
-size_x = 200
 size_y = 180
 
 [node name="Area2DSignalReturn10" parent="signalstairs" instance=ExtResource( 6 )]
-position = Vector2( 169.29, 256.47 )
+position = Vector2( 164.29, 254 )
 index = 10
+size_x = 150
+size_y = 180
+
+[node name="Area2DSignalReady0" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 8086.82, 2042.96 )
+index = 20
+size_x = 150
+size_y = 180
+
+[node name="Area2DSignalReady1" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 7561.15, 1594.7 )
+index = 21
+size_x = 250
+size_y = 180
+
+[node name="Area2DSignalReady2" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 8086.82, 1146.94 )
+index = 22
+size_x = 150
+size_y = 180
+
+[node name="Area2DSignalReady3" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 7561.15, 696.47 )
+index = 23
+size_x = 250
+size_y = 180
+
+[node name="Area2DSignalReady4" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 8239.29, 254 )
+index = 24
+size_x = 150
+size_y = 180
+
+[node name="Area2DSignalReady5" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 1438.38, 1597.12 )
+index = 25
+size_x = 250
+size_y = 180
+
+[node name="Area2DSignalReady6" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 1059.29, 1146.94 )
+index = 26
+size_y = 180
+
+[node name="Area2DSignalReady7" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 1440.89, 700.47 )
+index = 27
+size_x = 250
+size_y = 180
+
+[node name="Area2DSignalReady8" parent="signalstairs" instance=ExtResource( 6 )]
+position = Vector2( 909.29, 254 )
+index = 28
 size_x = 150
 size_y = 180
 
