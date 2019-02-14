@@ -1,10 +1,10 @@
 [gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=2]
+[ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=2]
 [ext_resource path="res://Textures/player/idle_0.png" type="Texture" id=3]
 [ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=4]
-[ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=5]
+[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=5]
 [ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=6]
 [ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=7]
 [ext_resource path="res://Textures/player/idle_flashlight_0.png" type="Texture" id=8]
@@ -45,12 +45,10 @@
 [ext_resource path="res://Textures/particles/light lanternright.png" type="Texture" id=43]
 
 [sub_resource type="CapsuleShape2D" id=1]
-
 radius = 28.6642
 height = 165.818
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "idle"
 length = 0.6
 loop = true
@@ -64,7 +62,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:enabled")
@@ -80,7 +78,6 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-
 resource_name = "idle_lightlantern"
 length = 0.6
 loop = true
@@ -134,7 +131,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-
 resource_name = "left_walk"
 length = 0.8
 loop = true
@@ -200,7 +196,6 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=5]
-
 resource_name = "left_walk_lightlantern"
 length = 0.8
 loop = true
@@ -266,7 +261,6 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=6]
-
 resource_name = "right_walk"
 length = 0.8
 loop = true
@@ -332,7 +326,6 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=7]
-
 resource_name = "right_walk_lightlantern"
 length = 0.8
 loop = true
@@ -398,7 +391,6 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=8]
-
 length = 1.2
 loop = true
 tracks/0/type = "value"
@@ -415,35 +407,27 @@ tracks/0/keys = {
 }
 
 [sub_resource type="AnimationNodeAnimation" id=9]
-
 animation = "run"
 
 [sub_resource type="AnimationNodeAnimation" id=10]
-
 animation = "idle"
 
 [sub_resource type="AnimationNodeAnimation" id=11]
-
 animation = "idle_lightlantern"
 
 [sub_resource type="AnimationNodeAnimation" id=12]
-
 animation = "left_walk"
 
 [sub_resource type="AnimationNodeAnimation" id=13]
-
 animation = "right_walk"
 
 [sub_resource type="AnimationNodeAnimation" id=14]
-
 animation = "left_walk_lightlantern"
 
 [sub_resource type="AnimationNodeAnimation" id=15]
-
 animation = "right_walk_lightlantern"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=16]
-
 blend_point_0/node = SubResource( 10 )
 blend_point_0/pos = Vector2( 0, 0 )
 blend_point_1/node = SubResource( 11 )
@@ -462,9 +446,7 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeBlend2" id=17]
 
-
 [sub_resource type="AnimationNodeBlendTree" id=18]
-
 graph_offset = Vector2( -52.0698, 12.25 )
 nodes/Animation/node = SubResource( 9 )
 nodes/Animation/position = Vector2( 60, 180 )
@@ -476,11 +458,14 @@ nodes/run/position = Vector2( 240, 60 )
 node_connections = [ "output", 0, "run", "run", 0, "idle_walk", "run", 1, "Animation" ]
 
 [sub_resource type="RectangleShape2D" id=19]
-
 extents = Vector2( 22.6529, 95.9753 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 position = Vector2( 1, 0 )
+collision_layer = 4
+collision_mask = 2
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

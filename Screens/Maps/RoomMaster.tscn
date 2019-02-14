@@ -7,7 +7,6 @@
 [ext_resource path="res://Textures/maps/Room001.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
-
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
 "loop": true,
@@ -16,11 +15,9 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-
 extents = Vector2( 10, 300.681 )
 
 [sub_resource type="RectangleShape2D" id=3]
-
 extents = Vector2( 1044.87, 10 )
 
 [node name="RoomMaster" type="Node"]
@@ -120,6 +117,8 @@ __meta__ = {
 [node name="StaticBody2DL" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( -8.23151, 242.7 )
+collision_layer = 0
+collision_mask = 2
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -131,6 +130,8 @@ shape = SubResource( 2 )
 [node name="StaticBody2DR" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 1929.9, 238.047 )
+collision_layer = 0
+collision_mask = 2
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -142,6 +143,8 @@ shape = SubResource( 2 )
 [node name="StaticBody2Dtop" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 947.868, 490.05 )
+collision_layer = 2
+collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true

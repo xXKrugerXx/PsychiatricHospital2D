@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Room/Area2DSignalReturn.gd" type="Script" id=1]
+
+[node name="Area2DSignalReturn" type="Area2D"]
+collision_mask = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+size_x = 100
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_Area2DSignalReturn_body_entered"]

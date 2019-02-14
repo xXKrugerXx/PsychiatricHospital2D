@@ -5,8 +5,6 @@ export(int) var run_speed = 380
 export(float, 0, 5,0.1) var regspeedstamina = 1.1
 export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
 
-var adasd : float
-
 onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
 
 onready var hudlabelkeys = $HUDcharacter/Control/LabelKeys as Label
@@ -56,15 +54,19 @@ func _physics_process(delta : float) -> void:
 	walk_run(isactiverun)
 	$AnimationTree['parameters/run/blend_amount'] = amountrun
 	$AnimationTree['parameters/idle_walk/blend_position'] = Vector2(motion.x,lightning)
-#	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,32))
-	motion = move_and_slide(motion,Vector2(0,-1))
+	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,6666))
 	stamina_run(delta)
 	
 	for a in $Area2DKeys.get_overlapping_areas():
 		if a.is_in_group('grkeys') and ispickup:
 			a.queue()
-		elif a.is_in_group('door') and ispickup:
+		elif a.is_in_group('grdoorsexit') and ispickup:
 			a.next_map()
+		elif a.is_in_group('grdoorenter') and ispickup:
+			if s_globals.keys.has(a.door_name):
+				a.door_open(a.door_name)
+			else:
+				print('not key')
 
 
 func _input(event) -> void:
@@ -141,6 +143,7 @@ func flashlight() -> void:
 		lightning = 0
 
 
-
+func init(pos):
+	self.position = pos
 
 
