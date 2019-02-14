@@ -16,7 +16,8 @@ func _on_Area2DSignalReturn_body_entered(body):
 		emit_signal('signalstairs', index)
 
 
-
+func open_doors():
+	print(get_name())
 
 
 

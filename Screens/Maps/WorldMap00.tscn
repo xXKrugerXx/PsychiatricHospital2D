@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/WorldMap.gd" type="Script" id=1]
 [ext_resource path="res://Textures/maps/PsyHospital_pt1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Textures/maps/PsyHospital_pt3.png" type="Texture" id=4]
 [ext_resource path="res://Screens/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Screens/Area2DSignalReturn.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Screens/AreaDoorenter.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4723.19, 10 )
@@ -70,9 +71,10 @@ position = Vector2( 3072, 0 )
 texture = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 4544.1, 2549.93 )
+position = Vector2( 4924.95, 2563.47 )
 collision_layer = 4
 collision_mask = 3
+regspeedstamina = 1.2
 
 [node name="floor" type="Node" parent="."]
 editor/display_folded = true
@@ -611,4 +613,147 @@ position = Vector2( 909.29, 254 )
 index = 28
 size_x = 150
 size_y = 180
+
+[node name="doors" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="AreaDoorenter" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 5119.62, 2554.47 )
+collision_mask = 0
+door_name = "DrDandy"
+
+[node name="AreaDoorenter2" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 6896.62, 2554.47 )
+collision_mask = 0
+door_name = "Hell"
+
+[node name="AreaDoorenter3" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 1539.62, 2554.47 )
+collision_mask = 0
+door_name = "023"
+
+[node name="AreaDoorenter4" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 1263.62, 2109.47 )
+collision_mask = 0
+door_name = "001"
+
+[node name="AreaDoorenter5" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 3023.62, 2109.47 )
+collision_mask = 0
+door_name = "002"
+
+[node name="AreaDoorenter6" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 4783.62, 2109.47 )
+collision_mask = 0
+door_name = "003"
+
+[node name="AreaDoorenter7" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 6543.62, 2109.47 )
+collision_mask = 0
+door_name = "004"
+
+[node name="AreaDoorenter8" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 7733.62, 2109.47 )
+collision_mask = 0
+door_name = "005"
+
+[node name="AreaDoorenter9" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 7733.62, 1659.47 )
+collision_mask = 0
+door_name = "015"
+
+[node name="AreaDoorenter10" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 6543.62, 1659.47 )
+collision_mask = 0
+door_name = "014"
+
+[node name="AreaDoorenter11" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 4783.62, 1659.47 )
+collision_mask = 0
+door_name = "013"
+
+[node name="AreaDoorenter12" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 3023.62, 1659.47 )
+collision_mask = 0
+door_name = "012"
+
+[node name="AreaDoorenter13" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 1263.62, 1659.47 )
+collision_mask = 0
+door_name = "011"
+
+[node name="AreaDoorenter14" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 1263.62, 1209.47 )
+collision_mask = 0
+door_name = "021"
+
+[node name="AreaDoorenter15" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 3023.62, 1209.47 )
+collision_mask = 0
+door_name = "022"
+
+[node name="AreaDoorenter16" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 4783.62, 1209.47 )
+collision_mask = 0
+door_name = "023"
+
+[node name="AreaDoorenter17" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 6543.62, 1209.47 )
+collision_mask = 0
+door_name = "024"
+
+[node name="AreaDoorenter18" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 7733.62, 1209.47 )
+collision_mask = 0
+door_name = "025"
+
+[node name="AreaDoorenter19" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 7733.62, 769.473 )
+collision_mask = 0
+door_name = "035"
+
+[node name="AreaDoorenter20" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 6543.62, 769.473 )
+collision_mask = 0
+door_name = "034"
+
+[node name="AreaDoorenter21" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 4783.62, 769.473 )
+collision_mask = 0
+door_name = "033"
+
+[node name="AreaDoorenter22" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 3023.62, 769.473 )
+collision_mask = 0
+door_name = "032"
+
+[node name="AreaDoorenter23" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 1263.62, 769.473 )
+collision_mask = 0
+door_name = "031"
+
+[node name="AreaDoorenter24" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 1263.62, 319.473 )
+collision_mask = 0
+door_name = "041"
+
+[node name="AreaDoorenter25" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 3023.62, 319.473 )
+collision_mask = 0
+door_name = "042"
+
+[node name="AreaDoorenter26" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 4783.62, 319.473 )
+collision_mask = 0
+door_name = "043"
+
+[node name="AreaDoorenter27" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 6543.62, 319.473 )
+collision_mask = 0
+door_name = "044"
+
+[node name="AreaDoorenter28" parent="doors" instance=ExtResource( 7 )]
+position = Vector2( 7733.62, 319.473 )
+collision_mask = 0
+door_name = "045"
 
