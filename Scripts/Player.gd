@@ -143,6 +143,7 @@ func flashlight() -> void:
 		lightning = 0
 
 
-
+func init(pos):
+	self.position = pos
 
 

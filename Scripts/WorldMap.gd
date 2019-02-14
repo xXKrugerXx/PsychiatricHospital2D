@@ -221,6 +221,3 @@ func fsignalstairs(index : int) -> void:
 
 
 
-
-
-
