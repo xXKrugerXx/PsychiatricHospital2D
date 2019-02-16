@@ -4,6 +4,7 @@ var keys : Array
 var posPlayer : Array
 var isreadystart : bool
 var currentstamina : float
+var is_enter_pos : bool
 
 func _ready() -> void:
 	currentstamina = 100
@@ -11,5 +12,5 @@ func _ready() -> void:
 	keys = ['023']
 	
 	for i in range(30):
-		posPlayer.append(0)
-	posPlayer[0] = 1
+		posPlayer.append(false)
+	posPlayer[0] = true

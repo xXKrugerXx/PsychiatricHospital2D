@@ -61,9 +61,11 @@ func _physics_process(delta : float) -> void:
 		if a.is_in_group('grkeys') and ispickup:
 			a.queue()
 		elif a.is_in_group('grdoorsexit') and ispickup:
+			s_globals.is_enter_pos = false
 			a.next_map()
 		elif a.is_in_group('grdoorenter') and ispickup:
 			if s_globals.keys.has(a.door_name):
+				s_globals.is_enter_pos = true
 				a.door_open(a.door_name)
 			else:
 				print('not key')
