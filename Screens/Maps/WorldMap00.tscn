@@ -9,55 +9,42 @@
 [ext_resource path="res://Screens/Player.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-
 extents = Vector2( 4723.19, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-
 extents = Vector2( 10, 1527.67 )
 
 [sub_resource type="RectangleShape2D" id=3]
-
 extents = Vector2( 4246.44, 10 )
 
 [sub_resource type="RectangleShape2D" id=4]
-
 extents = Vector2( 182.639, 10 )
 
 [sub_resource type="RectangleShape2D" id=5]
-
 extents = Vector2( 3647, 10 )
 
 [sub_resource type="RectangleShape2D" id=6]
-
 extents = Vector2( 3661.56, 10 )
 
 [sub_resource type="RectangleShape2D" id=7]
-
 extents = Vector2( 182.639, 10 )
 
 [sub_resource type="RectangleShape2D" id=8]
-
 extents = Vector2( 3647, 10 )
 
 [sub_resource type="RectangleShape2D" id=9]
-
 extents = Vector2( 384.771, 10 )
 
 [sub_resource type="RectangleShape2D" id=10]
-
 extents = Vector2( 308.239, 10 )
 
 [sub_resource type="RectangleShape2D" id=11]
-
 extents = Vector2( 384.771, 10 )
 
 [sub_resource type="RectangleShape2D" id=12]
-
 extents = Vector2( 494.764, 10 )
 
 [sub_resource type="RectangleShape2D" id=13]
-
 extents = Vector2( 468.024, 10 )
 
 [node name="WorldMap00" type="Node"]
@@ -84,7 +71,6 @@ position = Vector2( 3072, 0 )
 texture = ExtResource( 4 )
 
 [node name="floor" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="floor"]
 editor/display_folded = true

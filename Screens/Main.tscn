@@ -5,7 +5,6 @@
 [ext_resource path="res://Screens/HUDclickLE.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "screen_end"
 length = 3.0
 tracks/0/type = "value"
@@ -22,7 +21,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "screen_st"
 length = 5.0
 tracks/0/type = "value"
@@ -54,7 +52,6 @@ tracks/1/keys = {
 
 [sub_resource type="Environment" id=3]
 
-
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
 
@@ -64,13 +61,12 @@ script = ExtResource( 1 )
 layer = 6
 
 [node name="ScreenColor" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = 5
 
 [node name="ColorRect" type="ColorRect" parent="ScreenColor"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.133333, 0.133333, 0.133333, 0.25098 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ScreenColor"]
 anims/screen_end = SubResource( 1 )
