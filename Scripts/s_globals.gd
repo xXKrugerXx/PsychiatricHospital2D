@@ -13,4 +13,4 @@ func _ready() -> void:
 	
 	for i in range(30):
 		posPlayer.append(false)
-	posPlayer[0] = true
+	posPlayer[15] = true
