@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scripts/enemy1.gd" type="Script" id=1]
-[ext_resource path="res://Textures/enemies/1/Ghost_5.png" type="Texture" id=2]
+[ext_resource path="res://Textures/enemies/1/Ghost_2.png" type="Texture" id=2]
 [ext_resource path="res://Textures/enemies/1/Ghost_14.png" type="Texture" id=3]
 [ext_resource path="res://Textures/enemies/1/Ghost_15.png" type="Texture" id=4]
 [ext_resource path="res://Textures/enemies/1/Ghost_16.png" type="Texture" id=5]
@@ -10,9 +10,9 @@
 [ext_resource path="res://Textures/enemies/1/Ghost_19.png" type="Texture" id=8]
 [ext_resource path="res://Textures/enemies/1/Ghost_20.png" type="Texture" id=9]
 [ext_resource path="res://Textures/enemies/1/Ghost_1.png" type="Texture" id=10]
-[ext_resource path="res://Textures/enemies/1/Ghost_2.png" type="Texture" id=11]
-[ext_resource path="res://Textures/enemies/1/Ghost_3.png" type="Texture" id=12]
-[ext_resource path="res://Textures/enemies/1/Ghost_4.png" type="Texture" id=13]
+[ext_resource path="res://Textures/enemies/1/Ghost_3.png" type="Texture" id=11]
+[ext_resource path="res://Textures/enemies/1/Ghost_4.png" type="Texture" id=12]
+[ext_resource path="res://Textures/enemies/1/Ghost_5.png" type="Texture" id=13]
 [ext_resource path="res://Textures/enemies/1/Ghost_8.png" type="Texture" id=14]
 [ext_resource path="res://Textures/enemies/1/Ghost_9.png" type="Texture" id=15]
 [ext_resource path="res://Textures/enemies/1/Ghost_10.png" type="Texture" id=16]
@@ -46,7 +46,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0.8 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -66,7 +66,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -118,7 +118,7 @@ nodes/idle_walk/position = Vector2( 80, 60 )
 nodes/output/position = Vector2( 740, 60 )
 node_connections = [ "output", 0, "OneShotattack", "OneShotattack", 0, "idle_walk", "OneShotattack", 1, "attack" ]
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 452.654, 60.14 )
 
 [node name="enemy1" type="KinematicBody2D" groups=[
@@ -172,7 +172,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Dplayer"]
-shape = SubResource( 13 )
+shape = SubResource( 12 )
 
 [node name="Tween" type="Tween" parent="."]
 

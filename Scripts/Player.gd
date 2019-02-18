@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-export(int) var walk_speed = 200
-export(int) var run_speed = 380
+const walk_speed : int = 200
+const run_speed : int = 380
 export(float, 0, 5,0.1) var regspeedstamina = 1.1
 export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
 
@@ -178,6 +178,11 @@ func messagenokey():
 						Color8(255,255,255,0),0.4,
 						Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 	$HUDcharacter/messageDoorKeys/Tweenmessage.start()
+
+
+func death():
+#	self.queue_free()
+	print('player death')
 
 
 

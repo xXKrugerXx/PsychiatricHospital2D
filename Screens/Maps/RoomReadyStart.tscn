@@ -4,18 +4,18 @@
 [ext_resource path="res://Textures/flash lightning/023_01.png" type="Texture" id=2]
 [ext_resource path="res://Textures/particles/pain.png" type="Texture" id=3]
 [ext_resource path="res://Textures/maps/Room023.png" type="Texture" id=4]
-[ext_resource path="res://Textures/maps/room_start/room023_start0.png" type="Texture" id=5]
+[ext_resource path="res://Textures/maps/room_start/room023_start6.png" type="Texture" id=5]
 [ext_resource path="res://Textures/flash lightning/023_00.png" type="Texture" id=6]
-[ext_resource path="res://Textures/maps/room_start/room023_start1.png" type="Texture" id=7]
-[ext_resource path="res://Textures/maps/room_start/room023_start2.png" type="Texture" id=8]
-[ext_resource path="res://Textures/maps/room_start/room023_start3.png" type="Texture" id=9]
-[ext_resource path="res://Textures/maps/room_start/room023_start4.png" type="Texture" id=10]
-[ext_resource path="res://Textures/maps/room_start/room023_start5.png" type="Texture" id=11]
-[ext_resource path="res://Textures/maps/room_start/room023_start6.png" type="Texture" id=12]
+[ext_resource path="res://Textures/maps/room_start/room023_start0.png" type="Texture" id=7]
+[ext_resource path="res://Textures/maps/room_start/room023_start1.png" type="Texture" id=8]
+[ext_resource path="res://Textures/maps/room_start/room023_start2.png" type="Texture" id=9]
+[ext_resource path="res://Textures/maps/room_start/room023_start3.png" type="Texture" id=10]
+[ext_resource path="res://Textures/maps/room_start/room023_start4.png" type="Texture" id=11]
+[ext_resource path="res://Textures/maps/room_start/room023_start5.png" type="Texture" id=12]
 [ext_resource path="res://Screens/Dialog2D.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Textures/particles/svechi_light.png" type="Texture" id=14]
-[ext_resource path="res://Screens/Npc.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Screens/AreaDoorexit.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Screens/Npc.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Screens/AreaDoorexit.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Textures/flash lightning/001_00.png" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "statrt_ready"
@@ -27,7 +27,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4, 6, 32, 35 ),
+"times": PoolRealArray( 0, 0.4, 6, 30.5, 35 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
@@ -66,7 +66,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0.5, 9.3, 17, 30.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.254902, 0.254902, 0.254902, 1 ), Color( 0.227451, 0.227451, 0.227451, 1 ), Color( 0.227451, 0.227451, 0.227451, 1 ), Color( 0.0666667, 0.0666667, 0.0666667, 1 ) ]
+"values": [ Color( 0.254902, 0.254902, 0.254902, 1 ), Color( 0.227451, 0.227451, 0.227451, 1 ), Color( 0.227451, 0.227451, 0.227451, 1 ), Color( 0.141176, 0.141176, 0.141176, 1 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Pain2D0:emitting")
@@ -162,7 +162,7 @@ tracks/11/keys = {
 "times": PoolRealArray( 0, 17.8, 18, 18.2, 18.4, 18.6, 18.8, 19 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ]
+"values": [ ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 5 ) ]
 }
 tracks/12/type = "method"
 tracks/12/path = NodePath(".")
@@ -179,24 +179,12 @@ tracks/12/keys = {
 } ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Light2D:enabled")
-tracks/13/interp = 0
+tracks/13/path = NodePath("Npc:modulate")
+tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 19.4, 30.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("Npc:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
 "times": PoolRealArray( 0, 12.6, 30 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
@@ -217,6 +205,7 @@ __meta__ = {
 [node name="Pain2D0" type="CPUParticles2D" parent="."]
 position = Vector2( 1186.52, 53.9375 )
 scale = Vector2( 0.1, 0.5 )
+z_index = 1
 amount = 50
 lifetime = 1.4
 speed_scale = 2.0
@@ -226,7 +215,7 @@ emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
-scale_amount = 0.236842
+scale_amount = 0.5
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -235,6 +224,7 @@ __meta__ = {
 [node name="Pain2D1" type="CPUParticles2D" parent="."]
 position = Vector2( 1597.52, 53.9375 )
 scale = Vector2( 0.1, 0.5 )
+z_index = 1
 amount = 50
 lifetime = 1.4
 speed_scale = 2.0
@@ -244,7 +234,7 @@ emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
-scale_amount = 0.236842
+scale_amount = 0.5
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -253,6 +243,7 @@ __meta__ = {
 [node name="Pain2D2" type="CPUParticles2D" parent="."]
 position = Vector2( 767.518, 53.9375 )
 scale = Vector2( 0.1, 0.5 )
+z_index = 1
 amount = 50
 lifetime = 1.4
 speed_scale = 2.0
@@ -262,7 +253,7 @@ emission_rect_extents = Vector2( 1000, 1 )
 spread = 180.0
 gravity = Vector2( 0, 500 )
 initial_velocity = 20.0
-scale_amount = 0.236842
+scale_amount = 0.5
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -270,6 +261,7 @@ __meta__ = {
 
 [node name="room" type="Sprite" parent="."]
 scale = Vector2( 2.5, 2.5 )
+z_index = 3
 texture = ExtResource( 4 )
 centered = false
 __meta__ = {
@@ -279,6 +271,7 @@ __meta__ = {
 [node name="player" type="Sprite" parent="."]
 position = Vector2( 1160, 288 )
 scale = Vector2( 2, 2 )
+z_index = 4
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
@@ -292,7 +285,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.227451, 0.227451, 0.227451, 1 )
+color = Color( 0.141816, 0.141816, 0.141816, 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -305,23 +298,26 @@ color = Color( 0, 0, 0, 0 )
 anims/statrt_ready = SubResource( 1 )
 
 [node name="Dialog2D" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1180.81, 259.151 )
+position = Vector2( 1179.81, 256.151 )
+z_index = 5
 indextext = [ "Player_message_place_023_0", "Player_message_place_023_1", "Player_message_place_023_2", "Player_message_place_023_3" ]
 timespeed = 2.0
 st_tweenspeed = 1.2
 
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 1057, 192.219 )
-scale = Vector2( 1, 0.5 )
-enabled = false
-texture = ExtResource( 14 )
-texture_scale = 2.0
-
-[node name="Npc" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 1, 1, 0 )
+[node name="Npc" parent="." instance=ExtResource( 14 )]
 position = Vector2( 969.525, 364.753 )
+z_index = 4
 
-[node name="AreaDoorexit" parent="." instance=ExtResource( 16 )]
+[node name="AreaDoorexit" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1450, 352 )
 scale = Vector2( 2, 2 )
+z_index = 5
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 960, 176.25 )
+scale = Vector2( 2.5, 2.5 )
+z_index = 2
+texture = ExtResource( 16 )
+range_z_min = 0
+range_z_max = 1
 
