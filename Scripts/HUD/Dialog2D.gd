@@ -6,10 +6,21 @@ export(float, 0 , 4, 0.1) var timespeed = 1
 export(float, 0 , 4, 0.1) var st_tweenspeed = 1
 export(float, 0 , 4, 0.1) var end_tweenspeed = 1
 
+export(bool) var is_dialog_l_r = false
+
 var timenexttext : int
+
+const img : Array = [preload("res://Textures/texdialog_l.png"),
+				preload("res://Textures/texdialog_r.png")]
 
 func _ready() -> void:
 	self.modulate = Color(1,1,1,0)
+	if is_dialog_l_r:
+		$TextureRect.texture = img[1]
+		$TextureRect.margin_left = 0
+	else:
+		$TextureRect.texture = img[0]
+		$TextureRect.margin_left = -256
 #	textready()
 
 func textready() -> void:

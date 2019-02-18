@@ -41,6 +41,9 @@ func _ready():
 	###########HUD####################
 	Bar_run.value = s_globals.currentstamina
 	hudlabelkeys.text = tr('Door_keys')
+	$HUDcharacter/messageDoorKeys.hide()
+	
+	###########GROUP####################
 	yield(get_tree(),"idle_frame")
 	get_tree().call_group('enemy', 'tragetplayer', self)
 
@@ -74,13 +77,16 @@ func _physics_process(delta : float) -> void:
 				messagenokey()
 			yield($Timerwait_pickup,"timeout")
 			ispickup_wait = true
-		elif a.is_in_group('grdoorenter') and ispickup:
+		elif a.is_in_group('grdoorenter') and ispickup and ispickup_wait:
+			$Timerwait_pickup.start()
+			ispickup_wait = false
 			if s_globals.keys.has(a.door_name):
 				s_globals.is_enter_pos = true
 				a.door_open(a.door_name)
 			else:
 				messagenokey()
-
+			yield($Timerwait_pickup,"timeout")
+			ispickup_wait = true
 
 func _input(event) -> void:
 	if event.is_action_pressed("ui_left"):
@@ -159,6 +165,7 @@ func init(pos):
 	self.position = pos
 
 func messagenokey():
+	$HUDcharacter/messageDoorKeys.show()
 	$HUDcharacter/messageDoorKeys/labelmessage.text = tr('No_keys')
 	$HUDcharacter/messageDoorKeys/Tweenmessage.interpolate_property($HUDcharacter/messageDoorKeys,
 						'modulate',Color8(255,255,255,0),

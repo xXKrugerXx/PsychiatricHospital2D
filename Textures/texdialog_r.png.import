@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/texdialog.png-44fb052ccc5a355278ef4f0e8526def2.stex"
+path="res://.import/texdialog_r.png-30d3804e50b272a027005216a74f6025.stex"
 
 [deps]
 
-source_file="res://Textures/texdialog.png"
-dest_files=[ "res://.import/texdialog.png-44fb052ccc5a355278ef4f0e8526def2.stex" ]
+source_file="res://Textures/texdialog_r.png"
+dest_files=[ "res://.import/texdialog_r.png-30d3804e50b272a027005216a74f6025.stex" ]
 
 [params]
 

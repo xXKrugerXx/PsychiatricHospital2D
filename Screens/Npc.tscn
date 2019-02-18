@@ -58,10 +58,10 @@ shape = SubResource( 2 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Dialog2D" parent="." instance=ExtResource( 3 )]
-position = Vector2( -5.73349, -79.1113 )
+position = Vector2( 17, -93.111 )
 indextext = [ "Ghost_help_0", "Ghost_help_1", "Ghost_help_9" ]
 timespeed = 2.0
 end_tweenspeed = 0.5
+is_dialog_l_r = true
 
 [connection signal="body_entered" from="." to="." method="_on_Npc_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_Npc_body_exited"]
