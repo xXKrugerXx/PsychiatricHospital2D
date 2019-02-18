@@ -8,13 +8,9 @@ export(float, 0 , 4, 0.1) var end_tweenspeed = 1
 
 var timenexttext : int
 
-
-
 func _ready() -> void:
 	self.modulate = Color(1,1,1,0)
 #	textready()
-
-
 
 func textready() -> void:
 	if indextext != null:
@@ -33,7 +29,6 @@ func textend() -> void:
 		$Tween.interpolate_property(self,'modulate', Color(1,1,1,1), Color(1,1,1,0), end_tweenspeed,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 		$Tween.start()
 
-
 func _on_Timer_timeout():
 	if indextext != null:
 		if timenexttext < indextext.size():
@@ -43,3 +38,7 @@ func _on_Timer_timeout():
 				$Timer.stop()
 				textend()
 		timenexttext +=1
+
+
+
+

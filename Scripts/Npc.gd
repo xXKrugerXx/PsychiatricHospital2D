@@ -6,9 +6,15 @@ func _ready():
 
 func _on_Npc_body_entered(body):
 	if body.is_in_group('player'):
-		print('enter npc')
-
+		$Dialog2D.textready()
 
 func _on_Npc_body_exited(body):
 	if body.is_in_group('player'):
-		print('exit npc')
+		$Dialog2D.textend()
+
+func init(pos):
+	self.position = pos
+
+
+
+

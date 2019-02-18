@@ -464,6 +464,7 @@ extents = Vector2( 22.6529, 95.9753 )
 "player",
 ]]
 position = Vector2( 1, 0 )
+z_index = 4
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 1 )
@@ -519,4 +520,8 @@ collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeys"]
 shape = SubResource( 19 )
+
+[node name="Timerwait_pickup" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
 

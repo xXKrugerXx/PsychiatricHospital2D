@@ -770,6 +770,7 @@ door_name = "045"
 index_pos = 27
 
 [node name="pos" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Position0" type="Position2D" parent="pos"]
 position = Vector2( 1536.76, 2570.01 )
