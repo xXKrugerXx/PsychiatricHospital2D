@@ -2,8 +2,13 @@ extends Node
 
 var arrsignalstairs : Array = []
 var arrstairs : Array = []
+var arrplayerpos : Array = []
+
+const player := preload("res://Screens/Player.tscn")
 
 func _ready() -> void:
+	var p = player.instance()
+	
 	for s in $signalstairs.get_children():
 		s.connect('signalstairs',self,'fsignalstairs')
 	
@@ -12,6 +17,14 @@ func _ready() -> void:
 	
 	for arstairs in range(11):
 		arrstairs.append(0)
+	
+	for pos in $pos.get_children():
+		arrplayerpos.append(pos)
+	
+	for doors in $doors.get_children():
+		if s_globals.posPlayer[doors.get_index()] == true:
+			p.init(arrplayerpos[doors.index_pos].position)
+			add_child(p)
 
 
 func fsignalstairs(index : int) -> void:

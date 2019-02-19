@@ -28,7 +28,7 @@ position = Vector2( 960, 175 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 1 )
 animation = "loop"
-frame = 21
+frame = 23
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -37,6 +37,7 @@ __meta__ = {
 [node name="Pain2D" type="CPUParticles2D" parent="."]
 position = Vector2( 327.142, 52.6506 )
 scale = Vector2( 0.1, 0.5 )
+z_index = 1
 amount = 50
 lifetime = 1.4
 speed_scale = 2.0
@@ -55,6 +56,7 @@ __meta__ = {
 [node name="Pain2D2" type="CPUParticles2D" parent="."]
 position = Vector2( 734.142, 52.6506 )
 scale = Vector2( 0.1, 0.5 )
+z_index = 1
 amount = 50
 lifetime = 1.4
 speed_scale = 2.0
@@ -73,6 +75,7 @@ __meta__ = {
 [node name="Pain2D3" type="CPUParticles2D" parent="."]
 position = Vector2( 1185.14, 52.6506 )
 scale = Vector2( 0.1, 0.5 )
+z_index = 1
 amount = 50
 lifetime = 1.4
 speed_scale = 2.0
@@ -91,6 +94,7 @@ __meta__ = {
 [node name="Pain2D4" type="CPUParticles2D" parent="."]
 position = Vector2( 1589.14, 52.6506 )
 scale = Vector2( 0.1, 0.5 )
+z_index = 1
 amount = 50
 lifetime = 1.4
 speed_scale = 2.0
@@ -108,6 +112,7 @@ __meta__ = {
 
 [node name="Room" type="Sprite" parent="."]
 scale = Vector2( 2.5, 2.5 )
+z_index = 2
 texture = ExtResource( 5 )
 centered = false
 __meta__ = {
@@ -155,4 +160,10 @@ shape = SubResource( 3 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 960, 176.25 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 3 )
+range_z_max = 1
 

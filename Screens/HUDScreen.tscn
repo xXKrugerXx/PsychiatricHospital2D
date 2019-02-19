@@ -9,7 +9,6 @@
 [ext_resource path="res://Textures/maps/Hospital.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "screenloop"
 length = 16.0
 loop = true
@@ -99,6 +98,8 @@ __meta__ = {
 
 [node name="ParallaxBackground0" type="ParallaxBackground" parent="."]
 layer = 1
+offset = Vector2( -0.921631, 0 )
+transform = Transform2D( 1, 0, 0, 1, -0.921631, 0 )
 
 [node name="tree0" type="Sprite" parent="ParallaxBackground0"]
 position = Vector2( 380, 532 )
@@ -131,6 +132,8 @@ texture = ExtResource( 3 )
 
 [node name="ParallaxBackground1" type="ParallaxBackground" parent="."]
 layer = 2
+offset = Vector2( -0.552979, 0 )
+transform = Transform2D( 1, 0, 0, 1, -0.552979, 0 )
 
 [node name="clouds" type="Sprite" parent="ParallaxBackground1"]
 position = Vector2( 730, 90 )
@@ -148,7 +151,10 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 4 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 layer = 3
+offset = Vector2( 0.552979, 0 )
+transform = Transform2D( 1, 0, 0, 1, 0.552979, 0 )
 
 [node name="clouds3" type="Sprite" parent="ParallaxBackground2"]
 position = Vector2( 520, 198 )
@@ -161,8 +167,9 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 4 )
 
 [node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 layer = 4
+offset = Vector2( -1.10596, 0 )
+transform = Transform2D( 1, 0, 0, 1, -1.10596, 0 )
 
 [node name="tree" type="Sprite" parent="ParallaxBackground3"]
 position = Vector2( 438, 531 )
@@ -174,6 +181,8 @@ texture = ExtResource( 5 )
 
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
 layer = 4
+offset = Vector2( -1.65894, 0 )
+transform = Transform2D( 1, 0, 0, 1, -1.65894, 0 )
 
 [node name="tree" type="Sprite" parent="ParallaxBackground4"]
 position = Vector2( 518, 505 )
