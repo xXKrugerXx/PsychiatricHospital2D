@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Use_0.png-6af309ee006d92998afe4329d9a2fe27.stex"
+path="res://.import/Key_Button2.png-ba695562e6d8a810722caafda180c8ae.stex"
 
 [deps]
 
-source_file="res://Textures/touch/Use_0.png"
-dest_files=[ "res://.import/Use_0.png-6af309ee006d92998afe4329d9a2fe27.stex" ]
+source_file="res://Textures/touch/Key_Button2.png"
+dest_files=[ "res://.import/Key_Button2.png-ba695562e6d8a810722caafda180c8ae.stex" ]
 
 [params]
 
