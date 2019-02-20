@@ -11,7 +11,7 @@ var is_player_ready : bool
 
 var playerx
 
-func int(pos):
+func init(pos):
 	self.position = pos
 
 func _ready():

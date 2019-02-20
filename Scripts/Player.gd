@@ -48,10 +48,12 @@ func _ready():
 	$HUDcharacter/messageDoorKeys.hide()
 	
 	###########GROUP####################
-	yield(get_tree(),"idle_frame")
-	get_tree().call_group('enemy', 'tragetplayer', self)
+#	yield(get_tree(),"idle_frame")
+#	get_tree().call_group('enemy', 'tragetplayer', self)
 
 func _process(delta : float) -> void:
+	get_tree().call_group('enemy', 'tragetplayer', self)
+	
 	for i in $HUDcharacter/tablekeys/HUDTableKeys/GridContainer.get_children():
 		if i.get_name() in s_globals.keys:
 			i.modulate = Color8(255,255,255,255)
