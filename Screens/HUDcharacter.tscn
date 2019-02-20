@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Textures/touch/Left_Arrow_0.png" type="Texture" id=1]
 [ext_resource path="res://Textures/touch/Left_Arrow_1.png" type="Texture" id=2]
@@ -6,36 +6,38 @@
 [ext_resource path="res://Textures/touch/Right_Arrow_1.png" type="Texture" id=4]
 [ext_resource path="res://Textures/touch/Use_0.png" type="Texture" id=5]
 [ext_resource path="res://Textures/touch/Use_1.png" type="Texture" id=6]
-[ext_resource path="res://Textures/touch/Flashlight_0.png" type="Texture" id=7]
-[ext_resource path="res://Textures/touch/Run_0.png" type="Texture" id=8]
-[ext_resource path="res://Textures/touch/Run_1.png" type="Texture" id=9]
-[ext_resource path="res://Fonts/3572.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://Textures/keys/Key001.png" type="Texture" id=11]
-[ext_resource path="res://Textures/keys/Key002.png" type="Texture" id=12]
-[ext_resource path="res://Textures/keys/Key003.png" type="Texture" id=13]
-[ext_resource path="res://Textures/keys/Key004.png" type="Texture" id=14]
-[ext_resource path="res://Textures/keys/Key005.png" type="Texture" id=15]
-[ext_resource path="res://Textures/keys/Key011.png" type="Texture" id=16]
-[ext_resource path="res://Textures/keys/Key012.png" type="Texture" id=17]
-[ext_resource path="res://Textures/keys/Key013.png" type="Texture" id=18]
-[ext_resource path="res://Textures/keys/Key014.png" type="Texture" id=19]
-[ext_resource path="res://Textures/keys/Key015.png" type="Texture" id=20]
-[ext_resource path="res://Textures/keys/Key021.png" type="Texture" id=21]
-[ext_resource path="res://Textures/keys/Key022.png" type="Texture" id=22]
-[ext_resource path="res://Textures/keys/Key023.png" type="Texture" id=23]
-[ext_resource path="res://Textures/keys/Key024.png" type="Texture" id=24]
-[ext_resource path="res://Textures/keys/Key025.png" type="Texture" id=25]
-[ext_resource path="res://Textures/keys/Key031.png" type="Texture" id=26]
-[ext_resource path="res://Textures/keys/Key032.png" type="Texture" id=27]
-[ext_resource path="res://Textures/keys/Key033.png" type="Texture" id=28]
-[ext_resource path="res://Textures/keys/Key034.png" type="Texture" id=29]
-[ext_resource path="res://Textures/keys/Key035.png" type="Texture" id=30]
-[ext_resource path="res://Textures/keys/Key041.png" type="Texture" id=31]
-[ext_resource path="res://Textures/keys/Key042.png" type="Texture" id=32]
-[ext_resource path="res://Textures/keys/Key043.png" type="Texture" id=33]
-[ext_resource path="res://Textures/keys/Key044.png" type="Texture" id=34]
-[ext_resource path="res://Textures/keys/Key045.png" type="Texture" id=35]
-[ext_resource path="res://Screens/BarRun.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Textures/touch/Key_Button1.png" type="Texture" id=7]
+[ext_resource path="res://Textures/touch/Key_Button2.png" type="Texture" id=8]
+[ext_resource path="res://Textures/touch/Flashlight_0.png" type="Texture" id=9]
+[ext_resource path="res://Textures/touch/Run_0.png" type="Texture" id=10]
+[ext_resource path="res://Textures/touch/Run_1.png" type="Texture" id=11]
+[ext_resource path="res://Fonts/3572.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Textures/keys/Key001.png" type="Texture" id=13]
+[ext_resource path="res://Textures/keys/Key002.png" type="Texture" id=14]
+[ext_resource path="res://Textures/keys/Key003.png" type="Texture" id=15]
+[ext_resource path="res://Textures/keys/Key004.png" type="Texture" id=16]
+[ext_resource path="res://Textures/keys/Key005.png" type="Texture" id=17]
+[ext_resource path="res://Textures/keys/Key011.png" type="Texture" id=18]
+[ext_resource path="res://Textures/keys/Key012.png" type="Texture" id=19]
+[ext_resource path="res://Textures/keys/Key013.png" type="Texture" id=20]
+[ext_resource path="res://Textures/keys/Key014.png" type="Texture" id=21]
+[ext_resource path="res://Textures/keys/Key015.png" type="Texture" id=22]
+[ext_resource path="res://Textures/keys/Key021.png" type="Texture" id=23]
+[ext_resource path="res://Textures/keys/Key022.png" type="Texture" id=24]
+[ext_resource path="res://Textures/keys/Key023.png" type="Texture" id=25]
+[ext_resource path="res://Textures/keys/Key024.png" type="Texture" id=26]
+[ext_resource path="res://Textures/keys/Key025.png" type="Texture" id=27]
+[ext_resource path="res://Textures/keys/Key031.png" type="Texture" id=28]
+[ext_resource path="res://Textures/keys/Key032.png" type="Texture" id=29]
+[ext_resource path="res://Textures/keys/Key033.png" type="Texture" id=30]
+[ext_resource path="res://Textures/keys/Key034.png" type="Texture" id=31]
+[ext_resource path="res://Textures/keys/Key035.png" type="Texture" id=32]
+[ext_resource path="res://Textures/keys/Key041.png" type="Texture" id=33]
+[ext_resource path="res://Textures/keys/Key042.png" type="Texture" id=34]
+[ext_resource path="res://Textures/keys/Key043.png" type="Texture" id=35]
+[ext_resource path="res://Textures/keys/Key044.png" type="Texture" id=36]
+[ext_resource path="res://Textures/keys/Key045.png" type="Texture" id=37]
+[ext_resource path="res://Screens/BarRun.tscn" type="PackedScene" id=38]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -51,7 +53,7 @@ extents = Vector2( 32, 32 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 18
-font_data = ExtResource( 10 )
+font_data = ExtResource( 12 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.337255, 0.337255, 0.337255, 0.560784 )
@@ -59,11 +61,11 @@ bg_color = Color( 0.337255, 0.337255, 0.337255, 0.560784 )
 [sub_resource type="DynamicFont" id=7]
 size = 24
 outline_color = Color( 0.984314, 0.984314, 0.984314, 1 )
-font_data = ExtResource( 10 )
+font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 36
-font_data = ExtResource( 10 )
+font_data = ExtResource( 12 )
 
 [node name="HUDcharacter" type="CanvasLayer"]
 
@@ -122,15 +124,12 @@ margin_bottom = -20.0
 alignment = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-editor/display_folded = true
 margin_right = 236.0
 margin_bottom = 64.0
 alignment = 1
 
 [node name="Pickup" type="Control" parent="VBoxContainer/HBoxContainer2"]
-editor/display_folded = true
-margin_left = 86.0
-margin_right = 150.0
+margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
 
@@ -140,6 +139,24 @@ pressed = ExtResource( 6 )
 shape = SubResource( 2 )
 action = "ui_pickup"
 
+[node name="Container" type="Container" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 68.0
+margin_right = 168.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Keys" type="Control" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 172.0
+margin_right = 236.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="TSButtonhudKeys" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer2/Keys"]
+normal = ExtResource( 7 )
+pressed = ExtResource( 8 )
+shape = SubResource( 2 )
+action = "ui_keys"
+
 [node name="Container" type="Container" parent="VBoxContainer"]
 margin_top = 68.0
 margin_right = 236.0
@@ -147,17 +164,19 @@ margin_bottom = 108.0
 rect_min_size = Vector2( 0, 40 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
 margin_top = 112.0
 margin_right = 236.0
 margin_bottom = 176.0
 
 [node name="Flashlight" type="Control" parent="VBoxContainer/HBoxContainer"]
+editor/display_folded = true
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
 
 [node name="TSButtonF" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer/Flashlight"]
-normal = ExtResource( 7 )
+normal = ExtResource( 9 )
 shape = SubResource( 3 )
 action = "ui_flashlight"
 
@@ -168,30 +187,39 @@ margin_bottom = 64.0
 rect_min_size = Vector2( 100, 0 )
 
 [node name="run" type="Control" parent="VBoxContainer/HBoxContainer"]
+editor/display_folded = true
 margin_left = 172.0
 margin_right = 236.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
 
 [node name="TSButtonRun" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer/run"]
-normal = ExtResource( 8 )
-pressed = ExtResource( 9 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 11 )
 shape = SubResource( 4 )
 action = "ui_run"
 
 [node name="tablekeys" type="Control" parent="."]
+editor/display_folded = true
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -201.0
-margin_top = -191.0
-margin_bottom = 123.0
+margin_left = 2.0
+margin_top = -241.0
+margin_right = 220.0
+margin_bottom = 73.0
 
 [node name="Panel" type="Panel" parent="tablekeys"]
 self_modulate = Color( 0.466667, 0.466667, 0.466667, 0.192157 )
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -101.0
+margin_top = -157.0
+margin_right = 101.0
+margin_bottom = 157.0
 
 [node name="LabelKeys" type="Label" parent="tablekeys"]
 anchor_right = 1.0
@@ -243,7 +271,7 @@ valign = 1
 margin_left = 45.0
 margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
 
 [node name="002" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -269,7 +297,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 12 )
+texture = ExtResource( 14 )
 
 [node name="003" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -295,7 +323,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 13 )
+texture = ExtResource( 15 )
 
 [node name="004" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -322,7 +350,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 
 [node name="005" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -348,7 +376,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 15 )
+texture = ExtResource( 17 )
 
 [node name="011" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -377,7 +405,7 @@ valign = 1
 margin_left = 44.0
 margin_right = 76.0
 margin_bottom = 32.0
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
 
 [node name="012" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -405,7 +433,7 @@ valign = 1
 margin_left = 45.0
 margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 17 )
+texture = ExtResource( 19 )
 
 [node name="013" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -434,7 +462,7 @@ valign = 1
 margin_left = 45.0
 margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 18 )
+texture = ExtResource( 20 )
 
 [node name="014" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -462,7 +490,7 @@ valign = 1
 margin_left = 45.0
 margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 19 )
+texture = ExtResource( 21 )
 
 [node name="015" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -491,7 +519,7 @@ valign = 1
 margin_left = 45.0
 margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 20 )
+texture = ExtResource( 22 )
 
 [node name="021" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -519,7 +547,7 @@ valign = 1
 margin_left = 45.0
 margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 21 )
+texture = ExtResource( 23 )
 
 [node name="022" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -546,7 +574,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="023" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -572,7 +600,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 23 )
+texture = ExtResource( 25 )
 
 [node name="024" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -599,7 +627,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 24 )
+texture = ExtResource( 26 )
 
 [node name="025" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -625,7 +653,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 
 [node name="031" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -654,7 +682,7 @@ valign = 1
 margin_left = 45.0
 margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 26 )
+texture = ExtResource( 28 )
 
 [node name="032" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -680,7 +708,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 27 )
+texture = ExtResource( 29 )
 
 [node name="033" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -707,7 +735,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 28 )
+texture = ExtResource( 30 )
 
 [node name="034" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -733,7 +761,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 29 )
+texture = ExtResource( 31 )
 
 [node name="035" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -760,7 +788,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 30 )
+texture = ExtResource( 32 )
 
 [node name="041" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -788,7 +816,7 @@ valign = 1
 margin_left = 45.0
 margin_right = 77.0
 margin_bottom = 32.0
-texture = ExtResource( 31 )
+texture = ExtResource( 33 )
 
 [node name="042" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -815,7 +843,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 32 )
+texture = ExtResource( 34 )
 
 [node name="043" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -841,7 +869,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 33 )
+texture = ExtResource( 35 )
 
 [node name="044" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -868,7 +896,7 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 34 )
+texture = ExtResource( 36 )
 
 [node name="045" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
@@ -894,15 +922,17 @@ valign = 1
 margin_left = 47.0
 margin_right = 79.0
 margin_bottom = 32.0
-texture = ExtResource( 35 )
+texture = ExtResource( 37 )
 
-[node name="BarRun" parent="." instance=ExtResource( 36 )]
+[node name="BarRun" parent="." instance=ExtResource( 38 )]
+modulate = Color( 1, 1, 1, 0.509804 )
 margin_left = 43.941
 margin_top = 27.651
 margin_right = 163.941
 margin_bottom = 42.651
 
 [node name="messageDoorKeys" type="Panel" parent="."]
+editor/display_folded = true
 self_modulate = Color( 0.466667, 0.466667, 0.466667, 0.192157 )
 anchor_left = 0.5
 anchor_right = 0.5
@@ -919,4 +949,6 @@ align = 1
 valign = 1
 
 [node name="Tweenmessage" type="Tween" parent="messageDoorKeys"]
+
+[node name="Tweentablekeys" type="Tween" parent="."]
 

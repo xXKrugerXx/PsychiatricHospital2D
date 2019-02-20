@@ -65,6 +65,10 @@ ui_flashlight={
 "deadzone": 0.5,
 "events": [  ]
 }
+ui_keys={
+"deadzone": 0.5,
+"events": [  ]
+}
 
 [input_devices]
 
