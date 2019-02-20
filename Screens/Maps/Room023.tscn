@@ -20,7 +20,7 @@ animations = [ {
 
 [node name="ASpriteflashlighning" parent="." index="0"]
 frames = SubResource( 1 )
-frame = 14
+frame = 8
 
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 4 )
@@ -44,10 +44,10 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="enemy1" parent="." index="12" instance=ExtResource( 6 )]
-position = Vector2( 1390.34, 317.221 )
+position = Vector2( 1825.36, 388.919 )
 z_index = 5
 
 [node name="enemy2" parent="." index="13" instance=ExtResource( 7 )]
-position = Vector2( 822.634, 340.633 )
+position = Vector2( 367.912, 341.993 )
 z_index = 3
 

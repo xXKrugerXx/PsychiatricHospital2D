@@ -1,7 +1,7 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scripts/enemy2.gd" type="Script" id=1]
-[ext_resource path="res://Textures/enemies/2/Ghost_4.png" type="Texture" id=2]
+[ext_resource path="res://Textures/enemies/2/Ghost_8.png" type="Texture" id=2]
 [ext_resource path="res://Textures/enemies/2/Ghost_15.png" type="Texture" id=3]
 [ext_resource path="res://Textures/enemies/2/Ghost_16.png" type="Texture" id=4]
 [ext_resource path="res://Textures/enemies/2/Ghost_17.png" type="Texture" id=5]
@@ -11,10 +11,10 @@
 [ext_resource path="res://Textures/enemies/2/Ghost_1.png" type="Texture" id=9]
 [ext_resource path="res://Textures/enemies/2/Ghost_2.png" type="Texture" id=10]
 [ext_resource path="res://Textures/enemies/2/Ghost_3.png" type="Texture" id=11]
-[ext_resource path="res://Textures/enemies/2/Ghost_5.png" type="Texture" id=12]
-[ext_resource path="res://Textures/enemies/2/Ghost_6.png" type="Texture" id=13]
-[ext_resource path="res://Textures/enemies/2/Ghost_7.png" type="Texture" id=14]
-[ext_resource path="res://Textures/enemies/2/Ghost_8.png" type="Texture" id=15]
+[ext_resource path="res://Textures/enemies/2/Ghost_4.png" type="Texture" id=12]
+[ext_resource path="res://Textures/enemies/2/Ghost_5.png" type="Texture" id=13]
+[ext_resource path="res://Textures/enemies/2/Ghost_6.png" type="Texture" id=14]
+[ext_resource path="res://Textures/enemies/2/Ghost_7.png" type="Texture" id=15]
 [ext_resource path="res://Textures/enemies/2/Ghost_9.png" type="Texture" id=16]
 [ext_resource path="res://Textures/enemies/2/Ghost_10.png" type="Texture" id=17]
 [ext_resource path="res://Textures/enemies/2/Ghost_11.png" type="Texture" id=18]
@@ -29,6 +29,7 @@ height = 182.023
 [sub_resource type="Animation" id=2]
 resource_name = "attack"
 length = 1.2
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
@@ -56,7 +57,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 27.8576, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 2 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -76,39 +77,57 @@ tracks/0/keys = {
 "values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
 }
 
-[sub_resource type="AnimationNodeOneShot" id=10]
-autorestart_random_delay = 0.232353
-
-[sub_resource type="AnimationNodeAnimation" id=11]
-animation = "attack"
-
-[sub_resource type="AnimationNodeAnimation" id=5]
-animation = "walk"
-
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=7]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "walk"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=8]
-blend_point_0/node = SubResource( 5 )
-blend_point_0/pos = -1.0
-blend_point_1/node = SubResource( 6 )
-blend_point_1/pos = 0.0
-blend_point_2/node = SubResource( 7 )
-blend_point_2/pos = 1.0
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "walk"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "attack"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "attack"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=20]
+blend_point_0/node = SubResource( 14 )
+blend_point_0/pos = Vector2( 0, 0 )
+blend_point_1/node = SubResource( 15 )
+blend_point_1/pos = Vector2( -1, 0 )
+blend_point_2/node = SubResource( 16 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 17 )
+blend_point_3/pos = Vector2( -1, 1 )
+blend_point_4/node = SubResource( 18 )
+blend_point_4/pos = Vector2( 1, 1 )
+blend_point_5/node = SubResource( 19 )
+blend_point_5/pos = Vector2( 0, 1 )
+min_space = Vector2( -1, 0 )
+max_space = Vector2( 1, 1.01 )
+snap = Vector2( 0.2, 0.2 )
+blend_mode = 1
 
 [sub_resource type="AnimationNodeBlendTree" id=9]
-graph_offset = Vector2( 0, -19.25 )
-nodes/OneShotattack/node = SubResource( 10 )
-nodes/OneShotattack/position = Vector2( 460, 0 )
-nodes/attack/node = SubResource( 11 )
-nodes/attack/position = Vector2( 300, 100 )
-nodes/idle_walk/node = SubResource( 8 )
-nodes/idle_walk/position = Vector2( 60, 20 )
-nodes/output/position = Vector2( 820, 20 )
-node_connections = [ "output", 0, "OneShotattack", "OneShotattack", 0, "idle_walk", "OneShotattack", 1, "attack" ]
+graph_offset = Vector2( -29, -25.25 )
+nodes/idle_walk/node = SubResource( 20 )
+nodes/idle_walk/position = Vector2( 420, 20 )
+nodes/output/position = Vector2( 800, 60 )
+node_connections = [ "output", 0, "idle_walk" ]
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 452.654, 86.1952 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 207.979, 85.4387 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 36.82, 37.4104 )
 
 [node name="enemy2" type="KinematicBody2D" groups=[
 "enemy",
@@ -135,6 +154,37 @@ anims/walk = SubResource( 3 )
 tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/OneShotattack/active = false
-parameters/idle_walk/blend_position = 0.0
+parameters/idle_walk/blend_position = Vector2( 0, 0 )
 
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Area2Dwalk_player" type="Area2D" parent="."]
+editor/display_folded = true
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Dwalk_player"]
+position = Vector2( 0, 20 )
+shape = SubResource( 12 )
+
+[node name="Area2Dattakck_player" type="Area2D" parent="."]
+editor/display_folded = true
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Dattakck_player"]
+position = Vector2( 0, 20 )
+shape = SubResource( 13 )
+
+[node name="Area2Dplayer_death" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Dplayer_death"]
+shape = SubResource( 21 )
+
+[connection signal="body_entered" from="Area2Dwalk_player" to="." method="_on_Area2Dwalk_player_body_entered"]
+[connection signal="body_exited" from="Area2Dwalk_player" to="." method="_on_Area2Dwalk_player_body_exited"]
+[connection signal="body_entered" from="Area2Dattakck_player" to="." method="_on_Area2Dattakck_player_body_entered"]
+[connection signal="body_exited" from="Area2Dattakck_player" to="." method="_on_Area2Dattakck_player_body_exited"]
+[connection signal="body_entered" from="Area2Dplayer_death" to="." method="_on_Area2Dplayer_death_body_entered"]
