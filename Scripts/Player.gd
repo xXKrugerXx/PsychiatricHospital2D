@@ -216,7 +216,7 @@ func hudkeyshow() -> void:
 
 
 func death():
-#	self.queue_free()
+	self.queue_free()
 	print('player death')
 
 

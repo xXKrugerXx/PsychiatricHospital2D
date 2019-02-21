@@ -6,7 +6,9 @@ export(float, 0, 5, 0.2) var timer_wait_spawns = 1.4
 
 const arrenemies : Array = [
 		preload("res://Screens/enemies/enemy1.tscn"),
-		preload("res://Screens/enemies/enemy2.tscn")]
+		preload("res://Screens/enemies/enemy2.tscn"),
+		preload("res://Screens/enemies/enemy3.tscn"),
+		preload("res://Screens/enemies/enemy4.tscn")]
 
 var parent_spawn := null
 

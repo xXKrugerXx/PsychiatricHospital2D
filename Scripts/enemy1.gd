@@ -80,6 +80,5 @@ func _on_Area2Dplayer_body_exited(body):
 		tweenend()
 		yield(tweenend(),'completed')
 		self.queue_free()
-		print('queue pawn')
 
 
