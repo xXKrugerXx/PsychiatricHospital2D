@@ -28,6 +28,8 @@ var isflashlight : bool
 var isactiverun : bool
 var ispickup : bool
 var ispickup_wait : bool
+var ishudkeys : bool
+var ishudkeyswait : bool
 
 func _ready():
 	indexspeed = 2
@@ -37,17 +39,22 @@ func _ready():
 	isflashlight = true
 	ispickup = false
 	ispickup_wait = true
+	ishudkeys = true
+	ishudkeyswait = true
 	
 	###########HUD####################
 	Bar_run.value = s_globals.currentstamina
 	hudlabelkeys.text = tr('Door_keys')
 	$HUDcharacter/messageDoorKeys.hide()
+	$HUDcharacter/tablekeys.modulate = Color(1,1,1,0)
 	
 	###########GROUP####################
-	yield(get_tree(),"idle_frame")
-	get_tree().call_group('enemy', 'tragetplayer', self)
+#	yield(get_tree(),"idle_frame")
+#	get_tree().call_group('enemy', 'tragetplayer', self)
 
 func _process(delta : float) -> void:
+	get_tree().call_group('enemy', 'tragetplayer', self)
+	
 	for i in $HUDcharacter/tablekeys/HUDTableKeys/GridContainer.get_children():
 		if i.get_name() in s_globals.keys:
 			i.modulate = Color8(255,255,255,255)
@@ -109,6 +116,9 @@ func _input(event) -> void:
 		ispickup = false
 	if event.is_action_pressed("ui_flashlight"):
 		flashlight()
+	
+	if event.is_action_pressed('ui_keys'):
+		hudkeyshow()
 
 
 func stamina_run(delta : float) -> void:
@@ -161,10 +171,10 @@ func flashlight() -> void:
 		$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[0]
 		lightning = 0
 
-func init(pos):
+func init(pos) -> void:
 	self.position = pos
 
-func messagenokey():
+func messagenokey() -> void:
 	$HUDcharacter/messageDoorKeys.show()
 	$HUDcharacter/messageDoorKeys/labelmessage.text = tr('No_keys')
 	$HUDcharacter/messageDoorKeys/Tweenmessage.interpolate_property($HUDcharacter/messageDoorKeys,
@@ -180,8 +190,33 @@ func messagenokey():
 	$HUDcharacter/messageDoorKeys/Tweenmessage.start()
 
 
+func hudkeyshow() -> void:
+	if ishudkeys == true and ishudkeyswait:
+		ishudkeys = false
+		ishudkeyswait = false
+		$HUDcharacter/Tweentablekeys.interpolate_property($HUDcharacter/tablekeys,
+						'modulate',
+						Color8(255,255,255,0),
+						Color8(255,255,255,255),
+						1.0,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
+		$HUDcharacter/Tweentablekeys.start()
+		yield($HUDcharacter/Tweentablekeys,"tween_completed")
+		ishudkeyswait = true
+	elif ishudkeys == false and ishudkeyswait:
+		ishudkeys = true
+		ishudkeyswait = false
+		$HUDcharacter/Tweentablekeys.interpolate_property($HUDcharacter/tablekeys,
+						'modulate',
+						Color8(255,255,255,255),
+						Color8(255,255,255,0),
+						1.0,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
+		$HUDcharacter/Tweentablekeys.start()
+		yield($HUDcharacter/Tweentablekeys,"tween_completed")
+		ishudkeyswait = true
+
+
 func death():
-#	self.queue_free()
+	self.queue_free()
 	print('player death')
 
 

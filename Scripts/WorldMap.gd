@@ -1,5 +1,7 @@
 extends Node
 
+export(int) var max_spawns = 4
+
 var arrsignalstairs : Array = []
 var arrstairs : Array = []
 var arrplayerpos : Array = []
@@ -7,6 +9,7 @@ var arrplayerpos : Array = []
 const player := preload("res://Screens/Player.tscn")
 
 func _ready() -> void:
+	randomize()
 	var p = player.instance()
 	
 	for s in $signalstairs.get_children():
@@ -18,13 +21,18 @@ func _ready() -> void:
 	for arstairs in range(11):
 		arrstairs.append(0)
 	
-	for pos in $pos.get_children():
+	for pos in $posdoor.get_children():
 		arrplayerpos.append(pos)
 	
 	for doors in $doors.get_children():
 		if s_globals.posPlayer[doors.get_index()] == true:
 			p.init(arrplayerpos[doors.index_pos].position)
 			add_child(p)
+
+#	for asd in range(5):
+#		......
+#		break это перерыв только 1 раз
+
 
 
 func fsignalstairs(index : int) -> void:
@@ -231,6 +239,16 @@ func fsignalstairs(index : int) -> void:
 			arrstairs[8] = 2
 			arrstairs[9] = 2
 			arrstairs[10] = 1
+
+
+
+
+
+
+
+
+
+
 
 
 

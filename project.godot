@@ -65,6 +65,10 @@ ui_flashlight={
 "deadzone": 0.5,
 "events": [  ]
 }
+ui_keys={
+"deadzone": 0.5,
+"events": [  ]
+}
 
 [input_devices]
 
@@ -78,6 +82,7 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_4="enemy"
 2d_physics/layer_5="npc"
 2d_physics/layer_6="door"
+2d_physics/layer_7="floorenemy"
 
 [locale]
 

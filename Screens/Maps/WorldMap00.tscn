@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/WorldMap.gd" type="Script" id=1]
 [ext_resource path="res://Textures/maps/PsyHospital_pt1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Textures/maps/PsyHospital_pt3.png" type="Texture" id=4]
 [ext_resource path="res://Screens/Area2DSignalReturn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Screens/AreaDoorenter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Screens/randomspawns.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4723.19, 10 )
@@ -32,22 +33,23 @@ extents = Vector2( 182.639, 10 )
 extents = Vector2( 3647, 10 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 384.771, 10 )
-
-[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 308.239, 10 )
 
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 384.771, 10 )
-
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 494.764, 10 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 468.024, 10 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 384.771, 10 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 384.771, 10 )
 
 [node name="WorldMap00" type="Node"]
 script = ExtResource( 1 )
+max_spawns = 12
 
 [node name="map" type="Node2D" parent="."]
 editor/display_folded = true
@@ -241,6 +243,126 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f_l"]
 shape = SubResource( 7 )
 
+[node name="floor_enemy" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="stairs01R_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 8566.71, 2246 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs01R_enemy"]
+shape = SubResource( 9 )
+
+[node name="stairs02R_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 8740.71, 1798 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs02R_enemy"]
+shape = SubResource( 10 )
+
+[node name="stairs03R_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 8557.71, 1350 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs03R_enemy"]
+shape = SubResource( 9 )
+
+[node name="stairs04R_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 8738.71, 902 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs04R_enemy"]
+shape = SubResource( 10 )
+
+[node name="stairs05R_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 8557.71, 454 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs05R_enemy"]
+shape = SubResource( 9 )
+
+[node name="stairs02L_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 485.71, 1798 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs02L_enemy"]
+shape = SubResource( 11 )
+
+[node name="stairs03L_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 629.71, 1350 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs03L_enemy"]
+shape = SubResource( 9 )
+
+[node name="stairs04L_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 488.71, 902 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs04L_enemy"]
+shape = SubResource( 11 )
+
+[node name="stairs05L_enemy" type="StaticBody2D" parent="floor_enemy"]
+editor/display_folded = true
+position = Vector2( 632.71, 454 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs05L_enemy"]
+shape = SubResource( 9 )
+
 [node name="stairs" type="Node" parent="."]
 editor/display_folded = true
 
@@ -257,7 +379,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs00R"]
 light_mask = 0
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="stairs01R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -270,7 +392,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01R_is"]
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="stairs01R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -284,7 +406,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01R"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [node name="stairs02R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -297,7 +419,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02R_is"]
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="stairs02R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -311,7 +433,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02R"]
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="stairs03R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -324,7 +446,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03R_is"]
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="stairs03R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -338,7 +460,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03R"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [node name="stairs04R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -351,7 +473,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04R_is"]
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="stairs04R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -365,7 +487,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04R"]
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="stairs05R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -378,7 +500,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs05R_is"]
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="stairs01L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -392,7 +514,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01L"]
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="stairs02L_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -405,7 +527,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02L_is"]
-shape = SubResource( 13 )
+shape = SubResource( 11 )
 
 [node name="stairs02L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -419,7 +541,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02L"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [node name="stairs03L_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -432,7 +554,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03L_is"]
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="stairs03L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -446,7 +568,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03L"]
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="stairs04L_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -459,7 +581,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04L_is"]
-shape = SubResource( 13 )
+shape = SubResource( 11 )
 
 [node name="stairs04L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -473,7 +595,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04L"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [node name="stairs05L_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -486,7 +608,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs05L_is"]
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="signalstairs" type="Node" parent="."]
 editor/display_folded = true
@@ -769,94 +891,185 @@ position = Vector2( 7733.62, 319.473 )
 door_name = "045"
 index_pos = 27
 
-[node name="pos" type="Node" parent="."]
+[node name="posdoor" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="Position0" type="Position2D" parent="pos"]
+[node name="Position0" type="Position2D" parent="posdoor"]
 position = Vector2( 1536.76, 2570.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position1" type="Position2D" parent="pos"]
+[node name="Position1" type="Position2D" parent="posdoor"]
 position = Vector2( 5119.76, 2570.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position2" type="Position2D" parent="pos"]
+[node name="Position2" type="Position2D" parent="posdoor"]
 position = Vector2( 6896.76, 2570.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position3" type="Position2D" parent="pos"]
+[node name="Position3" type="Position2D" parent="posdoor"]
 position = Vector2( 1263.76, 2119.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position4" type="Position2D" parent="pos"]
+[node name="Position4" type="Position2D" parent="posdoor"]
 position = Vector2( 3023.76, 2119.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position5" type="Position2D" parent="pos"]
+[node name="Position5" type="Position2D" parent="posdoor"]
 position = Vector2( 4783.76, 2119.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position6" type="Position2D" parent="pos"]
+[node name="Position6" type="Position2D" parent="posdoor"]
 position = Vector2( 6543.76, 2119.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position7" type="Position2D" parent="pos"]
+[node name="Position7" type="Position2D" parent="posdoor"]
 position = Vector2( 7733.76, 2119.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position8" type="Position2D" parent="pos"]
+[node name="Position8" type="Position2D" parent="posdoor"]
 position = Vector2( 1263.76, 1669.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position9" type="Position2D" parent="pos"]
+[node name="Position9" type="Position2D" parent="posdoor"]
 position = Vector2( 3023.76, 1669.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position10" type="Position2D" parent="pos"]
+[node name="Position10" type="Position2D" parent="posdoor"]
 position = Vector2( 4783.76, 1669.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position11" type="Position2D" parent="pos"]
+[node name="Position11" type="Position2D" parent="posdoor"]
 position = Vector2( 6543.76, 1669.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position12" type="Position2D" parent="pos"]
+[node name="Position12" type="Position2D" parent="posdoor"]
 position = Vector2( 7734.76, 1669.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position13" type="Position2D" parent="pos"]
+[node name="Position13" type="Position2D" parent="posdoor"]
 position = Vector2( 1264.76, 1219.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position14" type="Position2D" parent="pos"]
+[node name="Position14" type="Position2D" parent="posdoor"]
 position = Vector2( 3024.76, 1219.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position15" type="Position2D" parent="pos"]
+[node name="Position15" type="Position2D" parent="posdoor"]
 position = Vector2( 4784.76, 1219.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position16" type="Position2D" parent="pos"]
+[node name="Position16" type="Position2D" parent="posdoor"]
 position = Vector2( 6544.76, 1219.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position17" type="Position2D" parent="pos"]
+[node name="Position17" type="Position2D" parent="posdoor"]
 position = Vector2( 7734.76, 1219.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position18" type="Position2D" parent="pos"]
+[node name="Position18" type="Position2D" parent="posdoor"]
 position = Vector2( 1264.76, 779.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position19" type="Position2D" parent="pos"]
+[node name="Position19" type="Position2D" parent="posdoor"]
 position = Vector2( 3024.76, 779.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position20" type="Position2D" parent="pos"]
+[node name="Position20" type="Position2D" parent="posdoor"]
 position = Vector2( 4784.76, 779.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position21" type="Position2D" parent="pos"]
+[node name="Position21" type="Position2D" parent="posdoor"]
 position = Vector2( 6544.76, 779.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position22" type="Position2D" parent="pos"]
+[node name="Position22" type="Position2D" parent="posdoor"]
 position = Vector2( 7734.76, 779.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position23" type="Position2D" parent="pos"]
+[node name="Position23" type="Position2D" parent="posdoor"]
 position = Vector2( 1264.76, 329.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position24" type="Position2D" parent="pos"]
+[node name="Position24" type="Position2D" parent="posdoor"]
 position = Vector2( 3024.76, 329.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position25" type="Position2D" parent="pos"]
+[node name="Position25" type="Position2D" parent="posdoor"]
 position = Vector2( 4784.76, 329.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position26" type="Position2D" parent="pos"]
+[node name="Position26" type="Position2D" parent="posdoor"]
 position = Vector2( 6544.76, 329.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Position27" type="Position2D" parent="pos"]
+[node name="Position27" type="Position2D" parent="posdoor"]
 position = Vector2( 7734.76, 329.01 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+
+[node name="spawns" type="Node" parent="."]
+
+[node name="randomspawns" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4591.96, 1325.27 )
+max_enemis = 22
+timer_ready = 2.4
+timer_wait_spawns = 2.0
 
