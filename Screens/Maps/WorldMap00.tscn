@@ -1063,14 +1063,13 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="spawns" type="Node" parent="."]
 
 [node name="randomspawns" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4591.96, 1325.27 )
-max_enemis = 15
+max_enemis = 22
 timer_ready = 2.4
 timer_wait_spawns = 2.0
 
