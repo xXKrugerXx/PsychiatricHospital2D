@@ -8,10 +8,6 @@ var arrplayerpos : Array = []
 
 const player := preload("res://Screens/Player.tscn")
 
-const arrenemies : Array = [
-		preload("res://Screens/enemies/enemy1.tscn"),
-		preload("res://Screens/enemies/enemy2.tscn")]
-
 func _ready() -> void:
 	randomize()
 	var p = player.instance()
@@ -243,18 +239,6 @@ func fsignalstairs(index : int) -> void:
 			arrstairs[8] = 2
 			arrstairs[9] = 2
 			arrstairs[10] = 1
-
-
-
-
-
-#func spawns():
-#	var r = randi() % arrenemies.size()
-#	var e = arrenemies[r].instance()
-#	if $spawns.get_child_count() < 7:
-#		e.init(arrposspawns[randi() % arrposspawns.size()].position)
-#		e.init(arrposspawns[11].position)
-#		$spawns.add_child(e)
 
 
 

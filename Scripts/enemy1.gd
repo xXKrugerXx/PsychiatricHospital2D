@@ -39,7 +39,6 @@ func _physics_process(delta):
 					$RayCast2DL.enabled = true
 			else:
 				motion.x = speed
-		print(playerx)
 		
 	$AnimationTree['parameters/idle_walk/blend_position'] = motion.x
 	motion = move_and_slide(motion,Vector2(0,-1))
@@ -80,7 +79,7 @@ func _on_Area2Dplayer_body_exited(body):
 		is_player = false
 		tweenend()
 		yield(tweenend(),'completed')
-#		self.queue_free()
+		self.queue_free()
 		print('queue pawn')
 
 

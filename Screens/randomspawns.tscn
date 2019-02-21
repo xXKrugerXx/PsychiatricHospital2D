@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/randomspawns.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3389.33, 1251.51 )
+
+[node name="randomspawns" type="StaticBody2D"]
+position = Vector2( 3528.56, 1348.98 )
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Timer_ready" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="Timer_wait_spawns" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer_ready" to="." method="_on_Timer_ready_timeout"]
+[connection signal="timeout" from="Timer_wait_spawns" to="." method="_on_Timer_wait_spawns_timeout"]

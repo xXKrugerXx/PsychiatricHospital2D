@@ -46,6 +46,7 @@ func _ready():
 	Bar_run.value = s_globals.currentstamina
 	hudlabelkeys.text = tr('Door_keys')
 	$HUDcharacter/messageDoorKeys.hide()
+	$HUDcharacter/tablekeys.modulate = Color(1,1,1,0)
 	
 	###########GROUP####################
 #	yield(get_tree(),"idle_frame")
@@ -194,8 +195,9 @@ func hudkeyshow() -> void:
 		ishudkeys = false
 		ishudkeyswait = false
 		$HUDcharacter/Tweentablekeys.interpolate_property($HUDcharacter/tablekeys,
-						'rect_position',
-						Vector2(802,99),Vector2(582,99),
+						'modulate',
+						Color8(255,255,255,0),
+						Color8(255,255,255,255),
 						1.0,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 		$HUDcharacter/Tweentablekeys.start()
 		yield($HUDcharacter/Tweentablekeys,"tween_completed")
@@ -204,8 +206,9 @@ func hudkeyshow() -> void:
 		ishudkeys = true
 		ishudkeyswait = false
 		$HUDcharacter/Tweentablekeys.interpolate_property($HUDcharacter/tablekeys,
-						'rect_position',
-						Vector2(582,99),Vector2(802,99),
+						'modulate',
+						Color8(255,255,255,255),
+						Color8(255,255,255,0),
 						1.0,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 		$HUDcharacter/Tweentablekeys.start()
 		yield($HUDcharacter/Tweentablekeys,"tween_completed")
