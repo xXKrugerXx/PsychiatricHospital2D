@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(int) var walk := 100
+export(int) var walk := 135
 
 var speed : float = 0
 var motion : Vector2
