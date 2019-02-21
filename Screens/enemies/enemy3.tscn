@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scripts/enemy3.gd" type="Script" id=1]
-[ext_resource path="res://Textures/enemies/3/Ghost_8.png" type="Texture" id=2]
+[ext_resource path="res://Textures/enemies/3/Ghost_5.png" type="Texture" id=2]
 [ext_resource path="res://Textures/enemies/3/Ghost_16.png" type="Texture" id=3]
 [ext_resource path="res://Textures/enemies/3/Ghost_17.png" type="Texture" id=4]
 [ext_resource path="res://Textures/enemies/3/Ghost_18.png" type="Texture" id=5]
@@ -11,9 +11,9 @@
 [ext_resource path="res://Textures/enemies/3/Ghost_22.png" type="Texture" id=9]
 [ext_resource path="res://Textures/enemies/3/Ghost_3.png" type="Texture" id=10]
 [ext_resource path="res://Textures/enemies/3/Ghost_4.png" type="Texture" id=11]
-[ext_resource path="res://Textures/enemies/3/Ghost_5.png" type="Texture" id=12]
-[ext_resource path="res://Textures/enemies/3/Ghost_6.png" type="Texture" id=13]
-[ext_resource path="res://Textures/enemies/3/Ghost_7.png" type="Texture" id=14]
+[ext_resource path="res://Textures/enemies/3/Ghost_6.png" type="Texture" id=12]
+[ext_resource path="res://Textures/enemies/3/Ghost_7.png" type="Texture" id=13]
+[ext_resource path="res://Textures/enemies/3/Ghost_8.png" type="Texture" id=14]
 [ext_resource path="res://Textures/enemies/3/Ghost_9.png" type="Texture" id=15]
 [ext_resource path="res://Textures/enemies/3/Ghost_10.png" type="Texture" id=16]
 [ext_resource path="res://Textures/enemies/3/Ghost_11.png" type="Texture" id=17]
@@ -41,6 +41,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.8 ]
+}
 
 [sub_resource type="Animation" id=3]
 length = 1.2
@@ -55,7 +67,19 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.8 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -72,6 +96,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.8 ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=5]
@@ -141,6 +177,7 @@ position = Vector2( 0, 11.6 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 1.8
 anims/attack = SubResource( 2 )
 anims/idle = SubResource( 3 )
 anims/walk = SubResource( 4 )

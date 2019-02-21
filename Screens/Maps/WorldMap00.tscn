@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/WorldMap.gd" type="Script" id=1]
 [ext_resource path="res://Textures/maps/PsyHospital_pt1.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Screens/Area2DSignalReturn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Screens/AreaDoorenter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Screens/randomspawns.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Textures/maps/Stairs.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4723.19, 10 )
@@ -750,7 +751,6 @@ size_x = 150
 size_y = 180
 
 [node name="doors" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="AreaDoorenter0" parent="doors" instance=ExtResource( 6 )]
 position = Vector2( 1539.62, 2554.47 )
@@ -1063,6 +1063,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="spawns" type="Node" parent="."]
@@ -1072,4 +1073,32 @@ position = Vector2( 4591.96, 1325.27 )
 max_enemis = 22
 timer_ready = 2.4
 timer_wait_spawns = 2.0
+
+[node name="stairslayrs" type="Node" parent="."]
+
+[node name="0" type="Sprite" parent="stairslayrs"]
+position = Vector2( 8560.77, 2389.64 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="1" type="Sprite" parent="stairslayrs"]
+position = Vector2( 8546.77, 1939.64 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
+
+[node name="2" type="Sprite" parent="stairslayrs"]
+position = Vector2( 8560.77, 1491.64 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="3" type="Sprite" parent="stairslayrs"]
+position = Vector2( 8546.77, 1044.64 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
 
