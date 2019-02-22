@@ -612,10 +612,9 @@ __meta__ = {
 shape = SubResource( 9 )
 
 [node name="signalstairs" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Area2DSignalReturn0" parent="signalstairs" instance=ExtResource( 5 )]
-position = Vector2( 8039.29, 2495.11 )
+position = Vector2( 7989.29, 2495.11 )
 collision_layer = 2
 size_x = 200
 size_y = 180
@@ -656,10 +655,10 @@ size_x = 150
 size_y = 180
 
 [node name="Area2DSignalReturn6" parent="signalstairs" instance=ExtResource( 5 )]
-position = Vector2( 164.29, 2045.47 )
+position = Vector2( 154.29, 2045.47 )
 collision_layer = 2
 index = 6
-size_x = 150
+size_x = 130
 size_y = 180
 
 [node name="Area2DSignalReturn7" parent="signalstairs" instance=ExtResource( 5 )]
@@ -751,6 +750,7 @@ size_x = 150
 size_y = 180
 
 [node name="doors" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="AreaDoorenter0" parent="doors" instance=ExtResource( 6 )]
 position = Vector2( 1539.62, 2554.47 )
@@ -1070,35 +1070,95 @@ color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="randomspawns" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4591.96, 1325.27 )
-max_enemis = 22
+max_enemis = 1
 timer_ready = 2.4
 timer_wait_spawns = 2.0
 
 [node name="stairslayrs" type="Node" parent="."]
 
-[node name="0" type="Sprite" parent="stairslayrs"]
-position = Vector2( 8560.77, 2389.64 )
+[node name="8" type="Sprite" parent="stairslayrs"]
+position = Vector2( 635, 597 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="7" type="Sprite" parent="stairslayrs"]
+position = Vector2( 649, 1045 )
 scale = Vector2( 2, 2 )
 z_index = 5
 texture = ExtResource( 8 )
 flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="1" type="Sprite" parent="stairslayrs"]
-position = Vector2( 8546.77, 1939.64 )
+[node name="6" type="Sprite" parent="stairslayrs"]
+position = Vector2( 635, 1493 )
 scale = Vector2( 2, 2 )
 z_index = 5
 texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="2" type="Sprite" parent="stairslayrs"]
-position = Vector2( 8560.77, 1491.64 )
+[node name="5" type="Sprite" parent="stairslayrs"]
+position = Vector2( 649, 1941 )
 scale = Vector2( 2, 2 )
 z_index = 5
 texture = ExtResource( 8 )
 flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="4" type="Sprite" parent="stairslayrs"]
+position = Vector2( 8561, 597 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="3" type="Sprite" parent="stairslayrs"]
-position = Vector2( 8546.77, 1044.64 )
+position = Vector2( 8547, 1045 )
 scale = Vector2( 2, 2 )
 z_index = 5
 texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="2" type="Sprite" parent="stairslayrs"]
+position = Vector2( 8561, 1493 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="1" type="Sprite" parent="stairslayrs"]
+position = Vector2( 8547, 1941 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="0" type="Sprite" parent="stairslayrs"]
+position = Vector2( 8561, 2389 )
+scale = Vector2( 2, 2 )
+z_index = 5
+texture = ExtResource( 8 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 

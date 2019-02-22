@@ -5,6 +5,7 @@ export(int) var max_spawns = 4
 var arrsignalstairs : Array = []
 var arrstairs : Array = []
 var arrplayerpos : Array = []
+var arrstairslayrs : Array = []
 
 const player := preload("res://Screens/Player.tscn")
 
@@ -28,6 +29,9 @@ func _ready() -> void:
 		if s_globals.posPlayer[doors.get_index()] == true:
 			p.init(arrplayerpos[doors.index_pos].position)
 			add_child(p)
+	
+	for slayr in $stairslayrs.get_children():
+		arrstairslayrs.append(slayr)
 
 #	for asd in range(5):
 #		......
@@ -43,11 +47,14 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[0].set_collision_layer_bit(1,false)
 				arrsignalstairs[1].set_collision_layer_bit(1,true)
 				arrsignalstairs[2].set_collision_layer_bit(1,true)
+				arrstairslayrs[8].z_index = 3
 			else:
 				arrstairs[0] -= 1
 				arrsignalstairs[0].set_collision_layer_bit(1,true)
 				arrsignalstairs[1].set_collision_layer_bit(1,false)
 				arrsignalstairs[2].set_collision_layer_bit(1,false)
+				arrstairslayrs[8].z_index = 5
+				arrstairslayrs[7].z_index = 3
 		1:
 			if arrstairs[1] == 0:
 				arrstairs[1] += 1
@@ -61,11 +68,14 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[2].set_collision_layer_bit(1,true)
 				arrsignalstairs[3].set_collision_layer_bit(1,false)
 				arrsignalstairs[4].set_collision_layer_bit(1,false)
+				arrstairslayrs[7].z_index = 5
+				arrstairslayrs[6].z_index = 3
 			else:
 				arrstairs[1] -= 2
 				arrsignalstairs[0].set_collision_layer_bit(1,true)
 				arrsignalstairs[1].set_collision_layer_bit(1,false)
 				arrsignalstairs[2].set_collision_layer_bit(1,false)
+				arrstairslayrs[7].z_index = 3
 		2:
 			if arrstairs[2] == 0:
 				arrstairs[2] += 1
@@ -79,11 +89,14 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[4].set_collision_layer_bit(1,true)
 				arrsignalstairs[5].set_collision_layer_bit(1,false)
 				arrsignalstairs[6].set_collision_layer_bit(1,false)
+				arrstairslayrs[6].z_index = 5
+				arrstairslayrs[5].z_index = 3
 			else:
 				arrstairs[2] -= 2
 				arrsignalstairs[2].set_collision_layer_bit(1,true)
 				arrsignalstairs[3].set_collision_layer_bit(1,false)
 				arrsignalstairs[4].set_collision_layer_bit(1,false)
+				arrstairslayrs[6].z_index = 3
 		3:
 			if arrstairs[3] == 0:
 				arrstairs[3] += 1
@@ -97,11 +110,14 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[6].set_collision_layer_bit(1,true)
 				arrsignalstairs[7].set_collision_layer_bit(1,false)
 				arrsignalstairs[8].set_collision_layer_bit(1,false)
+				arrstairslayrs[5].z_index = 5
+				arrstairslayrs[4].z_index = 3
 			else:
 				arrstairs[3] -= 2
 				arrsignalstairs[4].set_collision_layer_bit(1,true)
 				arrsignalstairs[5].set_collision_layer_bit(1,false)
 				arrsignalstairs[6].set_collision_layer_bit(1,false)
+				arrstairslayrs[5].z_index = 3
 		4:
 			if arrstairs[4] == 0:
 				arrstairs[4] += 1
@@ -114,11 +130,13 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[7].set_collision_layer_bit(1,false)
 				arrsignalstairs[8].set_collision_layer_bit(1,true)
 				arrsignalstairs[9].set_collision_layer_bit(1,false)
+				arrstairslayrs[4].z_index = 5
 			else:
 				arrstairs[4] -= 2
 				arrsignalstairs[6].set_collision_layer_bit(1,true)
 				arrsignalstairs[7].set_collision_layer_bit(1,false)
 				arrsignalstairs[8].set_collision_layer_bit(1,false)
+				arrstairslayrs[4].z_index = 3
 		5:
 			if arrstairs[5] == 0:
 				arrstairs[5] += 1
@@ -134,11 +152,14 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[10].set_collision_layer_bit(1,true)
 				arrsignalstairs[11].set_collision_layer_bit(1,false)
 				arrsignalstairs[12].set_collision_layer_bit(1,false)
+				arrstairslayrs[3].z_index = 5
+				arrstairslayrs[2].z_index = 3
 			else:
 				arrstairs[6] -= 1
 				arrsignalstairs[10].set_collision_layer_bit(1,false)
 				arrsignalstairs[11].set_collision_layer_bit(1,true)
 				arrsignalstairs[12].set_collision_layer_bit(1,true)
+				arrstairslayrs[3].z_index = 3
 		7:
 			if arrstairs[7] == 0:
 				arrstairs[7] += 1
@@ -152,11 +173,14 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[12].set_collision_layer_bit(1,true)
 				arrsignalstairs[13].set_collision_layer_bit(1,false)
 				arrsignalstairs[14].set_collision_layer_bit(1,false)
+				arrstairslayrs[2].z_index = 5
+				arrstairslayrs[1].z_index = 3
 			else:
 				arrstairs[7] -= 2
 				arrsignalstairs[10].set_collision_layer_bit(1,true)
 				arrsignalstairs[11].set_collision_layer_bit(1,false)
 				arrsignalstairs[12].set_collision_layer_bit(1,false)
+				arrstairslayrs[2].z_index = 3
 		8:
 			if arrstairs[8] == 0:
 				arrstairs[8] += 1
@@ -170,11 +194,14 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[14].set_collision_layer_bit(1,true)
 				arrsignalstairs[15].set_collision_layer_bit(1,false)
 				arrsignalstairs[16].set_collision_layer_bit(1,false)
+				arrstairslayrs[1].z_index = 5
+				arrstairslayrs[0].z_index = 3
 			else:
 				arrstairs[8] -= 2
 				arrsignalstairs[12].set_collision_layer_bit(1,true)
 				arrsignalstairs[13].set_collision_layer_bit(1,false)
 				arrsignalstairs[14].set_collision_layer_bit(1,false)
+				arrstairslayrs[1].z_index = 3
 		9:
 			if arrstairs[9] == 0:
 				arrstairs[9] += 1
@@ -187,11 +214,13 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[15].set_collision_layer_bit(1,false)
 				arrsignalstairs[16].set_collision_layer_bit(1,true)
 				arrsignalstairs[17].set_collision_layer_bit(1,false)
+				arrstairslayrs[0].z_index = 5
 			else:
 				arrstairs[9] -= 2
 				arrsignalstairs[14].set_collision_layer_bit(1,true)
 				arrsignalstairs[15].set_collision_layer_bit(1,false)
 				arrsignalstairs[16].set_collision_layer_bit(1,false)
+				arrstairslayrs[0].z_index = 3
 		10:
 			if arrstairs[10] == 0:
 				arrstairs[10] += 1
@@ -203,24 +232,29 @@ func fsignalstairs(index : int) -> void:
 				arrsignalstairs[17].set_collision_layer_bit(1,false)
 		20:
 			arrstairs[1] = 2
+			arrstairslayrs[7].z_index = 3
 		21:
 			arrstairs[2] = 2
 			arrstairs[1] = 2
+			arrstairslayrs[7].z_index = 5
 		22:
 			arrstairs[3] = 2
 			arrstairs[2] = 2
 			arrstairs[1] = 2
+			arrstairslayrs[5].z_index = 3
 		23:
 			arrstairs[4] = 2
 			arrstairs[3] = 2
 			arrstairs[2] = 2
 			arrstairs[1] = 2
+			arrstairslayrs[5].z_index = 5
 		24:
 			arrstairs[5] = 1
 			arrstairs[4] = 2
 			arrstairs[3] = 2
 			arrstairs[2] = 2
 			arrstairs[1] = 2
+			arrstairslayrs[4].z_index = 5
 		25:
 			arrstairs[6] = 1
 			arrstairs[7] = 2
