@@ -242,6 +242,8 @@ func fsignalstairs(index : int) -> void:
 			arrstairs[2] = 2
 			arrstairs[1] = 2
 			arrstairslayrs[5].z_index = 3
+			arrstairslayrs[6].z_index = 5
+			arrsignalstairs[5].set_collision_layer_bit(1,true)
 		23:
 			arrstairs[4] = 2
 			arrstairs[3] = 2
@@ -254,25 +256,37 @@ func fsignalstairs(index : int) -> void:
 			arrstairs[3] = 2
 			arrstairs[2] = 2
 			arrstairs[1] = 2
+			arrsignalstairs[9].set_collision_layer_bit(1,true)
 			arrstairslayrs[4].z_index = 5
 		25:
-			arrstairs[6] = 1
-			arrstairs[7] = 2
+			arrstairs[6] = 0
+			arrsignalstairs[10].set_collision_layer_bit(1,false)
+			arrstairslayrs[3].z_index = 3
 		26:
 			arrstairs[6] = 1
 			arrstairs[7] = 2
-			arrstairs[8] = 2
+			arrstairslayrs[3].z_index = 5
 		27:
 			arrstairs[6] = 1
 			arrstairs[7] = 2
 			arrstairs[8] = 2
-			arrstairs[9] = 2
+			arrstairslayrs[1].z_index = 3
+			arrstairslayrs[2].z_index = 5
+			arrsignalstairs[13].set_collision_layer_bit(1,true)
 		28:
 			arrstairs[6] = 1
 			arrstairs[7] = 2
 			arrstairs[8] = 2
 			arrstairs[9] = 2
+			arrstairslayrs[1].z_index = 5
+		29:
+			arrstairs[6] = 1
+			arrstairs[7] = 2
+			arrstairs[8] = 2
+			arrstairs[9] = 2
 			arrstairs[10] = 1
+			arrsignalstairs[17].set_collision_layer_bit(1,true)
+			arrstairslayrs[0].z_index = 5
 
 
 

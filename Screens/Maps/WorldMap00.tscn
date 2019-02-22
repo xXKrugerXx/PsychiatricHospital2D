@@ -365,7 +365,6 @@ __meta__ = {
 shape = SubResource( 9 )
 
 [node name="stairs" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="stairs00R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -723,29 +722,35 @@ size_x = 150
 size_y = 180
 
 [node name="Area2DSignalReady5" parent="signalstairs" instance=ExtResource( 5 )]
-position = Vector2( 1438.38, 1597.12 )
+position = Vector2( 1059.29, 2045.47 )
 collision_layer = 2
 index = 25
-size_x = 250
 size_y = 180
 
 [node name="Area2DSignalReady6" parent="signalstairs" instance=ExtResource( 5 )]
-position = Vector2( 1059.29, 1146.94 )
+position = Vector2( 1438.38, 1597.12 )
 collision_layer = 2
 index = 26
-size_y = 180
-
-[node name="Area2DSignalReady7" parent="signalstairs" instance=ExtResource( 5 )]
-position = Vector2( 1440.89, 700.47 )
-collision_layer = 2
-index = 27
 size_x = 250
 size_y = 180
 
+[node name="Area2DSignalReady7" parent="signalstairs" instance=ExtResource( 5 )]
+position = Vector2( 1059.29, 1146.94 )
+collision_layer = 2
+index = 27
+size_y = 180
+
 [node name="Area2DSignalReady8" parent="signalstairs" instance=ExtResource( 5 )]
-position = Vector2( 909.29, 254 )
+position = Vector2( 1440.89, 700.47 )
 collision_layer = 2
 index = 28
+size_x = 250
+size_y = 180
+
+[node name="Area2DSignalReady9" parent="signalstairs" instance=ExtResource( 5 )]
+position = Vector2( 909.29, 254 )
+collision_layer = 2
+index = 29
 size_x = 150
 size_y = 180
 
