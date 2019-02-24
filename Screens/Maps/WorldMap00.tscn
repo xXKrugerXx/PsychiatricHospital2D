@@ -365,6 +365,7 @@ __meta__ = {
 shape = SubResource( 9 )
 
 [node name="stairs" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="stairs00R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -611,6 +612,7 @@ __meta__ = {
 shape = SubResource( 9 )
 
 [node name="signalstairs" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Area2DSignalReturn0" parent="signalstairs" instance=ExtResource( 5 )]
 position = Vector2( 7989.29, 2495.11 )
@@ -1080,6 +1082,7 @@ timer_ready = 2.4
 timer_wait_spawns = 2.0
 
 [node name="stairslayrs" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="8" type="Sprite" parent="stairslayrs"]
 position = Vector2( 635, 597 )
