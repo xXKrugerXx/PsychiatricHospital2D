@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 const walk_speed : int = 200
-const run_speed : int = 480 #380
-export(float, 0, 5,0.1) var regspeedstamina = 6.1 # 1.1
+const run_speed : int = 380 #380
+export(float, 0, 5,0.1) var regspeedstamina = 1.5 # 1.5
 export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
 
 onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
@@ -218,7 +218,3 @@ func hudkeyshow() -> void:
 func death():
 	self.queue_free()
 	print('player death')
-
-
-
-

@@ -1,15 +1,54 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/randomspawns.gd" type="Script" id=1]
+[sub_resource type="GDScript" id=2]
+script/source = "extends StaticBody2D
+
+export(int) var max_enemis = 3
+export(float, 0, 5, 0.2) var timer_ready = 1.4
+export(float, 0, 5, 0.2) var timer_wait_spawns = 1.4
+
+const arrenemies : Array = [
+		preload(\"res://Screens/enemies/enemy1.tscn\"),
+		preload(\"res://Screens/enemies/enemy2.tscn\"),
+		preload(\"res://Screens/enemies/enemy3.tscn\"),
+		preload(\"res://Screens/enemies/enemy4.tscn\")]
+
+var parent_spawn := null
+
+func _ready():
+	randomize()
+#	$Timer_ready.wait_time = timer_ready
+#	$Timer_wait_spawns.wait_time = timer_wait_spawns
+	parent_spawn = get_parent().get_node('spawns')
+
+
+func spawns():
+	var size = $CollisionShape2D.shape.extents
+	var r = randi() % arrenemies.size()
+	var e = arrenemies[r].instance()
+	var pos : Vector2
+	pos.x = (randi() % int(size.x*2)) - (size.x*2/2)
+	pos.y = (randi() % int(size.y*2)) - (size.y*2/2)
+	e.init(pos)
+	parent_spawn.add_child(e)
+
+func _on_Timer_wait_spawns_timeout():
+	spawns()
+
+func _on_Timer_ready_timeout():
+	if parent_spawn.get_child_count() < max_enemis:
+		$Timer_wait_spawns.start()
+	else:
+		$Timer_wait_spawns.stop()
+"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3389.33, 1251.51 )
 
 [node name="randomspawns" type="StaticBody2D"]
-position = Vector2( 3528.56, 1348.98 )
 collision_layer = 0
 collision_mask = 0
-script = ExtResource( 1 )
+script = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -17,11 +56,3 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Timer_ready" type="Timer" parent="."]
-wait_time = 1.5
-autostart = true
-
-[node name="Timer_wait_spawns" type="Timer" parent="."]
-
-[connection signal="timeout" from="Timer_ready" to="." method="_on_Timer_ready_timeout"]
-[connection signal="timeout" from="Timer_wait_spawns" to="." method="_on_Timer_wait_spawns_timeout"]

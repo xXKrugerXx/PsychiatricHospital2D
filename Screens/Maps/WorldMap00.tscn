@@ -50,7 +50,13 @@ extents = Vector2( 384.771, 10 )
 
 [node name="WorldMap00" type="Node"]
 script = ExtResource( 1 )
-max_spawns = 12
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [ 7979.52 ]
+}
+timer_ready = 1.4
+timer_wait_spawns = 1.0
+max_spawns = 20
 
 [node name="map" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1070,16 +1076,13 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="spawns" type="Node" parent="."]
 
 [node name="randomspawns" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4591.96, 1325.27 )
-max_enemis = 1
-timer_ready = 2.4
-timer_wait_spawns = 2.0
+script = null
 
 [node name="stairslayrs" type="Node" parent="."]
 editor/display_folded = true
@@ -1170,3 +1173,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Timer_ready" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="Timer_wait_spawns" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer_ready" to="." method="_on_Timer_ready_timeout"]
+[connection signal="timeout" from="Timer_wait_spawns" to="." method="_on_Timer_wait_spawns_timeout"]
