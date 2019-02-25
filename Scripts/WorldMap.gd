@@ -335,7 +335,6 @@ func readygame():
 	var c = cameraGO.instance()
 	c.init(Vector2(p.x,p.y-90))
 	add_child(c)
-	print('camm')
 
 
 

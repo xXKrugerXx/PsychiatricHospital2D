@@ -1084,7 +1084,6 @@ color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="randomspawns" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4591.96, 1325.27 )
-script = null
 
 [node name="stairslayrs" type="Node" parent="."]
 editor/display_folded = true
