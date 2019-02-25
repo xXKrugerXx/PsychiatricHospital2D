@@ -48,7 +48,9 @@ extents = Vector2( 384.771, 10 )
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 384.771, 10 )
 
-[node name="WorldMap00" type="Node"]
+[node name="WorldMap00" type="Node" groups=[
+"world",
+]]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
@@ -1075,6 +1077,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="spawns" type="Node" parent="."]

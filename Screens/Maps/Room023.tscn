@@ -18,7 +18,7 @@ animations = [ {
 
 [node name="ASpriteflashlighning" parent="." index="0"]
 frames = SubResource( 1 )
-frame = 6
+frame = 22
 
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 4 )

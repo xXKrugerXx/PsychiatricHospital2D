@@ -4,6 +4,8 @@ export(float, 0, 5, 0.2) var timer_ready = 1.4
 export(float, 0, 5, 0.2) var timer_wait_spawns = 1.4
 export(int) var max_spawns = 4
 
+const cameraGO : = preload("res://Screens/Camera2DGame_over.tscn")
+
 const arrenemies : Array = [
 		preload("res://Screens/enemies/enemy1.tscn"),
 		preload("res://Screens/enemies/enemy2.tscn"),
@@ -53,7 +55,6 @@ func _ready() -> void:
 #	for asd in range(5):
 #		......
 #		break это перерыв только 1 раз
-
 
 
 func fsignalstairs(index : int) -> void:
@@ -328,3 +329,15 @@ func _on_Timer_ready_timeout():
 
 func _on_Timer_wait_spawns_timeout():
 	spawns()
+
+func readygame():
+	var p = get_tree().get_nodes_in_group('player')[0].global_position
+	var c = cameraGO.instance()
+	c.init(Vector2(p.x,p.y-90))
+	add_child(c)
+	print('camm')
+
+
+
+
+

@@ -89,6 +89,7 @@ func _physics_process(delta : float) -> void:
 			ispickup_wait = false
 			if s_globals.keys.has(a.door_name):
 				s_globals.is_enter_pos = true
+				s_globals.is_ready_pos_player = false
 				a.door_open(a.door_name)
 			else:
 				messagenokey()
@@ -216,5 +217,5 @@ func hudkeyshow() -> void:
 
 
 func death():
+	get_tree().call_group('world','readygame')
 	self.queue_free()
-	print('player death')
