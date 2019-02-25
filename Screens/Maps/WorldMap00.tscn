@@ -54,7 +54,6 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 7979.52 ]
 }
-timer_ready = 1.4
 timer_wait_spawns = 1.0
 max_spawns = 20
 
