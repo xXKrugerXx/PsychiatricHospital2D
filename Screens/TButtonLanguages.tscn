@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/HUD/TButtonLanguages.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/3572.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/HUD/TButtonLanguages.gd" type="Script" id=2]
 
-[node name="TButtonLanguages" type="TextureButton"]
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Fonts/ACS_____.ttf"
+
+[sub_resource type="DynamicFont" id=1]
+size = 56
+font_data = ExtResource( 1 )
+fallback/0 = SubResource( 2 )
+
+[node name="TButtonLanguages" type="Button"]
 margin_right = 40.0
 margin_bottom = 14.0
-script = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+flat = true
+script = ExtResource( 2 )
 
 [connection signal="pressed" from="." to="." method="_on_TButtonLanguages_pressed"]
