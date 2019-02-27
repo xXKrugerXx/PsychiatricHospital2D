@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 const walk_speed : int = 200
-const run_speed : int = 480 #380
-export(float, 0, 5,0.1) var regspeedstamina = 6.1 # 1.1
+const run_speed : int = 380 #380
+export(float, 0, 5,0.1) var regspeedstamina = 1.5 # 1.5
 export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
 
 onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
@@ -89,6 +89,7 @@ func _physics_process(delta : float) -> void:
 			ispickup_wait = false
 			if s_globals.keys.has(a.door_name):
 				s_globals.is_enter_pos = true
+				s_globals.is_ready_pos_player = false
 				a.door_open(a.door_name)
 			else:
 				messagenokey()
@@ -216,9 +217,5 @@ func hudkeyshow() -> void:
 
 
 func death():
+	get_tree().call_group('world','readygame')
 	self.queue_free()
-	print('player death')
-
-
-
-

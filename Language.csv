@@ -13,15 +13,12 @@ Ghost_help_6,"Тем я тебе подскажу, тем призрак мен�
 Ghost_help_7,Старайся меньше подсказок!,Try less tips!
 Ghost_help_8,Так будет лучше!,It will be better this way!
 Ghost_help_9,До встречи...,See you...
-Evil_ghost_nurse_0,Иди ко мне!,Come to me!
-Evil_ghost_nurse_1,А ну иди КО МНЕ!!!,"Well, COME TO ME!!!"
-Evil_ghost_1,Спаси меня!!!,Save me!!!
-Evil_ghost_2,Помоги!!,Help!!!
-Main_Menu_0,Вы выбрали язык именно так?,Did you choose the language exactly?
+Main_Menu_0,Вы точно выбрали язык?,Have you chosen a language exactly?
 Settings_G_0,Настройки,Settings
 Music_G_0,Музыка,Music
 Sound_G_0,Звук,Sound
-YES_S_0,Да,Yes
-NO_S_0,Нет,No
 Door_keys,Ключи от двери,Door keys
 No_keys,Нет ключей номера комнаты,No room number keys
+Game_over,Игра окончена,Game Over
+Ready_game,Eще раз,Again
+Exit_game,Выход из игры,Exit Game

@@ -1,11 +1,24 @@
 extends Node
 
+export(float, 0, 5, 0.2) var timer_ready = 1.4
+export(float, 0, 5, 0.2) var timer_wait_spawns = 1.4
 export(int) var max_spawns = 4
+
+const cameraGO : = preload("res://Screens/Camera2DGame_over.tscn")
+
+const arrenemies : Array = [
+		preload("res://Screens/enemies/enemy1.tscn"),
+		preload("res://Screens/enemies/enemy2.tscn"),
+		preload("res://Screens/enemies/enemy3.tscn"),
+		preload("res://Screens/enemies/enemy4.tscn")]
 
 var arrsignalstairs : Array = []
 var arrstairs : Array = []
 var arrplayerpos : Array = []
 var arrstairslayrs : Array = []
+
+var self_randomspawns_pos
+var self_randomspawns_pos_colli
 
 const player := preload("res://Screens/Player.tscn")
 
@@ -32,11 +45,16 @@ func _ready() -> void:
 	
 	for slayr in $stairslayrs.get_children():
 		arrstairslayrs.append(slayr)
+	
+	$Timer_ready.wait_time = timer_ready
+	$Timer_wait_spawns.wait_time = timer_wait_spawns
+	
+	self_randomspawns_pos = $randomspawns.global_position
+	self_randomspawns_pos_colli = $randomspawns/CollisionShape2D.shape.extents
 
 #	for asd in range(5):
 #		......
 #		break это перерыв только 1 раз
-
 
 
 func fsignalstairs(index : int) -> void:
@@ -288,13 +306,35 @@ func fsignalstairs(index : int) -> void:
 			arrsignalstairs[17].set_collision_layer_bit(1,true)
 			arrstairslayrs[0].z_index = 5
 
+func spawns():
+	var r = randi() % arrenemies.size()
+	var s = arrenemies[r].instance()
+	var xsizest = self_randomspawns_pos.x - self_randomspawns_pos_colli.x
+	var xsizeend = self_randomspawns_pos.x + self_randomspawns_pos_colli.x
+	var ysizest = self_randomspawns_pos.y - self_randomspawns_pos_colli.y
+	var ysizeend = self_randomspawns_pos.y + self_randomspawns_pos_colli.y
+	var posxrandom = rand_range(xsizest,xsizeend)
+	var posyrandom = rand_range(ysizest,ysizeend)
+	s.init(Vector2(posxrandom,posyrandom))
+	$spawns.add_child(s)
+	
 
 
+func _on_Timer_ready_timeout():
+	if $spawns.get_child_count() < max_spawns:
+		$Timer_wait_spawns.start()
+	else:
+		$Timer_wait_spawns.stop()
 
 
+func _on_Timer_wait_spawns_timeout():
+	spawns()
 
-
-
+func readygame():
+	var p = get_tree().get_nodes_in_group('player')[0].global_position
+	var c = cameraGO.instance()
+	c.init(Vector2(p.x,p.y-90))
+	add_child(c)
 
 
 
