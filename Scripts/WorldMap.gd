@@ -39,6 +39,8 @@ func _ready() -> void:
 		arrplayerpos.append(pos)
 	
 	for doors in $doors.get_children():
+		if not doors is Area2D:
+			continue
 		if s_globals.posPlayer[doors.get_index()] == true:
 			p.init(arrplayerpos[doors.index_pos].position)
 			add_child(p)
@@ -51,11 +53,24 @@ func _ready() -> void:
 	
 	self_randomspawns_pos = $randomspawns.global_position
 	self_randomspawns_pos_colli = $randomspawns/CollisionShape2D.shape.extents
-
+	
+	
+	#### final game ####
+	if is_final_keys():
+		print('asd')
+		###### video final
+	
+	
+	
 #	for asd in range(5):
 #		......
 #		break это перерыв только 1 раз
 
+func is_final_keys():
+	for f in s_globals.keys:
+		if f == '023':
+			return true
+		return false
 
 func fsignalstairs(index : int) -> void:
 	match index:

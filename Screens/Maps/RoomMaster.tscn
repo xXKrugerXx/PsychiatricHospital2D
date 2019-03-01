@@ -28,7 +28,7 @@ position = Vector2( 960, 175 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 1 )
 animation = "loop"
-frame = 23
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scripts/enemy3.gd" type="Script" id=1]
-[ext_resource path="res://Textures/enemies/3/Ghost_5.png" type="Texture" id=2]
+[ext_resource path="res://Textures/enemies/3/Ghost_4.png" type="Texture" id=2]
 [ext_resource path="res://Textures/enemies/3/Ghost_16.png" type="Texture" id=3]
 [ext_resource path="res://Textures/enemies/3/Ghost_17.png" type="Texture" id=4]
 [ext_resource path="res://Textures/enemies/3/Ghost_18.png" type="Texture" id=5]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Textures/enemies/3/Ghost_21.png" type="Texture" id=8]
 [ext_resource path="res://Textures/enemies/3/Ghost_22.png" type="Texture" id=9]
 [ext_resource path="res://Textures/enemies/3/Ghost_3.png" type="Texture" id=10]
-[ext_resource path="res://Textures/enemies/3/Ghost_4.png" type="Texture" id=11]
+[ext_resource path="res://Textures/enemies/3/Ghost_5.png" type="Texture" id=11]
 [ext_resource path="res://Textures/enemies/3/Ghost_6.png" type="Texture" id=12]
 [ext_resource path="res://Textures/enemies/3/Ghost_7.png" type="Texture" id=13]
 [ext_resource path="res://Textures/enemies/3/Ghost_8.png" type="Texture" id=14]
@@ -67,7 +67,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
+"values": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimationPlayer:playback_speed")
@@ -158,7 +158,7 @@ extents = Vector2( 452.654, 86.195 )
 extents = Vector2( 207.979, 85.439 )
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 36.82, 37.41 )
+extents = Vector2( 32.3708, 31.3308 )
 
 [node name="enemy3" type="KinematicBody2D" groups=[
 "enemy",
@@ -205,7 +205,7 @@ collision_mask = 4
 shape = SubResource( 14 )
 
 [node name="Area2Dplayer_death" type="Area2D" parent="."]
-editor/display_folded = true
+position = Vector2( 0, -30 )
 collision_layer = 0
 collision_mask = 4
 

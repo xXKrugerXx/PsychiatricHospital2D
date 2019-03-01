@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/walk_flashlight_4.png-d09c217c8ac8f4fd1ee1e653e9b93e33.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
