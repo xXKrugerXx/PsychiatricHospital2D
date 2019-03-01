@@ -85,57 +85,57 @@ tracks/0/keys = {
 "values": [ ExtResource( 2 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
 }
 
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "idle_no_char"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "walk"
+
 [sub_resource type="AnimationNodeAnimation" id=8]
 animation = "idle_no_char"
 
 [sub_resource type="AnimationNodeAnimation" id=9]
-animation = "walk"
+animation = "attack"
 
 [sub_resource type="AnimationNodeAnimation" id=10]
-animation = "idle_no_char"
+animation = "walk_no_char"
 
 [sub_resource type="AnimationNodeAnimation" id=11]
-animation = "attack"
-
-[sub_resource type="AnimationNodeAnimation" id=12]
-animation = "walk_no_char"
-
-[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "idle_no_char"
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "attack"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "walk"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "walk_no_char"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=6]
-blend_point_0/node = SubResource( 8 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=15]
+blend_point_0/node = SubResource( 6 )
 blend_point_0/pos = Vector2( 0, 0 )
-blend_point_1/node = SubResource( 9 )
+blend_point_1/node = SubResource( 7 )
 blend_point_1/pos = Vector2( -1, 0 )
-blend_point_2/node = SubResource( 10 )
+blend_point_2/node = SubResource( 8 )
 blend_point_2/pos = Vector2( 0, 1 )
-blend_point_3/node = SubResource( 11 )
+blend_point_3/node = SubResource( 9 )
 blend_point_3/pos = Vector2( -1, 1 )
-blend_point_4/node = SubResource( 12 )
+blend_point_4/node = SubResource( 10 )
 blend_point_4/pos = Vector2( -1, -1 )
-blend_point_5/node = SubResource( 13 )
+blend_point_5/node = SubResource( 11 )
 blend_point_5/pos = Vector2( 0, -1 )
-blend_point_6/node = SubResource( 14 )
+blend_point_6/node = SubResource( 12 )
 blend_point_6/pos = Vector2( 1, 1 )
-blend_point_7/node = SubResource( 15 )
+blend_point_7/node = SubResource( 13 )
 blend_point_7/pos = Vector2( 1, 0 )
-blend_point_8/node = SubResource( 16 )
+blend_point_8/node = SubResource( 14 )
 blend_point_8/pos = Vector2( 1, -1 )
 snap = Vector2( 0.2, 0.2 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeBlendTree" id=7]
-nodes/idle_walk/node = SubResource( 6 )
+[sub_resource type="AnimationNodeBlendTree" id=16]
+nodes/idle_walk/node = SubResource( 15 )
 nodes/idle_walk/position = Vector2( 440, 60 )
 nodes/output/position = Vector2( 840, 40 )
 node_connections = [ "output", 0, "idle_walk" ]
@@ -144,12 +144,12 @@ node_connections = [ "output", 0, "idle_walk" ]
 extents = Vector2( 379.58, 86.195 )
 
 [sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 61.7819, 58.2133 )
+extents = Vector2( 57.9105, 56.7196 )
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 207.979, 85.439 )
 
-[sub_resource type="RectangleShape2D" id=21]
+[sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 544.559, 99.4841 )
 
 [node name="enemy4" type="KinematicBody2D" groups=[
@@ -178,7 +178,7 @@ anims/walk = SubResource( 4 )
 anims/walk_no_char = SubResource( 5 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 7 )
+tree_root = SubResource( 16 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/idle_walk/blend_position = Vector2( 0, 0 )
@@ -194,7 +194,6 @@ collision_mask = 4
 shape = SubResource( 17 )
 
 [node name="Area2Dplayer_death" type="Area2D" parent="."]
-editor/display_folded = true
 collision_layer = 0
 collision_mask = 4
 
@@ -207,14 +206,14 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Dattakck_player"]
-shape = SubResource( 20 )
+shape = SubResource( 19 )
 
 [node name="Area2D_act_out" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_act_out"]
-shape = SubResource( 21 )
+shape = SubResource( 20 )
 
 [connection signal="body_entered" from="Area2Dwalk_player" to="." method="_on_Area2Dwalk_player_body_entered"]
 [connection signal="body_exited" from="Area2Dwalk_player" to="." method="_on_Area2Dwalk_player_body_exited"]

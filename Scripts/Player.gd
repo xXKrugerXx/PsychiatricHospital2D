@@ -14,8 +14,8 @@ const tex_arr_flaslight : Array = [preload("res://Textures/touch/Flashlight_0.pn
 						preload("res://Textures/touch/Flashlight_1.png")]
 
 
-const tex_arr_flasli_L_R : Array = [preload("res://Textures/particles/light lanternright.png"),
-						preload("res://Textures/particles/light lanternleft.png")]
+const tex_arr_flasli_L_R : Array = [preload("res://Textures/particles/light lanternright_new.png"),
+						preload("res://Textures/particles/light lanternleft_new.png")]
 
 
 var lightning : int

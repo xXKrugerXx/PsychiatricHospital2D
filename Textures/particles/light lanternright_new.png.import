@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light lanternright.png-cb60caca5856d2ed63dc8ac2888d621b.stex"
+path="res://.import/light lanternright_new.png-9b6ed2cfa3496227b29e5bee564b4882.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/particles/light lanternright.png"
-dest_files=[ "res://.import/light lanternright.png-cb60caca5856d2ed63dc8ac2888d621b.stex" ]
+source_file="res://Textures/particles/light lanternright_new.png"
+dest_files=[ "res://.import/light lanternright_new.png-9b6ed2cfa3496227b29e5bee564b4882.stex" ]
 
 [params]
 

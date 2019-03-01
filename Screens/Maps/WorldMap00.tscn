@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/WorldMap.gd" type="Script" id=1]
 [ext_resource path="res://Textures/maps/PsyHospital_pt1.png" type="Texture" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://Textures/maps/PsyHospital_pt3.png" type="Texture" id=4]
 [ext_resource path="res://Screens/Area2DSignalReturn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Screens/AreaDoorenter.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Screens/randomspawns.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Textures/maps/Stairs.png" type="Texture" id=8]
+[ext_resource path="res://Textures/maps/final_door.png" type="Texture" id=7]
+[ext_resource path="res://Screens/randomspawns.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Textures/maps/Stairs.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4723.19, 10 )
@@ -57,7 +58,7 @@ __meta__ = {
 "_edit_vertical_guides_": [ 7979.52 ]
 }
 timer_wait_spawns = 1.0
-max_spawns = 20
+max_spawns = 15
 
 [node name="map" type="Node2D" parent="."]
 editor/display_folded = true
@@ -905,6 +906,18 @@ position = Vector2( 7733.62, 319.473 )
 door_name = "045"
 index_pos = 27
 
+[node name="AreaDoorenter28" parent="doors" instance=ExtResource( 6 )]
+position = Vector2( 283.62, 2559.47 )
+door_name = "final"
+
+[node name="final_door" type="Sprite" parent="doors"]
+modulate = Color( 0.470588, 0.470588, 0.470588, 0.509804 )
+position = Vector2( 283.461, 2555.48 )
+scale = Vector2( 2, 2 )
+z_index = 10
+texture = ExtResource( 7 )
+flip_h = true
+
 [node name="posdoor" type="Node" parent="."]
 editor/display_folded = true
 
@@ -1081,7 +1094,7 @@ color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="spawns" type="Node" parent="."]
 
-[node name="randomspawns" parent="." instance=ExtResource( 7 )]
+[node name="randomspawns" parent="." instance=ExtResource( 8 )]
 position = Vector2( 4591.96, 1325.27 )
 
 [node name="stairslayrs" type="Node" parent="."]
@@ -1091,7 +1104,7 @@ editor/display_folded = true
 position = Vector2( 635, 597 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1100,7 +1113,7 @@ __meta__ = {
 position = Vector2( 649, 1045 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -1110,7 +1123,7 @@ __meta__ = {
 position = Vector2( 635, 1493 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1119,7 +1132,7 @@ __meta__ = {
 position = Vector2( 649, 1941 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -1129,7 +1142,7 @@ __meta__ = {
 position = Vector2( 8561, 597 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -1139,7 +1152,7 @@ __meta__ = {
 position = Vector2( 8547, 1045 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1148,7 +1161,7 @@ __meta__ = {
 position = Vector2( 8561, 1493 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -1158,7 +1171,7 @@ __meta__ = {
 position = Vector2( 8547, 1941 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1167,7 +1180,7 @@ __meta__ = {
 position = Vector2( 8561, 2389 )
 scale = Vector2( 2, 2 )
 z_index = 5
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true

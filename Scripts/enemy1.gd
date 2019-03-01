@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(int) var walk := 135
+export(int) var walk := 75
 
 var speed : float = 0
 var motion : Vector2
@@ -58,7 +58,7 @@ func attacked():
 
 
 func tweenst() -> void:
-	$Tween.interpolate_property($Sprite,'modulate',Color8(255,255,255,0),Color8(255,255,255,130),3.5,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
+	$Tween.interpolate_property($Sprite,'modulate',Color8(255,255,255,0),Color8(255,255,255,130),1.5,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 	$Tween.start()
 
 func tweenend() -> void:
