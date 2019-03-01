@@ -1,22 +1,22 @@
 [gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scripts/WorldMap.gd" type="Script" id=1]
-[ext_resource path="res://Textures/flash lightning/flash_lightning_p1_0.png" type="Texture" id=2]
-[ext_resource path="res://Textures/flash lightning/flash_lightning_p2_0.png" type="Texture" id=3]
-[ext_resource path="res://Textures/flash lightning/flash_lightning_p3_0.png" type="Texture" id=4]
-[ext_resource path="res://Textures/flash lightning/flash_lightning_p1_1.png" type="Texture" id=5]
-[ext_resource path="res://Textures/flash lightning/flash_lightning_p2_1.png" type="Texture" id=6]
-[ext_resource path="res://Textures/flash lightning/flash_lightning_p3_1.png" type="Texture" id=7]
-[ext_resource path="res://Textures/maps/PsyHospital_pt1.png" type="Texture" id=8]
-[ext_resource path="res://Textures/maps/PsyHospital_pt2.png" type="Texture" id=9]
-[ext_resource path="res://Textures/maps/PsyHospital_pt3.png" type="Texture" id=10]
+[ext_resource path="res://Textures/maps/PsyHospital_pt1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/maps/PsyHospital_pt2.png" type="Texture" id=3]
+[ext_resource path="res://Textures/maps/PsyHospital_pt3.png" type="Texture" id=4]
+[ext_resource path="res://Textures/flash lightning/flash_lightning_p1_0.png" type="Texture" id=5]
+[ext_resource path="res://Textures/flash lightning/flash_lightning_p2_0.png" type="Texture" id=6]
+[ext_resource path="res://Textures/flash lightning/flash_lightning_p3_0.png" type="Texture" id=7]
+[ext_resource path="res://Textures/flash lightning/flash_lightning_p1_1.png" type="Texture" id=8]
+[ext_resource path="res://Textures/flash lightning/flash_lightning_p2_1.png" type="Texture" id=9]
+[ext_resource path="res://Textures/flash lightning/flash_lightning_p3_1.png" type="Texture" id=10]
 [ext_resource path="res://Screens/Area2DSignalReturn.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Screens/AreaDoorenter.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Textures/maps/final_door.png" type="Texture" id=13]
 [ext_resource path="res://Screens/randomspawns.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Textures/maps/Stairs.png" type="Texture" id=15]
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=1]
 resource_name = "loop"
 length = 4.0
 loop = true
@@ -30,7 +30,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.6, 0.7, 1.3, 1.4, 1.5, 1.6, 2.5, 2.6, 3.6, 3.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 5 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("p2:texture")
@@ -42,7 +42,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.6, 0.7, 1.3, 1.4, 1.5, 1.6, 2.5, 2.6, 3.6, 3.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 3 ) ]
+"values": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 6 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("p3:texture")
@@ -54,46 +54,46 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.6, 0.7, 1.3, 1.4, 1.5, 1.6, 2.5, 2.6, 3.6, 3.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 4 ) ]
+"values": [ ExtResource( 7 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 7 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 4723.19, 10 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 1527.67 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4246.44, 10 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 182.639, 10 )
-
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 3647, 10 )
+extents = Vector2( 182.639, 10 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 3661.56, 10 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 182.639, 10 )
-
-[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 3647, 10 )
 
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 3661.56, 10 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 182.639, 10 )
+
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 308.239, 10 )
+extents = Vector2( 3647, 10 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 494.764, 10 )
+extents = Vector2( 308.239, 10 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 468.024, 10 )
+extents = Vector2( 494.764, 10 )
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 384.771, 10 )
+extents = Vector2( 468.024, 10 )
 
 [sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 384.771, 10 )
+
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 384.771, 10 )
 
 [node name="WorldMap00" type="Node" groups=[
@@ -107,40 +107,6 @@ __meta__ = {
 timer_wait_spawns = 1.0
 max_spawns = 15
 
-[node name="flash_lightning_rooms" type="Node2D" parent="."]
-scale = Vector2( 2, 2 )
-z_index = 1
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="p1" type="Sprite" parent="flash_lightning_rooms"]
-position = Vector2( 1072, 702 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="p2" type="Sprite" parent="flash_lightning_rooms"]
-position = Vector2( 2832, 564 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="p3" type="Sprite" parent="flash_lightning_rooms"]
-position = Vector2( 3867, 564 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="flash_lightning_rooms"]
-autoplay = "loop"
-playback_speed = 0.35
-anims/loop = SubResource( 14 )
-
 [node name="map" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 2048, 1372 )
@@ -151,15 +117,50 @@ __meta__ = {
 }
 
 [node name="map_pt1" type="Sprite" parent="map"]
-texture = ExtResource( 8 )
+texture = ExtResource( 2 )
 
 [node name="map_pt2" type="Sprite" parent="map"]
 position = Vector2( 2048, 0 )
-texture = ExtResource( 9 )
+texture = ExtResource( 3 )
 
 [node name="map_pt3" type="Sprite" parent="map"]
 position = Vector2( 3072, 0 )
-texture = ExtResource( 10 )
+texture = ExtResource( 4 )
+
+[node name="flash_lightning_rooms" type="Node2D" parent="."]
+editor/display_folded = true
+scale = Vector2( 2, 2 )
+z_index = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="p1" type="Sprite" parent="flash_lightning_rooms"]
+position = Vector2( 1072, 702 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="p2" type="Sprite" parent="flash_lightning_rooms"]
+position = Vector2( 2832, 564 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="p3" type="Sprite" parent="flash_lightning_rooms"]
+position = Vector2( 3867, 564 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="flash_lightning_rooms"]
+autoplay = "loop"
+playback_speed = 0.35
+anims/loop = SubResource( 1 )
 
 [node name="floor" type="Node" parent="."]
 editor/display_folded = true
@@ -175,7 +176,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -188,7 +189,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D2"]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -201,7 +202,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D3"]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="1f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -214,7 +215,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/1f"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="1f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -227,7 +228,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/1f_r"]
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="2f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -240,7 +241,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/2f"]
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="3f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -253,7 +254,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/3f"]
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="3f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -266,7 +267,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/3f_r"]
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="3f_l" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -279,7 +280,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/3f_l"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="4f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -292,7 +293,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/4f"]
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="5f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -305,7 +306,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f"]
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="5f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -318,7 +319,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f_r"]
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="5f_l" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
@@ -331,7 +332,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/5f_l"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="floor_enemy" type="Node" parent="."]
 editor/display_folded = true
@@ -347,7 +348,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs01R_enemy"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs02R_enemy" type="StaticBody2D" parent="floor_enemy"]
 editor/display_folded = true
@@ -360,7 +361,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs02R_enemy"]
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="stairs03R_enemy" type="StaticBody2D" parent="floor_enemy"]
 editor/display_folded = true
@@ -373,7 +374,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs03R_enemy"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs04R_enemy" type="StaticBody2D" parent="floor_enemy"]
 editor/display_folded = true
@@ -386,7 +387,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs04R_enemy"]
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="stairs05R_enemy" type="StaticBody2D" parent="floor_enemy"]
 editor/display_folded = true
@@ -399,7 +400,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs05R_enemy"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs02L_enemy" type="StaticBody2D" parent="floor_enemy"]
 editor/display_folded = true
@@ -412,7 +413,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs02L_enemy"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="stairs03L_enemy" type="StaticBody2D" parent="floor_enemy"]
 editor/display_folded = true
@@ -425,7 +426,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs03L_enemy"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs04L_enemy" type="StaticBody2D" parent="floor_enemy"]
 editor/display_folded = true
@@ -438,7 +439,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs04L_enemy"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="stairs05L_enemy" type="StaticBody2D" parent="floor_enemy"]
 editor/display_folded = true
@@ -451,7 +452,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor_enemy/stairs05L_enemy"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs" type="Node" parent="."]
 editor/display_folded = true
@@ -469,7 +470,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs00R"]
 light_mask = 0
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="stairs01R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -482,7 +483,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01R_is"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs01R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -496,7 +497,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01R"]
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="stairs02R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -509,7 +510,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02R_is"]
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="stairs02R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -523,7 +524,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02R"]
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="stairs03R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -536,7 +537,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03R_is"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs03R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -550,7 +551,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03R"]
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="stairs04R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -563,7 +564,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04R_is"]
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="stairs04R" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -577,7 +578,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04R"]
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="stairs05R_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -590,7 +591,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs05R_is"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs01L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -604,7 +605,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs01L"]
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="stairs02L_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -617,7 +618,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02L_is"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="stairs02L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -631,7 +632,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs02L"]
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="stairs03L_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -644,7 +645,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03L_is"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="stairs03L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -658,7 +659,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs03L"]
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="stairs04L_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -671,7 +672,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04L_is"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="stairs04L" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -685,7 +686,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs04L"]
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="stairs05L_is" type="StaticBody2D" parent="stairs"]
 editor/display_folded = true
@@ -698,7 +699,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/stairs05L_is"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="signalstairs" type="Node" parent="."]
 editor/display_folded = true
