@@ -51,7 +51,13 @@ func _ready() -> void:
 	
 	self_randomspawns_pos = $randomspawns.global_position
 	self_randomspawns_pos_colli = $randomspawns/CollisionShape2D.shape.extents
-
+	
+	
+	#### final game ####
+	
+	
+	
+	
 #	for asd in range(5):
 #		......
 #		break это перерыв только 1 раз

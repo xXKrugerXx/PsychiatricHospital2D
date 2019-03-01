@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/idle_flashlight_2.png-53b8b477864c932ea2f05c05a9d396cd.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
