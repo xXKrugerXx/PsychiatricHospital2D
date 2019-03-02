@@ -6,7 +6,7 @@
 [ext_resource path="res://Textures/texdialog_l_light.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 20
+size = 19
 outline_size = 2
 font_data = ExtResource( 3 )
 

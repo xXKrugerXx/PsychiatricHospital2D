@@ -12,6 +12,9 @@ func queue() -> void:
 			s_globals.keys.append('0' + str(key_index))
 	else:
 		s_globals.keys.append(key_index_name)
+	yield(get_tree().create_timer(0.2),"timeout")
+	if s_globals.keys.has('DrDandy'):
+		get_tree().call_group('rooms','active_anim')
 	print('key queue')
 	self.queue_free()
 	

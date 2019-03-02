@@ -4,7 +4,7 @@ const sceneready : String = "res://Screens/Maps/Room023.tscn"
 
 
 func init(pos):
-	self.position = pos
+	self.global_position = pos
 
 func _ready():
 	$CanvasLayer/ColorRect/LabelGameOver.text = tr('Game_over')

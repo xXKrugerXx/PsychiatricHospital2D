@@ -1,18 +1,14 @@
 ,ru,en
-Player_message_place_023_0,"Ох, Боже",Oh god
+Player_message_place_023_0,"Ох, боже",Oh god
 Player_message_place_023_1,Где я?,Where I am?
 Player_message_place_023_2,Что за место?,What place?
 Player_message_place_023_3,Бля сваливаем!,Shit we dump!
-Ghost_help_0,Иди сюда!,Go here!
-Ghost_help_1,Не бойся!,Do not be afraid!
-Ghost_help_2,Я тебе помогу!,I will help you!
-Ghost_help_3,"Покажи мне ключ, я подскажу какой комната.","Show me the key, I will tell you what room."
-Ghost_help_4,"Если тебе нужна помощь, я буду здесь!",If you need help I'll be here!
-Ghost_help_5,"Знай, я тебе подскажу только 4 раза!","Know, I will prompt you only 4 times!"
-Ghost_help_6,"Тем я тебе подскажу, тем призрак меня убьет!!!","I'll tell you a hint, the ghost will kill me !!!"
-Ghost_help_7,Старайся меньше подсказок!,Try less tips!
-Ghost_help_8,Так будет лучше!,It will be better this way!
-Ghost_help_9,До встречи...,See you...
+Ghost_help_0,"Иди сюда, не бойся",Come here don't be afraid
+Ghost_help_1,Вы хотите сбежать из этого здания?,Do you want to escape from this building?
+Ghost_help_2,"Вам придется искать все ключи, чтобы открыть комнату.",You will have to look for all the keys to open the room.
+Ghost_help_3,Найти здесь 2 ключ,Find 2 keys here
+Ghost_help_4,"Будьте осторожны, призраки повсюду","Be careful, ghosts are everywhere."
+Ghost_help_5,Прощай мой друг,Goodbye my friend
 Main_Menu_0,Вы точно выбрали язык?,Have you chosen a language exactly?
 Settings_G_0,Настройки,Settings
 Music_G_0,Музыка,Music
@@ -20,5 +16,6 @@ Sound_G_0,Звук,Sound
 Door_keys,Ключи от двери,Door keys
 No_keys,Нет ключей номера комнаты,No room number keys
 Game_over,Игра окончена,Game Over
-Ready_game,Eще раз,Again
+Ready_game,Играть снова?,Play Again?
 Exit_game,Выход из игры,Exit Game
+Final_game,финальная игра,The Final Game

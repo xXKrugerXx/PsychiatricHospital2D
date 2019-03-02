@@ -14,17 +14,14 @@ animations = [ {
 "speed": 3.0
 } ]
 
-[node name="Room032" instance=ExtResource( 1 )]
+[node name="Room032" index="0" instance=ExtResource( 1 )]
 
 [node name="ASpriteflashlighning" parent="." index="0"]
 frames = SubResource( 1 )
-frame = 9
+frame = 18
 
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 4 )
-
-[node name="CanvasModulate" parent="." index="9"]
-visible = false
 
 [node name="032" parent="." index="11" instance=ExtResource( 5 )]
 position = Vector2( 1310, 352 )
