@@ -105,7 +105,7 @@ __meta__ = {
 "_edit_vertical_guides_": [ 7979.52 ]
 }
 timer_wait_spawns = 1.0
-max_spawns = 15
+max_spawns = 0
 
 [node name="map" type="Node2D" parent="."]
 editor/display_folded = true
@@ -851,7 +851,7 @@ editor/display_folded = true
 
 [node name="AreaDoorenter0" parent="doors" instance=ExtResource( 12 )]
 position = Vector2( 1539.62, 2554.47 )
-door_name = "023"
+door_name = "BookCard"
 
 [node name="AreaDoorenter1" parent="doors" instance=ExtResource( 12 )]
 position = Vector2( 5119.62, 2554.47 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Textures/touch/Left_Arrow_0.png" type="Texture" id=1]
 [ext_resource path="res://Textures/touch/Left_Arrow_1.png" type="Texture" id=2]
@@ -37,7 +37,9 @@
 [ext_resource path="res://Textures/keys/Key043.png" type="Texture" id=35]
 [ext_resource path="res://Textures/keys/Key044.png" type="Texture" id=36]
 [ext_resource path="res://Textures/keys/Key045.png" type="Texture" id=37]
-[ext_resource path="res://Screens/BarRun.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Textures/keys/KeyHell.png" type="Texture" id=38]
+[ext_resource path="res://Textures/keys/KeyDr.Dandy.png" type="Texture" id=39]
+[ext_resource path="res://Screens/BarRun.tscn" type="PackedScene" id=40]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -240,26 +242,27 @@ custom_styles/bg = SubResource( 6 )
 scroll_horizontal_enabled = false
 
 [node name="GridContainer" type="GridContainer" parent="tablekeys/HUDTableKeys"]
-margin_right = 162.0
-margin_bottom = 464.0
+editor/display_folded = true
+margin_right = 192.0
+margin_bottom = 500.0
 columns = 2
 
 [node name="001" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 modulate = Color( 0.235294, 0.235294, 0.235294, 1 )
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 32.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/001"]
-margin_left = 1.0
-margin_right = 1.0
+margin_left = 10.0
+margin_right = 10.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/001"]
-margin_left = 5.0
+margin_left = 14.0
 margin_top = 2.0
-margin_right = 41.0
+margin_right = 50.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "001"
@@ -267,25 +270,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/001"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 54.0
+margin_right = 86.0
 margin_bottom = 32.0
 texture = ExtResource( 13 )
 
 [node name="002" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
-margin_right = 162.0
+margin_left = 100.0
+margin_right = 192.0
 margin_bottom = 32.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/002"]
+margin_left = 6.0
+margin_right = 6.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/002"]
-margin_left = 4.0
+margin_left = 10.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "002"
@@ -293,25 +298,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/002"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 53.0
+margin_right = 85.0
 margin_bottom = 32.0
 texture = ExtResource( 14 )
 
 [node name="003" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 36.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 68.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/003"]
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/003"]
-margin_left = 4.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 51.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "003"
@@ -319,26 +326,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/003"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 55.0
+margin_right = 87.0
 margin_bottom = 32.0
 texture = ExtResource( 15 )
 
 [node name="004" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 36.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 68.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/004"]
+margin_left = 6.0
+margin_right = 6.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/004"]
-margin_left = 4.0
+margin_left = 10.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "004"
@@ -346,25 +355,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/004"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 53.0
+margin_right = 85.0
 margin_bottom = 32.0
 texture = ExtResource( 16 )
 
 [node name="005" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 72.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 104.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/005"]
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/005"]
-margin_left = 4.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 51.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "005"
@@ -372,28 +383,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/005"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 55.0
+margin_right = 87.0
 margin_bottom = 32.0
 texture = ExtResource( 17 )
 
 [node name="011" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 72.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 104.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/011"]
-margin_left = 3.0
-margin_right = 3.0
+margin_left = 9.0
+margin_right = 9.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/011"]
-margin_left = 7.0
+margin_left = 13.0
 margin_top = 2.0
-margin_right = 40.0
+margin_right = 46.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "011"
@@ -401,27 +412,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/011"]
-margin_left = 44.0
-margin_right = 76.0
+margin_left = 50.0
+margin_right = 82.0
 margin_bottom = 32.0
 texture = ExtResource( 18 )
 
 [node name="012" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 108.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 140.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/012"]
-margin_left = 1.0
-margin_right = 1.0
+margin_left = 10.0
+margin_right = 10.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/012"]
-margin_left = 5.0
+margin_left = 14.0
 margin_top = 2.0
-margin_right = 41.0
+margin_right = 50.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "012"
@@ -429,28 +440,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/012"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 54.0
+margin_right = 86.0
 margin_bottom = 32.0
 texture = ExtResource( 19 )
 
 [node name="013" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 108.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 140.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/013"]
-margin_left = 1.0
-margin_right = 1.0
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/013"]
-margin_left = 5.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 41.0
+margin_right = 48.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "013"
@@ -458,27 +469,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/013"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 52.0
+margin_right = 84.0
 margin_bottom = 32.0
 texture = ExtResource( 20 )
 
 [node name="014" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 144.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 176.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/014"]
-margin_left = 1.0
-margin_right = 1.0
+margin_left = 10.0
+margin_right = 10.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/014"]
-margin_left = 5.0
+margin_left = 14.0
 margin_top = 2.0
-margin_right = 41.0
+margin_right = 50.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "015"
@@ -486,28 +497,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/014"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 54.0
+margin_right = 86.0
 margin_bottom = 32.0
 texture = ExtResource( 21 )
 
 [node name="015" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 144.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 176.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/015"]
-margin_left = 1.0
-margin_right = 1.0
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/015"]
-margin_left = 5.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 41.0
+margin_right = 48.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "001"
@@ -515,27 +526,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/015"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 52.0
+margin_right = 84.0
 margin_bottom = 32.0
 texture = ExtResource( 22 )
 
 [node name="021" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 180.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 212.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/021"]
-margin_left = 1.0
-margin_right = 1.0
+margin_left = 10.0
+margin_right = 10.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/021"]
-margin_left = 5.0
+margin_left = 14.0
 margin_top = 2.0
-margin_right = 41.0
+margin_right = 50.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "021"
@@ -543,26 +554,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/021"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 54.0
+margin_right = 86.0
 margin_bottom = 32.0
 texture = ExtResource( 23 )
 
 [node name="022" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 180.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 212.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/022"]
+margin_left = 6.0
+margin_right = 6.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/022"]
-margin_left = 4.0
+margin_left = 10.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "022"
@@ -570,25 +583,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/022"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 53.0
+margin_right = 85.0
 margin_bottom = 32.0
 texture = ExtResource( 24 )
 
 [node name="023" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 216.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 248.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/023"]
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/023"]
-margin_left = 4.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 51.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "023"
@@ -596,26 +611,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/023"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 55.0
+margin_right = 87.0
 margin_bottom = 32.0
 texture = ExtResource( 25 )
 
 [node name="024" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 216.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 248.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/024"]
+margin_left = 6.0
+margin_right = 6.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/024"]
-margin_left = 4.0
+margin_left = 10.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "024"
@@ -623,25 +640,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/024"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 53.0
+margin_right = 85.0
 margin_bottom = 32.0
 texture = ExtResource( 26 )
 
 [node name="025" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 252.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 284.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/025"]
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/025"]
-margin_left = 4.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 51.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "025"
@@ -649,28 +668,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/025"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 55.0
+margin_right = 87.0
 margin_bottom = 32.0
 texture = ExtResource( 27 )
 
 [node name="031" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 252.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 284.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/031"]
-margin_left = 1.0
-margin_right = 1.0
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/031"]
-margin_left = 5.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 41.0
+margin_right = 48.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "031"
@@ -678,25 +697,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/031"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 52.0
+margin_right = 84.0
 margin_bottom = 32.0
 texture = ExtResource( 28 )
 
 [node name="032" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 288.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 320.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/032"]
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/032"]
-margin_left = 4.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 51.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "032"
@@ -704,26 +725,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/032"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 55.0
+margin_right = 87.0
 margin_bottom = 32.0
 texture = ExtResource( 29 )
 
 [node name="033" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 288.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 320.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/033"]
+margin_left = 6.0
+margin_right = 6.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/033"]
-margin_left = 4.0
+margin_left = 10.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "033"
@@ -731,25 +754,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/033"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 53.0
+margin_right = 85.0
 margin_bottom = 32.0
 texture = ExtResource( 30 )
 
 [node name="034" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 324.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 356.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/034"]
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/034"]
-margin_left = 4.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 51.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "034"
@@ -757,26 +782,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/034"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 55.0
+margin_right = 87.0
 margin_bottom = 32.0
 texture = ExtResource( 31 )
 
 [node name="035" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 324.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 356.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/035"]
+margin_left = 6.0
+margin_right = 6.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/035"]
-margin_left = 4.0
+margin_left = 10.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "035"
@@ -784,27 +811,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/035"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 53.0
+margin_right = 85.0
 margin_bottom = 32.0
 texture = ExtResource( 32 )
 
 [node name="041" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 360.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 392.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/041"]
-margin_left = 1.0
-margin_right = 1.0
+margin_left = 10.0
+margin_right = 10.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/041"]
-margin_left = 5.0
+margin_left = 14.0
 margin_top = 2.0
-margin_right = 41.0
+margin_right = 50.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "041"
@@ -812,26 +839,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/041"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 54.0
+margin_right = 86.0
 margin_bottom = 32.0
 texture = ExtResource( 33 )
 
 [node name="042" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 360.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 392.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/042"]
+margin_left = 6.0
+margin_right = 6.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/042"]
-margin_left = 4.0
+margin_left = 10.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "042"
@@ -839,25 +868,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/042"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 53.0
+margin_right = 85.0
 margin_bottom = 32.0
 texture = ExtResource( 34 )
 
 [node name="043" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 396.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 428.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/043"]
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/043"]
-margin_left = 4.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 51.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "043"
@@ -865,26 +896,28 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/043"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 55.0
+margin_right = 87.0
 margin_bottom = 32.0
 texture = ExtResource( 35 )
 
 [node name="044" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
-margin_left = 83.0
+margin_left = 100.0
 margin_top = 396.0
-margin_right = 162.0
+margin_right = 192.0
 margin_bottom = 428.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/044"]
+margin_left = 6.0
+margin_right = 6.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/044"]
-margin_left = 4.0
+margin_left = 10.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "044"
@@ -892,25 +925,27 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/044"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 53.0
+margin_right = 85.0
 margin_bottom = 32.0
 texture = ExtResource( 36 )
 
 [node name="045" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
 editor/display_folded = true
 margin_top = 432.0
-margin_right = 79.0
+margin_right = 96.0
 margin_bottom = 464.0
 alignment = 1
 
 [node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/045"]
+margin_left = 8.0
+margin_right = 8.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/045"]
-margin_left = 4.0
+margin_left = 12.0
 margin_top = 2.0
-margin_right = 43.0
+margin_right = 51.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 7 )
 text = "045"
@@ -918,12 +953,94 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/045"]
-margin_left = 47.0
-margin_right = 79.0
+margin_left = 55.0
+margin_right = 87.0
 margin_bottom = 32.0
 texture = ExtResource( 37 )
 
-[node name="BarRun" parent="." instance=ExtResource( 38 )]
+[node name="Hell" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 100.0
+margin_top = 432.0
+margin_right = 192.0
+margin_bottom = 464.0
+alignment = 1
+
+[node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/Hell"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/Hell"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 56.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 7 )
+text = "hell"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/Hell"]
+margin_left = 60.0
+margin_right = 92.0
+margin_bottom = 32.0
+texture = ExtResource( 38 )
+
+[node name="Book" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_top = 468.0
+margin_right = 96.0
+margin_bottom = 500.0
+alignment = 1
+
+[node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/Book"]
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/Book"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 60.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 7 )
+text = "book"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/Book"]
+margin_left = 64.0
+margin_right = 96.0
+margin_bottom = 32.0
+texture = ExtResource( 38 )
+
+[node name="DrDandy" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
+editor/display_folded = true
+margin_left = 100.0
+margin_top = 468.0
+margin_right = 192.0
+margin_bottom = 500.0
+alignment = 1
+
+[node name="Container" type="Container" parent="tablekeys/HUDTableKeys/GridContainer/DrDandy"]
+margin_left = 3.0
+margin_right = 3.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="tablekeys/HUDTableKeys/GridContainer/DrDandy"]
+margin_left = 7.0
+margin_top = 2.0
+margin_right = 53.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 7 )
+text = "Dr.D"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="tablekeys/HUDTableKeys/GridContainer/DrDandy"]
+margin_left = 57.0
+margin_right = 89.0
+margin_bottom = 32.0
+texture = ExtResource( 39 )
+
+[node name="BarRun" parent="." instance=ExtResource( 40 )]
 modulate = Color( 1, 1, 1, 0.509804 )
 margin_left = 43.941
 margin_top = 27.651

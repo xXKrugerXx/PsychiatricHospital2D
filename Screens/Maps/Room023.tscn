@@ -18,7 +18,7 @@ animations = [ {
 
 [node name="ASpriteflashlighning" parent="." index="0"]
 frames = SubResource( 1 )
-frame = 19
+frame = 23
 
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 4 )
@@ -31,10 +31,11 @@ collision_mask = 0
 collision_layer = 2
 collision_mask = 0
 
+[node name="CanvasModulate" parent="." index="9"]
+visible = false
+
 [node name="023" parent="." index="10" instance=ExtResource( 5 )]
 position = Vector2( 1450, 352 )
-scale = Vector2( 2, 2 )
-z_index = 5
 collision_layer = 32
 collision_mask = 0
 

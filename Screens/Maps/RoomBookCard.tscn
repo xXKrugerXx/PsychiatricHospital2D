@@ -6,7 +6,6 @@
 [ext_resource path="res://Textures/maps/Room_r81i.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
-
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
 "loop": true,
@@ -18,7 +17,7 @@ animations = [ {
 
 [node name="ASpriteflashlighning" parent="." index="0"]
 frames = SubResource( 1 )
-frame = 6
+frame = 5
 
 [node name="Pain2D3" parent="." index="3"]
 visible = false
@@ -28,7 +27,4 @@ visible = false
 
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 4 )
-
-[node name="CanvasModulate" parent="." index="9"]
-visible = false
 

@@ -13,7 +13,8 @@ func _ready() -> void:
 	isreadystart = true
 	is_spawn_npc = true
 	is_ready_pos_player = false
-	keys = ['023', '024']
+	keys = []
+#	keys = ['Hell','Book','DrDandy']
 	
 	for i in range(30):
 		posPlayer.append(false)

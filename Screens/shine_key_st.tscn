@@ -12,9 +12,8 @@ particles_anim_h_frames = 3
 particles_anim_v_frames = 3
 particles_anim_loop = true
 
-[node name="shine_key_st" instance=ExtResource( 1 )]
-z_index = 4
-key_index = 23
+[node name="shine_key_st" index="0" instance=ExtResource( 1 )]
+key_index = 0
 
 [node name="Light2D" type="Light2D" parent="." index="2"]
 position = Vector2( 0, -25 )
