@@ -105,15 +105,14 @@ __meta__ = {
 "_edit_vertical_guides_": [ 7979.52 ]
 }
 timer_wait_spawns = 1.0
-max_spawns = 0
+max_spawns = 12
 
 [node name="map" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 2048, 1372 )
 scale = Vector2( 2, 2 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="map_pt1" type="Sprite" parent="map"]
@@ -1172,6 +1171,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="spawns" type="Node" parent="."]

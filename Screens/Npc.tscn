@@ -59,8 +59,8 @@ shape = SubResource( 2 )
 
 [node name="Dialog2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 17, -93.111 )
-indextext = [ "Ghost_help_0", "Ghost_help_1", "Ghost_help_2", "Ghost_help_3" ]
-timespeed = 2.0
+indextext = [ "Ghost_help_0", "Ghost_help_1", "Ghost_help_2", "Ghost_help_3", "Ghost_help_4" ]
+timespeed = 3.0
 end_tweenspeed = 0.5
 is_dialog_l_r = true
 

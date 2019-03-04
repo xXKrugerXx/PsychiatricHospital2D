@@ -2,7 +2,7 @@ extends Node
 
 export(float, 0, 5, 0.2) var timer_ready = 1.4
 export(float, 0, 5, 0.2) var timer_wait_spawns = 1.4
-export(int) var max_spawns = 4
+export(int) var max_spawns = 4 setget setspawns, getspawns
 
 const cameraGO : = preload("res://Screens/Camera2DGame_over.tscn")
 
@@ -25,7 +25,6 @@ const player := preload("res://Screens/Player.tscn")
 func _ready() -> void:
 	randomize()
 	var p = player.instance()
-	
 	for s in $signalstairs.get_children():
 		s.connect('signalstairs',self,'fsignalstairs')
 	
@@ -57,18 +56,13 @@ func _ready() -> void:
 	
 	#### final game ####
 	if is_final_keys():
-		print('asd')
+		max_spawns = 0
 		###### video final
-	
-	
-	
-#	for asd in range(5):
-#		......
-#		break это перерыв только 1 раз
+
 
 func is_final_keys():
 	for f in s_globals.keys:
-		if f == '023':
+		if f == 'final':
 			return true
 		return false
 
