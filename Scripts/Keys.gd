@@ -15,7 +15,6 @@ func queue() -> void:
 	yield(get_tree().create_timer(0.2),"timeout")
 	if s_globals.keys.has('DrDandy'):
 		get_tree().call_group('rooms','active_anim')
-	print('key queue')
 	self.queue_free()
 	
 func init(pos : Vector2, key : int, name : String, boo_index : bool) -> void:

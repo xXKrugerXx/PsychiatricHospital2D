@@ -5,7 +5,7 @@ const file : String = 'res://Screens/Maps/Room'
 export(String) var door_name := ''
 export(int) var index_pos := 0
 
-func door_open(stri) -> void:
+func door_open(stri : String) -> void:
 	get_tree().change_scene(file + stri + '.tscn')
 
 func _on_AreaDoorenter_body_entered(body):

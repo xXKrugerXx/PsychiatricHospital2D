@@ -1,6 +1,7 @@
 extends Node
 
 var keys : Array
+var keyfinal : String = ''
 var posPlayer : Array
 var isreadystart : bool
 var currentstamina : float
@@ -13,7 +14,8 @@ func _ready() -> void:
 	isreadystart = true
 	is_spawn_npc = true
 	is_ready_pos_player = false
-	keys = ['fina']
+	keys = []
+#	keys = ['DrDandy','023']
 #	keys = ['Hell','Book','DrDandy']
 	
 	for i in range(30):

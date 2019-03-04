@@ -4,6 +4,7 @@ const npc = preload("res://Screens/Npc.tscn")
 const player = preload("res://Screens/Player.tscn")
 const key_st = preload("res://Screens/shine_key_st.tscn")
 const keys = preload("res://Screens/Keys.tscn")
+const keyfinal = preload("res://Screens/keyfinal.tscn")
 const keys_y : int = 462
 
 func _ready():
@@ -11,6 +12,7 @@ func _ready():
 	var n = npc.instance()
 	var p = player.instance()
 	var key = keys.instance()
+	var keyf = keyfinal.instance()
 	
 	if get_name() == 'Room023':
 		if s_globals.is_spawn_npc and !s_globals.is_ready_pos_player:
@@ -194,9 +196,10 @@ func _ready():
 		p.init(Vector2(860,366.306))
 		add_child(p)
 	elif get_name() == 'RoomDrDandy':
-		if !s_globals.keys.has('Exit'):
-			key.init(Vector2(rand_range(910,1010),keys_y), 11,'Exit',false)
-			add_child(key)
+		
+		if !s_globals.keyfinal == 'final':
+			keyf.init(Vector2(rand_range(910,1010),keys_y))
+			add_child(keyf)
 			$AnimationPlayer.play("noloop")
 		else:
 			$AnimationPlayer.play("loop")
@@ -204,5 +207,6 @@ func _ready():
 		add_child(p)
 
 func active_anim():
-	$AnimationPlayer.play("loop")
+	if get_name() == 'RoomDrDandy':
+		$AnimationPlayer.play("loop")
 

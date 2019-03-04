@@ -2,7 +2,7 @@ extends Node
 
 export(float, 0, 5, 0.2) var timer_ready = 1.4
 export(float, 0, 5, 0.2) var timer_wait_spawns = 1.4
-export(int) var max_spawns = 4 setget setspawns, getspawns
+export(int) var max_spawns = 1
 
 const cameraGO : = preload("res://Screens/Camera2DGame_over.tscn")
 
@@ -11,6 +11,11 @@ const arrenemies : Array = [
 		preload("res://Screens/enemies/enemy2.tscn"),
 		preload("res://Screens/enemies/enemy3.tscn"),
 		preload("res://Screens/enemies/enemy4.tscn")]
+
+const arrenemisfinal : Array = [
+		preload("res://Screens/enemies/enemy1final.tscn"),
+		preload("res://Screens/enemies/enemy2final.tscn"),
+		preload("res://Screens/enemies/enemy3final.tscn")]
 
 var arrsignalstairs : Array = []
 var arrstairs : Array = []
@@ -49,22 +54,15 @@ func _ready() -> void:
 	
 	$Timer_ready.wait_time = timer_ready
 	$Timer_wait_spawns.wait_time = timer_wait_spawns
-	
 	self_randomspawns_pos = $randomspawns.global_position
 	self_randomspawns_pos_colli = $randomspawns/CollisionShape2D.shape.extents
 	
-	
-	#### final game ####
-	if is_final_keys():
+	if s_globals.keyfinal == 'final':
 		max_spawns = 0
-		###### video final
-
-
-func is_final_keys():
-	for f in s_globals.keys:
-		if f == 'final':
-			return true
-		return false
+		for e in range(3):
+			var s1 = arrenemisfinal[e].instance()
+			s1.init($Pos2Dfinal.global_position)
+			$spawns.add_child(s1)
 
 func fsignalstairs(index : int) -> void:
 	match index:
@@ -326,8 +324,6 @@ func spawns():
 	var posyrandom = rand_range(ysizest,ysizeend)
 	s.init(Vector2(posxrandom,posyrandom))
 	$spawns.add_child(s)
-	
-
 
 func _on_Timer_ready_timeout():
 	if $spawns.get_child_count() < max_spawns:
@@ -344,8 +340,3 @@ func readygame():
 	var c = cameraGO.instance()
 	c.init(Vector2(p.x,p.y-90))
 	add_child(c)
-
-
-
-
-

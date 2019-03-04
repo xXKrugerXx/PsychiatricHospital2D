@@ -17,6 +17,7 @@ func _on_Buttonready_pressed():
 	yield($AnimationPlayer,"animation_finished")
 	s_globals.posPlayer[15] = true
 	s_globals.is_ready_pos_player = true
+	s_globals.keyfinal = ''
 	get_tree().change_scene(sceneready)
 
 func _on_Buttonexitgame_pressed():
