@@ -134,8 +134,6 @@ func stamina_run(delta : float) -> void:
 	Bar_run.value = s_globals.currentstamina
 
 
-
-
 func walk_run(boo : bool) -> void:
 	if !boo:
 		if indexspeed == 0:

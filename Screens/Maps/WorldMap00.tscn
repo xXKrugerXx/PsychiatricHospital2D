@@ -105,15 +105,14 @@ __meta__ = {
 "_edit_vertical_guides_": [ 7979.52 ]
 }
 timer_wait_spawns = 1.0
-max_spawns = 15
+max_spawns = 22
 
 [node name="map" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 2048, 1372 )
 scale = Vector2( 2, 2 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="map_pt1" type="Sprite" parent="map"]
@@ -168,7 +167,7 @@ editor/display_folded = true
 [node name="StaticBody2D" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 4617.71, 2694 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -181,7 +180,7 @@ shape = SubResource( 2 )
 [node name="StaticBody2D2" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 53.9903, 1367.23 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -194,7 +193,7 @@ shape = SubResource( 3 )
 [node name="StaticBody2D3" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 9230, 1367.23 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -207,7 +206,7 @@ shape = SubResource( 3 )
 [node name="1f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 4022.71, 2246 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -220,7 +219,7 @@ shape = SubResource( 4 )
 [node name="1f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 9046.71, 2246 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -233,7 +232,7 @@ shape = SubResource( 5 )
 [node name="2f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 4598, 1798 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -246,7 +245,7 @@ shape = SubResource( 6 )
 [node name="3f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 4587.71, 1350 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -259,7 +258,7 @@ shape = SubResource( 7 )
 [node name="3f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 9045.71, 1350 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -272,7 +271,7 @@ shape = SubResource( 5 )
 [node name="3f_l" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 149.71, 1350 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -285,7 +284,7 @@ shape = SubResource( 8 )
 [node name="4f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 4598.71, 902 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -298,7 +297,7 @@ shape = SubResource( 9 )
 [node name="5f" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 4592.71, 454 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -311,7 +310,7 @@ shape = SubResource( 7 )
 [node name="5f_r" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 9043.71, 454 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -324,7 +323,7 @@ shape = SubResource( 5 )
 [node name="5f_l" type="StaticBody2D" parent="floor"]
 editor/display_folded = true
 position = Vector2( 149.71, 454 )
-collision_layer = 2
+collision_layer = 66
 collision_mask = 0
 __meta__ = {
 "_edit_group_": true,
@@ -851,7 +850,7 @@ editor/display_folded = true
 
 [node name="AreaDoorenter0" parent="doors" instance=ExtResource( 12 )]
 position = Vector2( 1539.62, 2554.47 )
-door_name = "023"
+door_name = "Book"
 
 [node name="AreaDoorenter1" parent="doors" instance=ExtResource( 12 )]
 position = Vector2( 5119.62, 2554.47 )
@@ -1172,7 +1171,6 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="spawns" type="Node" parent="."]
@@ -1274,6 +1272,9 @@ wait_time = 1.5
 autostart = true
 
 [node name="Timer_wait_spawns" type="Timer" parent="."]
+
+[node name="Pos2Dfinal" type="Position2D" parent="."]
+position = Vector2( 6570, 2530 )
 
 [connection signal="timeout" from="Timer_ready" to="." method="_on_Timer_ready_timeout"]
 [connection signal="timeout" from="Timer_wait_spawns" to="." method="_on_Timer_wait_spawns_timeout"]

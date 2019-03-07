@@ -4,7 +4,7 @@ const sceneready : String = "res://Screens/Maps/Room023.tscn"
 
 
 func init(pos):
-	self.position = pos
+	self.global_position = pos
 
 func _ready():
 	$CanvasLayer/ColorRect/LabelGameOver.text = tr('Game_over')
@@ -17,6 +17,7 @@ func _on_Buttonready_pressed():
 	yield($AnimationPlayer,"animation_finished")
 	s_globals.posPlayer[15] = true
 	s_globals.is_ready_pos_player = true
+	s_globals.keyfinal = ''
 	get_tree().change_scene(sceneready)
 
 func _on_Buttonexitgame_pressed():
