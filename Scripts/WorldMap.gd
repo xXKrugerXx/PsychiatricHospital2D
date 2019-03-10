@@ -30,6 +30,8 @@ const player := preload("res://Screens/Player.tscn")
 
 func _ready() -> void:
 	randomize()
+	print(s_globals.keys)
+	
 	var p = player.instance()
 	for s in $signalstairs.get_children():
 		s.connect('signalstairs',self,'fsignalstairs')
@@ -66,7 +68,6 @@ func _ready() -> void:
 			$spawns.add_child(s1)
 	else:
 		max_spawns = round(keys_plus_enemis(stardant_spawns,1.46))
-	print(max_spawns)
 	
 
 func fsignalstairs(index : int) -> void:

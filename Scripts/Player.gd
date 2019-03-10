@@ -216,6 +216,9 @@ func update_pickup():
 				s_globals.is_enter_pos = true
 				s_globals.is_ready_pos_player = false
 				a.door_open(a.door_name)
+
+			elif s_globals.keyfinal == 'final':
+				a.door_open(a.door_name)
 			else:
 				messagenokey()
 			yield($Timerwait_pickup,"timeout")

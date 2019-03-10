@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://Screens/HUDScreen.tscn" type="PackedScene" id=2]
@@ -50,6 +50,22 @@ tracks/1/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=4]
+resource_name = "screen_stop"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
 [sub_resource type="Environment" id=3]
 
 [node name="Main" type="Node"]
@@ -61,17 +77,17 @@ script = ExtResource( 1 )
 layer = 6
 
 [node name="ScreenColor" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = 5
 
 [node name="ColorRect" type="ColorRect" parent="ScreenColor"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.133333, 0.133333, 0.133333, 0.25098 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ScreenColor"]
 anims/screen_end = SubResource( 1 )
 anims/screen_st = SubResource( 2 )
+anims/screen_stop = SubResource( 4 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
