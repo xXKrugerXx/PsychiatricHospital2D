@@ -6,6 +6,7 @@ var speed : float = 0
 var motion : Vector2
 
 var is_player : bool
+var is_player_ready : bool
 
 var playerx
 
@@ -13,7 +14,17 @@ func _ready():
 	is_player = false
 	$RayCast2DR.enabled = false
 	$RayCast2DL.enabled = false
+	is_player_ready = false
 	$Sprite.modulate = Color8(255,255,255,0)
+	$Tween.interpolate_property($Sprite,
+		'modulate',
+		Color8(255,255,255,0),
+		Color8(255,255,255,130),3.0,
+		Tween.TRANS_SINE,Tween.EASE_IN_OUT)
+	$Tween.start()
+	yield($Tween,"tween_completed")
+	is_player_ready = true
+	
 
 func _physics_process(delta):
 	motion.y += 10
@@ -22,7 +33,7 @@ func _physics_process(delta):
 		$AnimationTree['parameters/OneShotattack/active'] = true
 	else:
 		if playerx != null:
-			if is_player:
+			if is_player and is_player_ready:
 				var pl = playerx.global_position.x - self.global_position.x
 				if pl > 30:
 					$Sprite.flip_h = true
@@ -56,11 +67,6 @@ func attacked():
 		if R != null:
 			R.death()
 
-
-func tweenst() -> void:
-	$Tween.interpolate_property($Sprite,'modulate',Color8(255,255,255,0),Color8(255,255,255,130),1.5,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
-	$Tween.start()
-
 func tweenend() -> void:
 	$Tween.interpolate_property($Sprite,'modulate',Color8(255,255,255,130),Color8(255,255,255,0),1.4,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 	$Tween.start()
@@ -72,12 +78,10 @@ func tragetplayer(player):
 func _on_Area2Dplayer_body_entered(body):
 	if body.is_in_group('player'):
 		is_player = true
-		tweenst()
 
 func _on_Area2Dplayer_body_exited(body):
 	if body.is_in_group('player'):
 		is_player = false
-		tweenend()
 		yield(tweenend(),'completed')
 		self.queue_free()
 

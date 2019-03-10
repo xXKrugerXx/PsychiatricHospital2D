@@ -105,7 +105,6 @@ __meta__ = {
 "_edit_vertical_guides_": [ 7979.52 ]
 }
 timer_wait_spawns = 1.0
-max_spawns = 22
 
 [node name="map" type="Node2D" parent="."]
 editor/display_folded = true
