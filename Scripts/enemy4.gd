@@ -27,7 +27,7 @@ func _ready():
 	$Area2Dplayer_death.set_collision_mask_bit(2,false)
 	$Tween.interpolate_property(self,'modulate',
 					Color8(255,255,255,0),
-					Color8(255,255,255,255),1.0,
+					Color8(255,255,255,255),3.0,
 					Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 	$Tween.start()
 	yield($Tween,"tween_completed")

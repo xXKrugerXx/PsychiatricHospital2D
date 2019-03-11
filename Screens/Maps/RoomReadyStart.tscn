@@ -310,8 +310,6 @@ z_index = 4
 
 [node name="AreaDoorexit" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1450, 352 )
-scale = Vector2( 2, 2 )
-z_index = 5
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 960, 176.25 )

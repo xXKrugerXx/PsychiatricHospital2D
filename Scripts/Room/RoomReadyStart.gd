@@ -3,6 +3,8 @@ extends Node
 const next_map : = preload("res://Screens/Maps/Room023.tscn")
 
 func _ready():
+	s_globals.keys.clear()
+	s_globals.keyfinal = ''
 	$CanvasLayer/ColorRect.color = Color8(0,0,0,255)
 	$AnimationPlayer.play("statrt_ready")
 	yield($AnimationPlayer,"animation_finished")

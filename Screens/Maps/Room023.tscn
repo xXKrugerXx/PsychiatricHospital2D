@@ -18,9 +18,13 @@ animations = [ {
 
 [node name="ASpriteflashlighning" parent="." index="0"]
 frames = SubResource( 1 )
+frame = 12
 
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 4 )
+
+[node name="StaticBody2Dtop" parent="." index="8"]
+collision_layer = 66
 
 [node name="023" parent="." index="10" instance=ExtResource( 5 )]
 position = Vector2( 1450, 352 )

@@ -2,7 +2,8 @@ extends Node
 
 export(float, 0, 5, 0.2) var timer_ready = 1.4
 export(float, 0, 5, 0.2) var timer_wait_spawns = 1.4
-export(int) var max_spawns = 1
+export(int) var stardant_spawns = 5
+var max_spawns : int
 
 const cameraGO : = preload("res://Screens/Camera2DGame_over.tscn")
 
@@ -29,6 +30,8 @@ const player := preload("res://Screens/Player.tscn")
 
 func _ready() -> void:
 	randomize()
+	print(s_globals.keys)
+	
 	var p = player.instance()
 	for s in $signalstairs.get_children():
 		s.connect('signalstairs',self,'fsignalstairs')
@@ -63,6 +66,9 @@ func _ready() -> void:
 			var s1 = arrenemisfinal[e].instance()
 			s1.init($Pos2Dfinal.global_position)
 			$spawns.add_child(s1)
+	else:
+		max_spawns = round(keys_plus_enemis(stardant_spawns,1.46))
+	
 
 func fsignalstairs(index : int) -> void:
 	match index:
@@ -340,3 +346,12 @@ func readygame():
 	var c = cameraGO.instance()
 	c.init(Vector2(p.x,p.y-90))
 	add_child(c)
+
+
+func keys_plus_enemis(st_spawns,mult_v):
+	var ksize = s_globals.keys.size()
+	var total = st_spawns + (ksize / mult_v)
+	return total
+	
+
+

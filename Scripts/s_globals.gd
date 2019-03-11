@@ -14,7 +14,8 @@ func _ready() -> void:
 	isreadystart = true
 	is_spawn_npc = true
 	is_ready_pos_player = false
-	keys = []
+	keys = ['DrDandy']
+#	keyfinal = 'final'
 #	keys = ['DrDandy','023']
 #	keys = ['Hell','Book','DrDandy']
 	

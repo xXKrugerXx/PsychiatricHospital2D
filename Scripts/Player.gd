@@ -26,7 +26,6 @@ var motion : Vector2
 var indexspeed : int
 var isflashlight : bool
 var isactiverun : bool
-var ispickup : bool
 var ispickup_wait : bool
 var ishudkeys : bool
 var ishudkeyswait : bool
@@ -37,7 +36,6 @@ func _ready():
 	amountrun = 0
 	isactiverun = false
 	isflashlight = true
-	ispickup = false
 	ispickup_wait = true
 	ishudkeys = true
 	ishudkeyswait = true
@@ -71,30 +69,7 @@ func _physics_process(delta : float) -> void:
 	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,6666))
 	stamina_run(delta)
 	
-	for a in $Area2DKeys.get_overlapping_areas():
-		if a.is_in_group('grkeys') and ispickup:
-			a.queue()
-		elif a.is_in_group('grdoorsexit') and ispickup and ispickup_wait:
-			$Timerwait_pickup.start()
-			ispickup_wait = false
-			s_globals.is_enter_pos = false
-			if s_globals.keys.has(a.get_name()):
-				a.next_map()
-			else:
-				messagenokey()
-			yield($Timerwait_pickup,"timeout")
-			ispickup_wait = true
-		elif a.is_in_group('grdoorenter') and ispickup and ispickup_wait:
-			$Timerwait_pickup.start()
-			ispickup_wait = false
-			if s_globals.keys.has(a.door_name):
-				s_globals.is_enter_pos = true
-				s_globals.is_ready_pos_player = false
-				a.door_open(a.door_name)
-			else:
-				messagenokey()
-			yield($Timerwait_pickup,"timeout")
-			ispickup_wait = true
+
 
 func _input(event) -> void:
 	if event.is_action_pressed("ui_left"):
@@ -112,9 +87,7 @@ func _input(event) -> void:
 		isactiverun = false
 		
 	if event.is_action_pressed("ui_pickup"):
-		ispickup = true
-	elif event.is_action_released("ui_pickup"):
-		ispickup = false
+		update_pickup()
 	if event.is_action_pressed("ui_flashlight"):
 		flashlight()
 	
@@ -217,3 +190,37 @@ func hudkeyshow() -> void:
 func death():
 	get_tree().call_group('world','readygame')
 	self.queue_free()
+
+func update_pickup():
+	for a in $Area2DKeys.get_overlapping_areas():
+		if a.is_in_group('grkeys') and ispickup_wait:
+			ispickup_wait = false
+			$Timerwait_pickup.start()
+			a.queue()
+			yield($Timerwait_pickup,"timeout")
+			ispickup_wait = true
+		elif a.is_in_group('grdoorsexit') and ispickup_wait:
+			$Timerwait_pickup.start()
+			ispickup_wait = false
+			s_globals.is_enter_pos = false
+			if s_globals.keys.has(a.get_name()):
+				a.next_map()
+			else:
+				messagenokey()
+			yield($Timerwait_pickup,"timeout")
+			ispickup_wait = true
+		elif a.is_in_group('grdoorenter') and ispickup_wait:
+			$Timerwait_pickup.start()
+			ispickup_wait = false
+			if s_globals.keys.has(a.door_name):
+				s_globals.is_enter_pos = true
+				s_globals.is_ready_pos_player = false
+				a.door_open(a.door_name)
+
+			elif s_globals.keyfinal == 'final':
+				a.door_open(a.door_name)
+			else:
+				messagenokey()
+			yield($Timerwait_pickup,"timeout")
+			ispickup_wait = true
+

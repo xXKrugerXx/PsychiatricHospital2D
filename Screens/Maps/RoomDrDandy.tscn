@@ -105,7 +105,7 @@ extents = Vector2( 10, 300 )
 
 [node name="ASpriteflashlighning" parent="." index="0"]
 frames = SubResource( 1 )
-frame = 16
+frame = 22
 
 [node name="Pain2D3" parent="." index="3"]
 visible = false
