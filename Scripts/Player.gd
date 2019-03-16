@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 const walk_speed : int = 200
 const run_speed : int = 380 #380
+const gravity : int = 400
 export(float, 0, 5,0.1) var regspeedstamina = 1.5 # 1.5
 export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
 
@@ -60,13 +61,16 @@ func _process(delta : float) -> void:
 			i.modulate = Color8(60,60,60,255)
 
 func _physics_process(delta : float) -> void:
-	motion.y += 10
+	motion.y += gravity * delta
 	motion.x = speed
 	s_globals.currentstamina = clamp(s_globals.currentstamina,Bar_run.get_min(),Bar_run.get_max())
 	walk_run(isactiverun)
 	$AnimationTree['parameters/run/blend_amount'] = amountrun
 	$AnimationTree['parameters/idle_walk/blend_position'] = Vector2(motion.x,lightning)
-	motion = move_and_slide_with_snap(motion,Vector2(0,-1), Vector2(0,6666))
+	motion = move_and_slide_with_snap(motion,
+		Vector2(0,256),
+		Vector2(0,-1), true,
+		4,0.785398)
 	stamina_run(delta)
 	
 
