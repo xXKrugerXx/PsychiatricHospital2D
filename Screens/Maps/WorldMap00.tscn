@@ -845,6 +845,7 @@ size_x = 150
 size_y = 180
 
 [node name="doors" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="AreaDoorenter0" parent="doors" instance=ExtResource( 12 )]
 position = Vector2( 1539.62, 2554.47 )
@@ -1170,7 +1171,6 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 
 [node name="spawns" type="Node" parent="."]
