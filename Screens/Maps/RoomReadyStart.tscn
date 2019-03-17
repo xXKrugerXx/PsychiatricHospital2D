@@ -12,13 +12,14 @@
 [ext_resource path="res://Textures/maps/room_start/room023_start4.png" type="Texture" id=10]
 [ext_resource path="res://Textures/maps/room_start/room023_start5.png" type="Texture" id=11]
 [ext_resource path="res://Textures/maps/room_start/room023_start6.png" type="Texture" id=12]
-[ext_resource path="res://new sound/гром.wav" type="AudioStream" id=13]
+[ext_resource path="res://Sounds/гром.wav" type="AudioStream" id=13]
 [ext_resource path="res://Sounds/дождь с грозой.wav" type="AudioStream" id=14]
 [ext_resource path="res://Sounds/дождь(повтор).wav" type="AudioStream" id=15]
 [ext_resource path="res://Screens/Dialog2D.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Screens/Npc.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Screens/AreaDoorexit.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Textures/flash lightning/001_00.png" type="Texture" id=19]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "statrt_ready"
