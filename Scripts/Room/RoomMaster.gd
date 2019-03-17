@@ -1,5 +1,12 @@
 extends Node
 
+export var flashlighning_x3_or_x4 : bool = false
+
+const anim_name : Array = [
+	'st_flashlighning_x4_r1',
+	'st_flashlighning_x4_r2',
+	'st_flashlighning_x4_r3']
+
 const npc = preload("res://Screens/Npc.tscn")
 const player = preload("res://Screens/Player.tscn")
 const key_st = preload("res://Screens/shine_key_st.tscn")
@@ -7,12 +14,18 @@ const keys = preload("res://Screens/Keys.tscn")
 const keyfinal = preload("res://Screens/keyfinal.tscn")
 const keys_y : int = 462
 
+
 func _ready():
 	randomize()
 	var n = npc.instance()
 	var p = player.instance()
 	var key = keys.instance()
 	var keyf = keyfinal.instance()
+	
+	if flashlighning_x3_or_x4:
+		pass
+	else:
+		$AnimationPlayer.play(anim_name[randi() % 3])
 	
 	if get_name() == 'Room023':
 		if s_globals.is_spawn_npc and !s_globals.is_ready_pos_player:

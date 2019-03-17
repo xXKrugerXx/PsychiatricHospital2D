@@ -331,7 +331,6 @@ range_z_max = 1
 bus = "BGM"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "st_flashlighning_x4_r1"
 anims/st_flashlighning_x4_r1 = SubResource( 4 )
 anims/st_flashlighning_x4_r2 = SubResource( 5 )
 anims/st_flashlighning_x4_r3 = SubResource( 6 )
