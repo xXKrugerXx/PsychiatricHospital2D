@@ -16,6 +16,7 @@ func _ready():
 	$RayCast2DL.enabled = false
 	is_player_ready = false
 	$Sprite.modulate = Color8(255,255,255,0)
+	$AudioStreamPlayer2D.playing = false
 	$Tween.interpolate_property($Sprite,
 		'modulate',
 		Color8(255,255,255,0),
@@ -63,8 +64,10 @@ func attacked():
 		var L = $RayCast2DL.get_collider()
 		var R = $RayCast2DR.get_collider()
 		if L != null:
+			$AudioStreamPlayer2D.playing = false
 			L.death()
 		if R != null:
+			$AudioStreamPlayer2D.playing = false
 			R.death()
 
 func tweenend() -> void:
@@ -78,10 +81,12 @@ func tragetplayer(player):
 func _on_Area2Dplayer_body_entered(body):
 	if body.is_in_group('player'):
 		is_player = true
+		$AudioStreamPlayer2D.playing = true
 
 func _on_Area2Dplayer_body_exited(body):
 	if body.is_in_group('player'):
 		is_player = false
+		$AudioStreamPlayer2D.playing = false
 		yield(tweenend(),'completed')
 		self.queue_free()
 

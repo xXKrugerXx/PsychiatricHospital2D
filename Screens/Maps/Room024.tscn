@@ -4,12 +4,87 @@
 [ext_resource path="res://Textures/maps/Room024.png" type="Texture" id=2]
 [ext_resource path="res://Textures/maps/Svecha024.png" type="Texture" id=3]
 [ext_resource path="res://Textures/particles/svechi_light.png" type="Texture" id=4]
-[ext_resource path="res://Textures/flash lightning/001_00.png" type="Texture" id=5]
-[ext_resource path="res://Screens/AreaDoorexit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Screens/AreaDoorexit.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "loop"
-length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D2:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.3, 0.9, 1.3, 1.3, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D3:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.3, 0.9, 1.3, 1.3, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D4:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.3, 0.9, 1.3, 1.3, 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D5:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.3, 0.9, 1.3, 1.3, 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2D6:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.3, 0.9, 1.3, 1.3, 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Light2D7:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 2.0, 1.1, 2.0, 2.0, 1.4 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "loop"
+length = 0.8
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -18,82 +93,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Light2D2:color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.984314, 0.815686, 0.521569, 0.576471 ), Color( 0.984314, 0.815686, 0.521569, 0.384314 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Light2D3:color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.984314, 0.815686, 0.521569, 0.576471 ), Color( 0.984314, 0.815686, 0.521569, 0.384314 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Light2D4:color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.984314, 0.815686, 0.521569, 0.576471 ), Color( 0.984314, 0.815686, 0.521569, 0.384314 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Light2D5:color")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.984314, 0.815686, 0.521569, 0.576471 ), Color( 0.984314, 0.815686, 0.521569, 0.384314 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Light2D6:color")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.984314, 0.815686, 0.521569, 0.576471 ), Color( 0.984314, 0.815686, 0.521569, 0.384314 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Light2D:color")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 0.823529, 0.509804, 0.576471 ), Color( 1, 0.792157, 0.427451, 0.576471 ) ]
 }
 
 [node name="Room024" index="0" instance=ExtResource( 1 )]
@@ -104,19 +107,16 @@ texture = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="." index="10"]
 position = Vector2( 960, 240 )
 scale = Vector2( 2.5, 2.5 )
+z_index = 2
 texture = ExtResource( 3 )
 hframes = 4
+frame = 3
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Light2D" parent="." index="11"]
-position = Vector2( 986.454, 408.009 )
-scale = Vector2( 4.9001, 1.00241 )
-texture = ExtResource( 4 )
-texture_scale = 2.16
-color = Color( 1, 0.823529, 0.509804, 0.576471 )
-range_z_max = 1024
+position = Vector2( 960, 176 )
 
 [node name="Light2D2" type="Light2D" parent="." index="12"]
 position = Vector2( 1109.84, 363.226 )
@@ -124,7 +124,8 @@ scale = Vector2( 0.3, 0.5 )
 texture = ExtResource( 4 )
 texture_scale = 1.45
 color = Color( 0.984314, 0.815686, 0.521569, 0.576471 )
-energy = 1.1
+energy = 1.00875
+range_z_max = 3
 __meta__ = {
 "_edit_lock_": true
 }
@@ -135,7 +136,8 @@ scale = Vector2( 0.3, 0.5 )
 texture = ExtResource( 4 )
 texture_scale = 1.45
 color = Color( 0.984314, 0.815686, 0.521569, 0.576471 )
-energy = 1.1
+energy = 1.00875
+range_z_max = 3
 __meta__ = {
 "_edit_lock_": true
 }
@@ -146,7 +148,8 @@ scale = Vector2( 0.3, 0.5 )
 texture = ExtResource( 4 )
 texture_scale = 1.45
 color = Color( 0.984314, 0.815686, 0.521569, 0.576471 )
-energy = 1.1
+energy = 1.00875
+range_z_max = 3
 __meta__ = {
 "_edit_lock_": true
 }
@@ -157,7 +160,8 @@ scale = Vector2( 0.3, 0.5 )
 texture = ExtResource( 4 )
 texture_scale = 1.45
 color = Color( 0.984314, 0.815686, 0.521569, 0.576471 )
-energy = 1.1
+energy = 1.00875
+range_z_max = 3
 __meta__ = {
 "_edit_lock_": true
 }
@@ -168,25 +172,29 @@ scale = Vector2( 0.3, 0.5 )
 texture = ExtResource( 4 )
 texture_scale = 1.45
 color = Color( 0.984314, 0.815686, 0.521569, 0.576471 )
-energy = 1.1
+energy = 1.00875
+range_z_max = 3
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Light2Dwindow" type="Light2D" parent="." index="17"]
-position = Vector2( 960, 176.25 )
-scale = Vector2( 2.5, 2.5 )
-texture = ExtResource( 5 )
-range_z_max = 1
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Light2D7" type="Light2D" parent="." index="17"]
+position = Vector2( 985.858, 399.637 )
+scale = Vector2( 6.68912, 1.17768 )
+texture = ExtResource( 4 )
+color = Color( 0.403922, 0.388235, 0.286275, 0.576471 )
+energy = 1.4175
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="18"]
+[node name="024" parent="." index="19" instance=ExtResource( 5 )]
+position = Vector2( 470, 352 )
+
+[node name="AnimationPlayerLoopLight" type="AnimationPlayer" parent="." index="21"]
 autoplay = "loop"
-playback_speed = 0.4
+playback_speed = 0.2
 anims/loop = SubResource( 1 )
 
-[node name="024" parent="." index="19" instance=ExtResource( 6 )]
-position = Vector2( 470, 352 )
+[node name="AnimationPlayerLoopSvecha" type="AnimationPlayer" parent="." index="22"]
+autoplay = "loop"
+playback_speed = 0.5
+anims/loop = SubResource( 2 )
 

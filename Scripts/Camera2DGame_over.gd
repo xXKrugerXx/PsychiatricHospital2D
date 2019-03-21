@@ -5,8 +5,10 @@ const sceneready : String = "res://Screens/Maps/Room023.tscn"
 
 func init(pos):
 	self.global_position = pos
+	$AudioStreamPlayerDeath.playing = false
 
 func _ready():
+	$AudioStreamPlayerDeath.playing = true
 	$CanvasLayer/ColorRect/LabelGameOver.text = tr('Game_over')
 	$CanvasLayer/ColorRect/VBoxContainer/Buttonready.text = tr('Ready_game')
 	$CanvasLayer/ColorRect/VBoxContainer/Buttonexitgame.text = tr('Exit_game')

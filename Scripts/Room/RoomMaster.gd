@@ -1,5 +1,17 @@
 extends Node
 
+export var flashlighning_x3_or_x4 : bool = false
+
+const anim_name : Array = [
+	'st_flashlighning_x4_r1',
+	'st_flashlighning_x4_r2',
+	'st_flashlighning_x4_r3']
+
+const anim_name1 : Array = [
+	'st_flashlighning_x2_r1',
+	'st_flashlighning_x2_r2',
+	'st_flashlighning_x2_r3']
+
 const npc = preload("res://Screens/Npc.tscn")
 const player = preload("res://Screens/Player.tscn")
 const key_st = preload("res://Screens/shine_key_st.tscn")
@@ -7,12 +19,22 @@ const keys = preload("res://Screens/Keys.tscn")
 const keyfinal = preload("res://Screens/keyfinal.tscn")
 const keys_y : int = 462
 
+
 func _ready():
 	randomize()
 	var n = npc.instance()
 	var p = player.instance()
 	var key = keys.instance()
 	var keyf = keyfinal.instance()
+	
+	print(AudioServer.get_bus_effect(1,0))
+	
+	
+	
+	if flashlighning_x3_or_x4:
+		$AnimationPlayerflashlighning.play(anim_name1[randi() % 3])
+	else:
+		$AnimationPlayerflashlighning.play(anim_name[randi() % 3])
 	
 	if get_name() == 'Room023':
 		if s_globals.is_spawn_npc and !s_globals.is_ready_pos_player:
@@ -112,6 +134,7 @@ func _ready():
 		p.init(Vector2(800,366.306))
 		add_child(p)
 	elif get_name() == 'Roomhell':
+		$AudioStreamPlayer2DKnockHeart.playing = true
 		if !s_globals.keys.has('024'):
 			key.init(Vector2(rand_range(40,1010),keys_y), 24,'',true)
 			add_child(key)

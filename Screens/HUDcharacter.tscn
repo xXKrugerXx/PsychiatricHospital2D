@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Textures/touch/Left_Arrow_0.png" type="Texture" id=1]
 [ext_resource path="res://Textures/touch/Left_Arrow_1.png" type="Texture" id=2]
@@ -41,6 +41,8 @@
 [ext_resource path="res://Textures/keys/KeyBook.png" type="Texture" id=39]
 [ext_resource path="res://Textures/keys/KeyDr.Dandy.png" type="Texture" id=40]
 [ext_resource path="res://Screens/BarRun.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Textures/touch/Setting1.png" type="Texture" id=42]
+[ext_resource path="res://Textures/touch/Setting2.png" type="Texture" id=43]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -70,6 +72,9 @@ font_data = ExtResource( 12 )
 size = 36
 font_data = ExtResource( 12 )
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 32, 32 )
+
 [node name="HUDcharacter" type="CanvasLayer"]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -94,7 +99,7 @@ pressed = ExtResource( 2 )
 shape = SubResource( 1 )
 action = "ui_left"
 
-[node name="Container" type="Container" parent="HBoxContainer"]
+[node name="Container" type="Control" parent="HBoxContainer"]
 margin_left = 68.0
 margin_right = 128.0
 margin_bottom = 64.0
@@ -132,6 +137,7 @@ margin_bottom = 64.0
 alignment = 1
 
 [node name="Pickup" type="Control" parent="VBoxContainer/HBoxContainer2"]
+editor/display_folded = true
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
@@ -142,7 +148,7 @@ pressed = ExtResource( 6 )
 shape = SubResource( 2 )
 action = "ui_pickup"
 
-[node name="Container" type="Container" parent="VBoxContainer/HBoxContainer2"]
+[node name="Container" type="Control" parent="VBoxContainer/HBoxContainer2"]
 margin_left = 68.0
 margin_right = 168.0
 margin_bottom = 64.0
@@ -160,7 +166,7 @@ pressed = ExtResource( 8 )
 shape = SubResource( 2 )
 action = "ui_keys"
 
-[node name="Container" type="Container" parent="VBoxContainer"]
+[node name="Container" type="Control" parent="VBoxContainer"]
 margin_top = 68.0
 margin_right = 236.0
 margin_bottom = 108.0
@@ -183,7 +189,7 @@ normal = ExtResource( 9 )
 shape = SubResource( 3 )
 action = "ui_flashlight"
 
-[node name="Container" type="Container" parent="VBoxContainer/HBoxContainer"]
+[node name="Container" type="Control" parent="VBoxContainer/HBoxContainer"]
 margin_left = 68.0
 margin_right = 168.0
 margin_bottom = 64.0
@@ -1059,4 +1065,22 @@ valign = 1
 [node name="Tweenmessage" type="Tween" parent="messageDoorKeys"]
 
 [node name="Tweentablekeys" type="Tween" parent="."]
+
+[node name="touchsettings" type="Control" parent="."]
+modulate = Color( 1, 1, 1, 0.509804 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -94.0
+margin_top = 20.0
+margin_right = -30.0
+margin_bottom = 84.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="touchsettings"]
+normal = ExtResource( 42 )
+pressed = ExtResource( 43 )
+shape = SubResource( 9 )
+action = "ui_settings"
 

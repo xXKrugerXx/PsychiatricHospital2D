@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scripts/enemy4.gd" type="Script" id=1]
 [ext_resource path="res://Textures/enemies/4/Ghost4.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Textures/enemies/4/Ghost5.png" type="Texture" id=11]
 [ext_resource path="res://Textures/enemies/4/Ghost6.png" type="Texture" id=12]
 [ext_resource path="res://Textures/enemies/4/Ghost7.png" type="Texture" id=13]
+[ext_resource path="res://Sounds/звук колесо.wav" type="AudioStream" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 41.2505
@@ -214,6 +215,12 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_act_out"]
 shape = SubResource( 20 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 0, 53 )
+stream = ExtResource( 14 )
+max_distance = 390.0
+bus = "ghost wheel"
 
 [connection signal="body_entered" from="Area2Dwalk_player" to="." method="_on_Area2Dwalk_player_body_entered"]
 [connection signal="body_exited" from="Area2Dwalk_player" to="." method="_on_Area2Dwalk_player_body_exited"]

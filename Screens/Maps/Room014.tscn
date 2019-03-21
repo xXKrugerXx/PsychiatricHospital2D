@@ -6,9 +6,6 @@
 
 [node name="Room014" index="0" instance=ExtResource( 1 )]
 
-[node name="ASpriteflashlighning" parent="." index="0"]
-frame = 11
-
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 2 )
 

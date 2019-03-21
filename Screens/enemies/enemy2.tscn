@@ -1,7 +1,7 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scripts/enemy2.gd" type="Script" id=1]
-[ext_resource path="res://Textures/enemies/2/Ghost_6.png" type="Texture" id=2]
+[ext_resource path="res://Textures/enemies/2/Ghost_2.png" type="Texture" id=2]
 [ext_resource path="res://Textures/enemies/2/Ghost_15.png" type="Texture" id=3]
 [ext_resource path="res://Textures/enemies/2/Ghost_16.png" type="Texture" id=4]
 [ext_resource path="res://Textures/enemies/2/Ghost_17.png" type="Texture" id=5]
@@ -9,10 +9,10 @@
 [ext_resource path="res://Textures/enemies/2/Ghost_19.png" type="Texture" id=7]
 [ext_resource path="res://Textures/enemies/2/Ghost_20.png" type="Texture" id=8]
 [ext_resource path="res://Textures/enemies/2/Ghost_1.png" type="Texture" id=9]
-[ext_resource path="res://Textures/enemies/2/Ghost_2.png" type="Texture" id=10]
-[ext_resource path="res://Textures/enemies/2/Ghost_3.png" type="Texture" id=11]
-[ext_resource path="res://Textures/enemies/2/Ghost_4.png" type="Texture" id=12]
-[ext_resource path="res://Textures/enemies/2/Ghost_5.png" type="Texture" id=13]
+[ext_resource path="res://Textures/enemies/2/Ghost_3.png" type="Texture" id=10]
+[ext_resource path="res://Textures/enemies/2/Ghost_4.png" type="Texture" id=11]
+[ext_resource path="res://Textures/enemies/2/Ghost_5.png" type="Texture" id=12]
+[ext_resource path="res://Textures/enemies/2/Ghost_6.png" type="Texture" id=13]
 [ext_resource path="res://Textures/enemies/2/Ghost_7.png" type="Texture" id=14]
 [ext_resource path="res://Textures/enemies/2/Ghost_8.png" type="Texture" id=15]
 [ext_resource path="res://Textures/enemies/2/Ghost_9.png" type="Texture" id=16]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Textures/enemies/2/Ghost_12.png" type="Texture" id=19]
 [ext_resource path="res://Textures/enemies/2/Ghost_13.png" type="Texture" id=20]
 [ext_resource path="res://Textures/enemies/2/Ghost_14.png" type="Texture" id=21]
+[ext_resource path="res://Sounds/звук крик женские медсестра.wav" type="AudioStream" id=22]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 25.2498
@@ -57,7 +58,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 15 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -158,6 +159,7 @@ parameters/idle_walk/blend_position = Vector2( 0, 0 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Area2Dwalk_player" type="Area2D" parent="."]
+editor/display_folded = true
 collision_layer = 0
 collision_mask = 4
 
@@ -166,6 +168,7 @@ position = Vector2( 0, 20 )
 shape = SubResource( 13 )
 
 [node name="Area2Dattakck_player" type="Area2D" parent="."]
+editor/display_folded = true
 collision_layer = 0
 collision_mask = 4
 
@@ -174,6 +177,7 @@ position = Vector2( 0, 20 )
 shape = SubResource( 14 )
 
 [node name="Area2Dplayer_death" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 0, -20 )
 collision_layer = 0
 collision_mask = 4
@@ -181,6 +185,11 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Dplayer_death"]
 position = Vector2( 0, 10 )
 shape = SubResource( 15 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 22 )
+max_distance = 450.0
+bus = "ghost nurse"
 
 [connection signal="body_entered" from="Area2Dwalk_player" to="." method="_on_Area2Dwalk_player_body_entered"]
 [connection signal="body_exited" from="Area2Dwalk_player" to="." method="_on_Area2Dwalk_player_body_exited"]
