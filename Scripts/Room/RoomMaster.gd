@@ -134,6 +134,7 @@ func _ready():
 		p.init(Vector2(800,366.306))
 		add_child(p)
 	elif get_name() == 'Roomhell':
+		$AudioStreamPlayer2DKnockHeart.playing = true
 		if !s_globals.keys.has('024'):
 			key.init(Vector2(rand_range(40,1010),keys_y), 24,'',true)
 			add_child(key)

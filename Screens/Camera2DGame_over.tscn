@@ -204,7 +204,7 @@ uppercase = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect"]
 visible = false
-self_modulate = Color( 1, 1, 1, 0.0666666 )
+self_modulate = Color( 1, 1, 1, 0.2 )
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -216,7 +216,7 @@ margin_bottom = -110.0
 alignment = 1
 
 [node name="Buttonready" type="Button" parent="CanvasLayer/ColorRect/VBoxContainer"]
-margin_top = 21.0
+margin_top = 19.0
 margin_right = 393.0
 margin_bottom = 67.0
 custom_fonts/font = SubResource( 2 )
@@ -225,7 +225,7 @@ text = "none"
 flat = true
 clip_text = true
 
-[node name="Container" type="Container" parent="CanvasLayer/ColorRect/VBoxContainer"]
+[node name="Container" type="Control" parent="CanvasLayer/ColorRect/VBoxContainer"]
 margin_top = 71.0
 margin_right = 393.0
 margin_bottom = 91.0
@@ -234,7 +234,7 @@ rect_min_size = Vector2( 0, 20 )
 [node name="Buttonexitgame" type="Button" parent="CanvasLayer/ColorRect/VBoxContainer"]
 margin_top = 95.0
 margin_right = 393.0
-margin_bottom = 141.0
+margin_bottom = 143.0
 custom_fonts/font = SubResource( 2 )
 disabled = true
 text = "none"

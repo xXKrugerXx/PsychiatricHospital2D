@@ -8,13 +8,15 @@ var currentstamina : float
 var is_enter_pos : bool
 var is_spawn_npc : bool
 var is_ready_pos_player : bool
+var is_ready_setting_sound : bool
 
 func _ready() -> void:
 	currentstamina = 100
 	isreadystart = true
 	is_spawn_npc = true
 	is_ready_pos_player = false
-	keys = ['DrDandy']
+	is_ready_setting_sound = true
+	keys = []
 #	keyfinal = 'final'
 #	keys = ['DrDandy','023']
 #	keys = ['Hell','Book','DrDandy']

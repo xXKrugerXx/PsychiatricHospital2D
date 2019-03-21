@@ -1,11 +1,23 @@
-[gd_resource type="AudioBusLayout" load_steps=6 format=2]
+[gd_resource type="AudioBusLayout" load_steps=9 format=2]
 
 [sub_resource type="AudioEffectAmplify" id=1]
 resource_name = "Amplify"
 
+[sub_resource type="AudioEffectAmplify" id=7]
+resource_name = "Amplify"
+volume_db = 2.0
+
+[sub_resource type="AudioEffectAmplify" id=8]
+resource_name = "Amplify"
+volume_db = -10.0
+
+[sub_resource type="AudioEffectAmplify" id=9]
+resource_name = "Amplify"
+volume_db = 5.0
+
 [sub_resource type="AudioEffectAmplify" id=3]
 resource_name = "Amplify"
-volume_db = 10.0
+volume_db = 14.0
 
 [sub_resource type="AudioEffectAmplify" id=4]
 resource_name = "Amplify"
@@ -24,7 +36,7 @@ bus/1/name = "BGM"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -80.0
+bus/1/volume_db = 1.7
 bus/1/send = "Master"
 bus/1/effect/0/effect = SubResource( 1 )
 bus/1/effect/0/enabled = true
@@ -32,7 +44,7 @@ bus/2/name = "SFX"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = -80.0
+bus/2/volume_db = 3.6
 bus/2/send = "Master"
 bus/3/name = "Ghosts"
 bus/3/solo = false
@@ -40,6 +52,8 @@ bus/3/mute = false
 bus/3/bypass_fx = false
 bus/3/volume_db = 2.6
 bus/3/send = "Master"
+bus/3/effect/0/effect = SubResource( 9 )
+bus/3/effect/0/enabled = true
 bus/4/name = "Character"
 bus/4/solo = false
 bus/4/mute = false
@@ -96,4 +110,20 @@ bus/11/mute = false
 bus/11/bypass_fx = false
 bus/11/volume_db = 0.0
 bus/11/send = "Ghosts"
+bus/12/name = "KnockHeart"
+bus/12/solo = false
+bus/12/mute = false
+bus/12/bypass_fx = false
+bus/12/volume_db = 0.0
+bus/12/send = "BGM"
+bus/12/effect/0/effect = SubResource( 7 )
+bus/12/effect/0/enabled = true
+bus/13/name = "world thunder"
+bus/13/solo = false
+bus/13/mute = false
+bus/13/bypass_fx = false
+bus/13/volume_db = 0.0
+bus/13/send = "BGM"
+bus/13/effect/0/effect = SubResource( 8 )
+bus/13/effect/0/enabled = true
 

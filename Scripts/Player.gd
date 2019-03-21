@@ -10,6 +10,8 @@ onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
 
 onready var hudlabelkeys = $HUDcharacter/tablekeys/LabelKeys as Label
 
+onready var hud_settings = $Settings/ColorRect as ColorRect
+
 
 const tex_arr_flaslight : Array = [preload("res://Textures/touch/Flashlight_0.png"),
 						preload("res://Textures/touch/Flashlight_1.png")]
@@ -40,6 +42,7 @@ func _ready():
 	ispickup_wait = true
 	ishudkeys = true
 	ishudkeyswait = true
+	hud_settings.hide()
 	
 	
 	###########HUD####################
@@ -98,6 +101,11 @@ func _input(event) -> void:
 	
 	if event.is_action_pressed('ui_keys'):
 		hudkeyshow()
+	
+	if event.is_action_pressed('ui_settings'):
+		get_tree().paused = true
+		hud_settings.show()
+		
 
 
 func stamina_run(delta : float) -> void:
@@ -228,4 +236,5 @@ func update_pickup():
 				messagenokey()
 			yield($Timerwait_pickup,"timeout")
 			ispickup_wait = true
+
 
