@@ -7,6 +7,11 @@ const anim_name : Array = [
 	'st_flashlighning_x4_r2',
 	'st_flashlighning_x4_r3']
 
+const anim_name1 : Array = [
+	'st_flashlighning_x2_r1',
+	'st_flashlighning_x2_r2',
+	'st_flashlighning_x2_r3']
+
 const npc = preload("res://Screens/Npc.tscn")
 const player = preload("res://Screens/Player.tscn")
 const key_st = preload("res://Screens/shine_key_st.tscn")
@@ -27,7 +32,7 @@ func _ready():
 	
 	
 	if flashlighning_x3_or_x4:
-		pass
+		$AnimationPlayerflashlighning.play(anim_name1[randi() % 3])
 	else:
 		$AnimationPlayerflashlighning.play(anim_name[randi() % 3])
 	

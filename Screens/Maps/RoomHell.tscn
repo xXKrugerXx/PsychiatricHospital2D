@@ -40,6 +40,7 @@ tracks/1/keys = {
 }
 
 [node name="Roomhell" index="0" instance=ExtResource( 1 )]
+flashlighning_x3_or_x4 = true
 
 [node name="Pain2D3" parent="." index="3"]
 visible = false

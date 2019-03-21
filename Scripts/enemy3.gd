@@ -18,6 +18,7 @@ func _ready():
 	self.modulate = Color8(255,255,255,0)
 	is_player = false
 	is_player_ready = false
+	$AudioStreamPlayer2D.playing = false
 	$Tween.interpolate_property(self,'modulate',
 					Color8(255,255,255,0),
 					Color8(255,255,255,255),3.0,
@@ -60,10 +61,12 @@ func tragetplayer(player):
 func _on_Area2Dwalk_player_body_entered(body):
 	if body.is_in_group('player'):
 		is_player = true
+		$AudioStreamPlayer2D.playing = true
 
 func _on_Area2Dwalk_player_body_exited(body):
 	if body.is_in_group('player'):
 		is_player = false
+		$AudioStreamPlayer2D.playing = false
 		queue()
 
 func _on_Area2Dattakck_player_body_entered(body):
@@ -76,6 +79,7 @@ func _on_Area2Dattakck_player_body_exited(body):
 
 func _on_Area2Dplayer_death_body_entered(body):
 	if body.is_in_group('player'):
+		$AudioStreamPlayer2D.playing = false
 		body.death()
 		if playerx != null:
 			$Tween.interpolate_property(self,'modulate',

@@ -24,6 +24,7 @@ func _ready():
 	is_player_ready = false
 	is_piayer_act_out = false
 	is_act_attack = true
+	$AudioStreamPlayer2D.playing = false
 	$Area2Dplayer_death.set_collision_mask_bit(2,false)
 	$Tween.interpolate_property(self,'modulate',
 					Color8(255,255,255,0),
@@ -83,6 +84,7 @@ func _on_Area2Dwalk_player_body_entered(body):
 		if rindex == 0:
 			$Area2Dplayer_death.set_collision_mask_bit(2,false)
 		elif rindex == 1:
+			$AudioStreamPlayer2D.playing = true ##############################
 			$Area2Dplayer_death.set_collision_mask_bit(2,true)
 			is_player = true
 		else:
@@ -100,6 +102,7 @@ func _on_Area2Dwalk_player_body_exited(body):
 			is_piayer_act_out = true
 			attackactive = -1
 			is_act_attack = false
+			$AudioStreamPlayer2D.playing = true
 
 func _on_Area2Dattakck_player_body_entered(body):
 	if body.is_in_group('player'):
@@ -113,6 +116,7 @@ func _on_Area2Dattakck_player_body_exited(body):
 
 func _on_Area2Dplayer_death_body_entered(body):
 	if body.is_in_group('player'):
+		$AudioStreamPlayer2D.playing = false
 		body.death()
 		if playerx != null:
 			$Tween.interpolate_property(self,'modulate',

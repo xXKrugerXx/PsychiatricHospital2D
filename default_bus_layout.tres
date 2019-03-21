@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=5 format=2]
+[gd_resource type="AudioBusLayout" load_steps=6 format=2]
 
 [sub_resource type="AudioEffectAmplify" id=1]
 resource_name = "Amplify"
@@ -14,6 +14,10 @@ volume_db = -5.0
 [sub_resource type="AudioEffectAmplify" id=5]
 resource_name = "Amplify"
 volume_db = 5.0
+
+[sub_resource type="AudioEffectAmplify" id=6]
+resource_name = "Amplify"
+volume_db = 10.0
 
 [resource]
 bus/1/name = "BGM"
@@ -34,7 +38,7 @@ bus/3/name = "Ghosts"
 bus/3/solo = false
 bus/3/mute = false
 bus/3/bypass_fx = false
-bus/3/volume_db = -80.0
+bus/3/volume_db = 2.6
 bus/3/send = "Master"
 bus/4/name = "Character"
 bus/4/solo = false
@@ -66,4 +70,30 @@ bus/7/volume_db = 0.0
 bus/7/send = "BGM"
 bus/7/effect/0/effect = SubResource( 5 )
 bus/7/effect/0/enabled = true
+bus/8/name = "ghost cut off legs"
+bus/8/solo = false
+bus/8/mute = false
+bus/8/bypass_fx = false
+bus/8/volume_db = 0.0
+bus/8/send = "Ghosts"
+bus/8/effect/0/effect = SubResource( 6 )
+bus/8/effect/0/enabled = true
+bus/9/name = "ghost wheel"
+bus/9/solo = false
+bus/9/mute = false
+bus/9/bypass_fx = false
+bus/9/volume_db = 0.0
+bus/9/send = "Ghosts"
+bus/10/name = "ghost nurse"
+bus/10/solo = false
+bus/10/mute = false
+bus/10/bypass_fx = false
+bus/10/volume_db = 0.0
+bus/10/send = "Ghosts"
+bus/11/name = "ghost hand snapping"
+bus/11/solo = false
+bus/11/mute = false
+bus/11/bypass_fx = false
+bus/11/volume_db = 0.0
+bus/11/send = "Ghosts"
 
