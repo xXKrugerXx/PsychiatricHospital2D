@@ -607,6 +607,7 @@ shadow_enabled = true
 shadow_gradient_length = 0.1
 
 [node name="Area2DKeys" type="Area2D" parent="."]
+editor/display_folded = true
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DKeys"]
@@ -618,5 +619,5 @@ one_shot = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 0, -90 )
-bus = "SFX"
+bus = "Character"
 

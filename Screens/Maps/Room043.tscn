@@ -23,9 +23,6 @@ tracks/0/keys = {
 
 [node name="Room043" index="0" instance=ExtResource( 1 )]
 
-[node name="ASpriteflashlighning" parent="." index="0"]
-frame = 15
-
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 2 )
 

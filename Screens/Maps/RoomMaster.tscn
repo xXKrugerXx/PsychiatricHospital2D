@@ -8,13 +8,13 @@
 [ext_resource path="res://Sounds/гром.wav" type="AudioStream" id=6]
 [ext_resource path="res://Sounds/дождь(повтор).wav" type="AudioStream" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 300.681 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1044.87, 10 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "st_flashlighning_x4_r1"
 length = 4.0
 loop = true
@@ -71,7 +71,7 @@ tracks/2/keys = {
 "times": PoolRealArray( -0.1 )
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "st_flashlighning_x4_r2"
 length = 4.0
 loop = true
@@ -128,7 +128,7 @@ tracks/2/keys = {
 "times": PoolRealArray( -0.1 )
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "st_flashlighning_x4_r3"
 length = 4.0
 loop = true
@@ -290,7 +290,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DL"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="StaticBody2DR" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -303,7 +303,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DR"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="StaticBody2Dtop" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -316,7 +316,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2Dtop"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
@@ -330,8 +330,8 @@ range_z_max = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 bus = "BGM"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/st_flashlighning_x4_r1 = SubResource( 4 )
-anims/st_flashlighning_x4_r2 = SubResource( 5 )
-anims/st_flashlighning_x4_r3 = SubResource( 6 )
+[node name="AnimationPlayerflashlighning" type="AnimationPlayer" parent="."]
+anims/st_flashlighning_x4_r1 = SubResource( 3 )
+anims/st_flashlighning_x4_r2 = SubResource( 4 )
+anims/st_flashlighning_x4_r3 = SubResource( 5 )
 

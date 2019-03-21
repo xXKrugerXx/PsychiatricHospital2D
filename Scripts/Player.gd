@@ -41,6 +41,7 @@ func _ready():
 	ishudkeys = true
 	ishudkeyswait = true
 	
+	
 	###########HUD####################
 	Bar_run.value = s_globals.currentstamina
 	hudlabelkeys.text = tr('Door_keys')

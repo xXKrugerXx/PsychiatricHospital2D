@@ -22,10 +22,14 @@ func _ready():
 	var key = keys.instance()
 	var keyf = keyfinal.instance()
 	
+	print(AudioServer.get_bus_effect(1,0))
+	
+	
+	
 	if flashlighning_x3_or_x4:
 		pass
 	else:
-		$AnimationPlayer.play(anim_name[randi() % 3])
+		$AnimationPlayerflashlighning.play(anim_name[randi() % 3])
 	
 	if get_name() == 'Room023':
 		if s_globals.is_spawn_npc and !s_globals.is_ready_pos_player:
