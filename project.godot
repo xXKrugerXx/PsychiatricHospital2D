@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="MentalHospital2D"
 run/main_scene="res://Screens/Main.tscn"
+boot_splash/image="res://Textures/maps/final_door.png"
 config/icon="res://icon.png"
 
 [autoload]

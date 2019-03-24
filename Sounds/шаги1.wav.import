@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/шаги.wav-e3086937212d33940c3cd1243a7b7d78.sample"
+path="res://.import/шаги1.wav-c46c9c2640929d64d1d3b4579e6ef053.sample"
 
 [deps]
 
-source_file="res://Sounds/шаги.wav"
-dest_files=[ "res://.import/шаги.wav-e3086937212d33940c3cd1243a7b7d78.sample" ]
+source_file="res://Sounds/шаги1.wav"
+dest_files=[ "res://.import/шаги1.wav-c46c9c2640929d64d1d3b4579e6ef053.sample" ]
 
 [params]
 
