@@ -1,6 +1,6 @@
 extends Area2D
 
-export(bool) var is_final = false
+var is_final = false
 
 const file : String = 'res://Screens/Maps/Room'
 const file_final_game : String = 'res://Screens/Maps/Final_Game'

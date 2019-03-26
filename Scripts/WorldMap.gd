@@ -30,8 +30,7 @@ const player := preload("res://Screens/Player.tscn")
 
 func _ready() -> void:
 	randomize()
-	print(s_globals.keys)
-	
+
 	var p = player.instance()
 	for s in $signalstairs.get_children():
 		s.connect('signalstairs',self,'fsignalstairs')
@@ -65,6 +64,8 @@ func _ready() -> void:
 		for e in range(3):
 			var s1 = arrenemisfinal[e].instance()
 			s1.init($Pos2Dfinal.global_position)
+			s1.set('walk', s1.get('walk') + 130)
+			print('final enemis ',s1.get('walk'))
 			$spawns.add_child(s1)
 	else:
 		max_spawns = round(keys_plus_enemis(stardant_spawns,1.46))
@@ -329,6 +330,8 @@ func spawns():
 	var posxrandom = rand_range(xsizest,xsizeend)
 	var posyrandom = rand_range(ysizest,ysizeend)
 	s.init(Vector2(posxrandom,posyrandom))
+	s.set('walk', s.get('walk') + int(enemis_walk_plus(1.4)))
+#	print(s.get_name(),' ',s.get('walk'), ' ', int(enemis_walk_plus(1.4)))
 	$spawns.add_child(s)
 
 func _on_Timer_ready_timeout():
@@ -352,6 +355,10 @@ func keys_plus_enemis(st_spawns,mult_v):
 	var ksize = s_globals.keys.size()
 	var total = st_spawns + (ksize / mult_v)
 	return total
-	
+
+func enemis_walk_plus(value):
+	var ksize = s_globals.keys.size()
+	var summ = ksize * value
+	return summ
 
 
