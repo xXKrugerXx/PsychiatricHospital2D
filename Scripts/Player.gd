@@ -45,6 +45,7 @@ func _ready():
 	hud_settings.hide()
 	
 	
+	
 	###########HUD####################
 	Bar_run.value = s_globals.currentstamina
 	hudlabelkeys.text = tr('Door_keys')
@@ -222,15 +223,20 @@ func update_pickup():
 				messagenokey()
 			yield($Timerwait_pickup,"timeout")
 			ispickup_wait = true
-		elif a.is_in_group('grdoorenter') and ispickup_wait:
+		elif a.is_in_group('grdoorenter') and ispickup_wait and s_globals.keyfinal != 'final':
 			$Timerwait_pickup.start()
 			ispickup_wait = false
 			if s_globals.keys.has(a.door_name):
 				s_globals.is_enter_pos = true
 				s_globals.is_ready_pos_player = false
 				a.door_open(a.door_name)
-
-			elif s_globals.keyfinal == 'final':
+			else:
+				messagenokey()
+		elif a.is_in_group('grdoorenterfinal') and ispickup_wait:
+			ispickup_wait = false
+			$Timerwait_pickup.start()
+			if s_globals.keyfinal == 'final':
+				$Timerwait_pickup.stop()
 				a.door_open(a.door_name)
 			else:
 				messagenokey()

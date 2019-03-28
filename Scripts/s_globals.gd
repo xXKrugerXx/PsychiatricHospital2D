@@ -9,8 +9,10 @@ var is_enter_pos : bool
 var is_spawn_npc : bool
 var is_ready_pos_player : bool
 var is_ready_setting_sound : bool
+var is_keys_final_doors : bool 
 
 func _ready() -> void:
+	is_keys_final_doors = true
 	currentstamina = 100
 	isreadystart = true
 	is_spawn_npc = true
