@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ghost_stroller.ogg-f574b549117345a6355580f7eb7fe658.oggstr"
+
+[deps]
+
+source_file="res://Sounds/ghost_stroller.ogg"
+dest_files=[ "res://.import/ghost_stroller.ogg-f574b549117345a6355580f7eb7fe658.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

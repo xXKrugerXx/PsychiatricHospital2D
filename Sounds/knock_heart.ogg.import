@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/knock_heart.ogg-154747961184b171fd54c4f325d3f306.oggstr"
+
+[deps]
+
+source_file="res://Sounds/knock_heart.ogg"
+dest_files=[ "res://.import/knock_heart.ogg-154747961184b171fd54c4f325d3f306.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

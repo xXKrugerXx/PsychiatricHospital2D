@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rain_with_thunderstorms.ogg-df5528b0f2b39f8e7ca59f7f93d0ce92.oggstr"
+
+[deps]
+
+source_file="res://Sounds/rain_with_thunderstorms.ogg"
+dest_files=[ "res://.import/rain_with_thunderstorms.ogg-df5528b0f2b39f8e7ca59f7f93d0ce92.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

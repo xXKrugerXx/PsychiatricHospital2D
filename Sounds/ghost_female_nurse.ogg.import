@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ghost_female_nurse.ogg-fce03bb2368917a7bf8fdf5b244a77ea.oggstr"
+
+[deps]
+
+source_file="res://Sounds/ghost_female_nurse.ogg"
+dest_files=[ "res://.import/ghost_female_nurse.ogg-fce03bb2368917a7bf8fdf5b244a77ea.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

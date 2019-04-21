@@ -1,14 +1,16 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Screens/Maps/RoomMaster.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Textures/maps/Room_r1i5.png" type="Texture" id=2]
+[ext_resource path="res://Textures/maps/Room_r1i1.png" type="Texture" id=2]
 [ext_resource path="res://Screens/AreaDoorexit.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sounds/капает кровь.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Sounds/звук тук сердце.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Textures/maps/Room_r1i1.png" type="Texture" id=6]
-[ext_resource path="res://Textures/maps/Room_r1i2.png" type="Texture" id=7]
-[ext_resource path="res://Textures/maps/Room_r1i3.png" type="Texture" id=8]
-[ext_resource path="res://Textures/maps/Room_r1i4.png" type="Texture" id=9]
+[ext_resource path="res://Sounds/blood_is_dripping.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/knock_heart.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Textures/maps/Room_r1i2.png" type="Texture" id=6]
+[ext_resource path="res://Textures/maps/Room_r1i3.png" type="Texture" id=7]
+[ext_resource path="res://Textures/maps/Room_r1i4.png" type="Texture" id=8]
+[ext_resource path="res://Textures/maps/Room_r1i5.png" type="Texture" id=9]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 300 )
@@ -25,7 +27,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AudioStreamPlayer2DBlood:playing")
@@ -51,9 +53,6 @@ visible = false
 
 [node name="Room" parent="." index="5"]
 texture = ExtResource( 2 )
-
-[node name="CanvasModulate" parent="." index="9"]
-visible = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="11"]
 editor/display_folded = true

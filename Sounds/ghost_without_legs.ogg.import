@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ghost_without_legs.ogg-0c353f73cb90814144086a7304332cd8.oggstr"
+
+[deps]
+
+source_file="res://Sounds/ghost_without_legs.ogg"
+dest_files=[ "res://.import/ghost_without_legs.ogg-0c353f73cb90814144086a7304332cd8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

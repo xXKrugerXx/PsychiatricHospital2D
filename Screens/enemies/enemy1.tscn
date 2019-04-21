@@ -19,7 +19,8 @@
 [ext_resource path="res://Textures/enemies/1/Ghost_11.png" type="Texture" id=17]
 [ext_resource path="res://Textures/enemies/1/Ghost_12.png" type="Texture" id=18]
 [ext_resource path="res://Textures/enemies/1/Ghost_13.png" type="Texture" id=19]
-[ext_resource path="res://Sounds/звук волочится (призрак без ног).ogg" type="AudioStream" id=20]
+[ext_resource path="res://Sounds/ghost_without_legs.ogg" type="AudioStream" id=20]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 32.9437

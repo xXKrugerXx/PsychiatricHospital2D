@@ -3,7 +3,7 @@ extends Node
 onready var clicklg : Array = [$HUDclickLE/Panel/VBoxContainer/TButtonLanguages,
 		$HUDclickLE/Panel/VBoxContainer/TButtonLanguages2]
 
-const start_game_sc : = preload("res://Screens/Maps/RoomReadyStart.tscn")
+const start_game_sc : = preload('res://Screens/Maps/RoomReadyStart.tscn')
 
 func _ready() -> void:
 	$HUDclickLE/exitgame/Button.connect('pressed',self,'exit_game')
@@ -41,6 +41,7 @@ func _on_HUDclickLE_animPsHeng():
 	$ScreenColor/AnimationPlayer.play('screen_end')
 	yield($ScreenColor/AnimationPlayer,"animation_finished")
 	get_tree().change_scene_to(start_game_sc)
+#	get_tree().change_scene('res://Screens/Maps/RoomReadyStart.tscn')
 
 func exit_game():
 	get_tree().quit()
