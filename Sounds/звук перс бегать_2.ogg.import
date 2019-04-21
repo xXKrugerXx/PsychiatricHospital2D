@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/звук перс бегать_2.ogg-aed0b4cadbee57bc027cfe83b57d43e8.oggstr"
+
+[deps]
+
+source_file="res://Sounds/звук перс бегать_2.ogg"
+dest_files=[ "res://.import/звук перс бегать_2.ogg-aed0b4cadbee57bc027cfe83b57d43e8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

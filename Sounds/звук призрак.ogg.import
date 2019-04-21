@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/звук призрак.ogg-1c971f57d2034063769c4aab4286be1e.oggstr"
+
+[deps]
+
+source_file="res://Sounds/звук призрак.ogg"
+dest_files=[ "res://.import/звук призрак.ogg-1c971f57d2034063769c4aab4286be1e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

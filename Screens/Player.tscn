@@ -1,27 +1,27 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/player/walk_2.png" type="Texture" id=2]
 [ext_resource path="res://Textures/player/idle_0.png" type="Texture" id=3]
-[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=4]
-[ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=5]
-[ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=6]
-[ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=7]
-[ext_resource path="res://Textures/player/idle_flashlight_0.png" type="Texture" id=8]
-[ext_resource path="res://Textures/player/idle_flashlight_1.png" type="Texture" id=9]
-[ext_resource path="res://Textures/player/idle_flashlight_2.png" type="Texture" id=10]
-[ext_resource path="res://Textures/player/idle_flashlight_3.png" type="Texture" id=11]
-[ext_resource path="res://Textures/player/idle_flashlight_4.png" type="Texture" id=12]
-[ext_resource path="res://Textures/player/idle_flashlight_5.png" type="Texture" id=13]
-[ext_resource path="res://Textures/player/walk_0.png" type="Texture" id=14]
-[ext_resource path="res://Textures/player/walk_1.png" type="Texture" id=15]
-[ext_resource path="res://Textures/player/walk_2.png" type="Texture" id=16]
+[ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=4]
+[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=5]
+[ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=6]
+[ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=7]
+[ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=8]
+[ext_resource path="res://Textures/player/idle_flashlight_0.png" type="Texture" id=9]
+[ext_resource path="res://Textures/player/idle_flashlight_1.png" type="Texture" id=10]
+[ext_resource path="res://Textures/player/idle_flashlight_2.png" type="Texture" id=11]
+[ext_resource path="res://Textures/player/idle_flashlight_3.png" type="Texture" id=12]
+[ext_resource path="res://Textures/player/idle_flashlight_4.png" type="Texture" id=13]
+[ext_resource path="res://Textures/player/idle_flashlight_5.png" type="Texture" id=14]
+[ext_resource path="res://Textures/player/walk_0.png" type="Texture" id=15]
+[ext_resource path="res://Textures/player/walk_1.png" type="Texture" id=16]
 [ext_resource path="res://Textures/player/walk_3.png" type="Texture" id=17]
 [ext_resource path="res://Textures/player/walk_4.png" type="Texture" id=18]
 [ext_resource path="res://Textures/player/walk_5.png" type="Texture" id=19]
 [ext_resource path="res://Textures/player/walk_6.png" type="Texture" id=20]
 [ext_resource path="res://Textures/player/walk_7.png" type="Texture" id=21]
-[ext_resource path="res://Sounds/шаги1.wav" type="AudioStream" id=22]
+[ext_resource path="res://Sounds/шаги1.ogg" type="AudioStream" id=22]
 [ext_resource path="res://Textures/player/walk_flashlight_0.png" type="Texture" id=23]
 [ext_resource path="res://Textures/player/walk_flashlight_1.png" type="Texture" id=24]
 [ext_resource path="res://Textures/player/walk_flashlight_2.png" type="Texture" id=25]
@@ -30,22 +30,23 @@
 [ext_resource path="res://Textures/player/walk_flashlight_5.png" type="Texture" id=28]
 [ext_resource path="res://Textures/player/walk_flashlight_6.png" type="Texture" id=29]
 [ext_resource path="res://Textures/player/walk_flashlight_7.png" type="Texture" id=30]
-[ext_resource path="res://Textures/player/run_0.png" type="Texture" id=31]
-[ext_resource path="res://Textures/player/run_1.png" type="Texture" id=32]
-[ext_resource path="res://Textures/player/run_2.png" type="Texture" id=33]
-[ext_resource path="res://Textures/player/run_3.png" type="Texture" id=34]
-[ext_resource path="res://Textures/player/run_4.png" type="Texture" id=35]
-[ext_resource path="res://Textures/player/run_5.png" type="Texture" id=36]
-[ext_resource path="res://Textures/player/run_6.png" type="Texture" id=37]
-[ext_resource path="res://Textures/player/run_7.png" type="Texture" id=38]
-[ext_resource path="res://Textures/player/run_8.png" type="Texture" id=39]
-[ext_resource path="res://Textures/player/run_9.png" type="Texture" id=40]
-[ext_resource path="res://Textures/player/run_10.png" type="Texture" id=41]
-[ext_resource path="res://Textures/player/run_11.png" type="Texture" id=42]
-[ext_resource path="res://Sounds/звук перс бегать.wav" type="AudioStream" id=43]
-[ext_resource path="res://Screens/HUDcharacter.tscn" type="PackedScene" id=44]
-[ext_resource path="res://Screens/Settings.tscn" type="PackedScene" id=45]
-[ext_resource path="res://Textures/particles/light lanternright_new.png" type="Texture" id=46]
+[ext_resource path="res://Sounds/шаги1.wav" type="AudioStream" id=31]
+[ext_resource path="res://Textures/player/run_0.png" type="Texture" id=32]
+[ext_resource path="res://Textures/player/run_1.png" type="Texture" id=33]
+[ext_resource path="res://Textures/player/run_2.png" type="Texture" id=34]
+[ext_resource path="res://Textures/player/run_3.png" type="Texture" id=35]
+[ext_resource path="res://Textures/player/run_4.png" type="Texture" id=36]
+[ext_resource path="res://Textures/player/run_5.png" type="Texture" id=37]
+[ext_resource path="res://Textures/player/run_6.png" type="Texture" id=38]
+[ext_resource path="res://Textures/player/run_7.png" type="Texture" id=39]
+[ext_resource path="res://Textures/player/run_8.png" type="Texture" id=40]
+[ext_resource path="res://Textures/player/run_9.png" type="Texture" id=41]
+[ext_resource path="res://Textures/player/run_10.png" type="Texture" id=42]
+[ext_resource path="res://Textures/player/run_11.png" type="Texture" id=43]
+[ext_resource path="res://Sounds/звук перс бегать_2.ogg" type="AudioStream" id=44]
+[ext_resource path="res://Screens/HUDcharacter.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Screens/Settings.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Textures/particles/light lanternright_new.png" type="Texture" id=47]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 28.6642
@@ -65,7 +66,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:enabled")
@@ -94,7 +95,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:enabled")
@@ -147,7 +148,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
+"values": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:enabled")
@@ -205,11 +206,11 @@ tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
 "clips": [ {
-"end_offset": 1.00495,
+"end_offset": 1.07734,
 "start_offset": 0.0,
 "stream": ExtResource( 22 )
 }, {
-"end_offset": 0.983974,
+"end_offset": 1.07737,
 "start_offset": 0.0,
 "stream": ExtResource( 22 )
 } ],
@@ -290,11 +291,11 @@ tracks/5/keys = {
 "clips": [ {
 "end_offset": 1.00346,
 "start_offset": 0.0,
-"stream": ExtResource( 22 )
+"stream": ExtResource( 31 )
 }, {
 "end_offset": 0.983363,
 "start_offset": 0.0,
-"stream": ExtResource( 22 )
+"stream": ExtResource( 31 )
 } ],
 "times": PoolRealArray( 0, 0.4 )
 }
@@ -313,7 +314,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
+"values": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:enabled")
@@ -373,11 +374,11 @@ tracks/5/keys = {
 "clips": [ {
 "end_offset": 1.0031,
 "start_offset": 0.0,
-"stream": ExtResource( 22 )
+"stream": ExtResource( 31 )
 }, {
 "end_offset": 0.983989,
 "start_offset": 0.0,
-"stream": ExtResource( 22 )
+"stream": ExtResource( 31 )
 } ],
 "times": PoolRealArray( 0, 0.4 )
 }
@@ -456,11 +457,11 @@ tracks/5/keys = {
 "clips": [ {
 "end_offset": 1.00388,
 "start_offset": 0.0,
-"stream": ExtResource( 22 )
+"stream": ExtResource( 31 )
 }, {
 "end_offset": 0.984362,
 "start_offset": 0.0,
-"stream": ExtResource( 22 )
+"stream": ExtResource( 31 )
 } ],
 "times": PoolRealArray( 0, 0.4 )
 }
@@ -478,7 +479,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ]
+"values": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ]
 }
 tracks/1/type = "audio"
 tracks/1/path = NodePath("AudioStreamPlayer2D")
@@ -488,11 +489,15 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "clips": [ {
-"end_offset": 0.849807,
+"end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource( 43 )
+"stream": ExtResource( 44 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 44 )
 } ],
-"times": PoolRealArray( 0 )
+"times": PoolRealArray( -0.36, 0.24 )
 }
 
 [sub_resource type="AnimationNodeAnimation" id=9]
@@ -574,7 +579,6 @@ drag_margin_v_enabled = false
 smoothing_enabled = true
 drag_margin_left = 0.1
 drag_margin_right = 0.1
-editor_draw_drag_margin = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -591,20 +595,19 @@ anims/run = SubResource( 8 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 18 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/idle_walk/blend_position = Vector2( 0, 0 )
 parameters/run/blend_amount = 0.0
 
-[node name="HUDcharacter" parent="." instance=ExtResource( 44 )]
+[node name="HUDcharacter" parent="." instance=ExtResource( 45 )]
 
-[node name="Settings" parent="." instance=ExtResource( 45 )]
+[node name="Settings" parent="." instance=ExtResource( 46 )]
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 0, -16 )
 scale = Vector2( 1.5, 2.4 )
 enabled = false
-texture = ExtResource( 46 )
-offset = Vector2( 12, -5 )
+texture = ExtResource( 47 )
+offset = Vector2( -13, -5 )
 energy = 0.9
 shadow_enabled = true
 shadow_gradient_length = 0.1
