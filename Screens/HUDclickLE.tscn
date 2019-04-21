@@ -452,6 +452,7 @@ margin_right = 179.0
 margin_bottom = 69.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
 tab_size = 8
 scroll_active = false
 
