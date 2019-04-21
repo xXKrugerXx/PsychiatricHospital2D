@@ -18,7 +18,6 @@ _global_script_class_icons={
 config/name="MentalHospital2D"
 run/main_scene="res://Screens/Main.tscn"
 boot_splash/fullsize=false
-boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
@@ -37,6 +36,13 @@ window/stretch/aspect="expand"
 _global_script_classes=[  ]
 _global_script_class_icons={
 
+}
+
+[importer_defaults]
+
+csv_translation={
+"compress": true,
+"delimiter": 0
 }
 
 [input]
@@ -92,7 +98,7 @@ pointing/emulate_touch_from_mouse=true
 
 [locale]
 
-translations=PoolStringArray( "res://Language.en.translation", "res://Language.ru.translation" )
+translations=PoolStringArray( "res://languages/languages.en.translation", "res://languages/languages.ru.translation" )
 
 [rendering]
 
