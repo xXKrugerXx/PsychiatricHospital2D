@@ -140,6 +140,7 @@ timer_ready = 4.0
 timer_wait_spawns = 0.6
 
 [node name="map" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 2048, 1372 )
 scale = Vector2( 2, 2 )
 __meta__ = {
@@ -158,6 +159,7 @@ position = Vector2( 3072, 0 )
 texture = ExtResource( 4 )
 
 [node name="flash_lightning_rooms" type="Node2D" parent="."]
+editor/display_folded = true
 scale = Vector2( 2, 2 )
 z_index = 1
 __meta__ = {
@@ -880,6 +882,7 @@ size_x = 150
 size_y = 180
 
 [node name="doors" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="AreaDoorenter0" parent="doors" instance=ExtResource( 13 )]
 position = Vector2( 1539.62, 2554.47 )
@@ -1307,6 +1310,9 @@ autostart = true
 
 [node name="Pos2Dfinal" type="Position2D" parent="."]
 position = Vector2( 6570, 2530 )
+
+[node name="Pos_start_glow023" type="Position2D" parent="."]
+position = Vector2( 4785.15, 1102.17 )
 
 [connection signal="timeout" from="Timer_ready" to="." method="_on_Timer_ready_timeout"]
 [connection signal="timeout" from="Timer_wait_spawns" to="." method="_on_Timer_wait_spawns_timeout"]

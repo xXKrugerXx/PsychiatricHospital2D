@@ -232,6 +232,8 @@ func update_pickup():
 				a.door_open(a.door_name)
 			else:
 				messagenokey()
+			yield($Timerwait_pickup,"timeout")
+			ispickup_wait = true
 		elif a.is_in_group('grdoorenterfinal') and ispickup_wait:
 			ispickup_wait = false
 			$Timerwait_pickup.start()

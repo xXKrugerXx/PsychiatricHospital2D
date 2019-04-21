@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Textures/particles/svechi_light.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/glow_start_room_023_exit.gd" type="Script" id=2]
+[ext_resource path="res://Textures/particles/cursor_start.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "start"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1.1, 1.8, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.01, 1.0, 1.0, 0.01 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cursor_anim:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.1, 1.8, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.01, 1.0, 1.0, 0.01 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("cursor_anim:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.5, 2, 2.5, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 48.2916, 31.7985 ), Vector2( 28.2916, 31.7985 ), Vector2( 48.2916, 31.7985 ), Vector2( 28.2916, 31.7985 ), Vector2( 48.2916, 31.7985 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue"
+} ]
+}
+
+[node name="glow_start_room_023_exit" type="Light2D"]
+scale = Vector2( 0.5, 0.5 )
+z_index = 4
+texture = ExtResource( 1 )
+color = Color( 0.733333, 0.733333, 0.733333, 1 )
+energy = 0.01
+range_z_max = 1
+script = ExtResource( 2 )
+
+[node name="cursor_anim" type="Light2D" parent="."]
+position = Vector2( 48.2916, 31.7985 )
+z_index = 4
+texture = ExtResource( 3 )
+color = Color( 1, 0, 0, 1 )
+energy = 0.01
+range_z_max = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "start"
+anims/start = SubResource( 1 )
+

@@ -7,6 +7,8 @@ var max_spawns : int
 
 const cameraGO : = preload("res://Screens/Camera2DGame_over.tscn")
 
+const glow_start_room_023_exit := preload('res://Screens/glow_start_room_023_exit.tscn')
+
 const arrenemies : Array = [
 		preload("res://Screens/enemies/enemy1.tscn"),
 		preload("res://Screens/enemies/enemy2.tscn"),
@@ -30,7 +32,6 @@ const player := preload("res://Screens/Player.tscn")
 
 func _ready() -> void:
 	randomize()
-
 	var p = player.instance()
 	for s in $signalstairs.get_children():
 		s.connect('signalstairs',self,'fsignalstairs')
@@ -69,6 +70,15 @@ func _ready() -> void:
 			$spawns.add_child(s1)
 	else:
 		max_spawns = round(keys_plus_enemis(stardant_spawns,1.46))
+	
+	
+	if s_globals.is_glow_start_room_023_exit:
+		var st_glow = glow_start_room_023_exit.instance()
+		st_glow.init($Pos_start_glow023.global_position)
+		self.add_child(st_glow)
+		s_globals.is_glow_start_room_023_exit = false
+	
+	
 	
 
 func fsignalstairs(index : int) -> void:
