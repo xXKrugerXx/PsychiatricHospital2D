@@ -13,7 +13,7 @@
 [ext_resource path="res://Textures/enemies/4/Ghost5.png" type="Texture" id=11]
 [ext_resource path="res://Textures/enemies/4/Ghost6.png" type="Texture" id=12]
 [ext_resource path="res://Textures/enemies/4/Ghost7.png" type="Texture" id=13]
-[ext_resource path="res://Sounds/звук колесо.wav" type="AudioStream" id=14]
+[ext_resource path="res://Sounds/звук колесо.ogg" type="AudioStream" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 41.2505

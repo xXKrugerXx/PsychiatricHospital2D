@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/капает кровь.ogg-d26b3248b1e7d5cb9b247ce424ed0ff5.oggstr"
+
+[deps]
+
+source_file="res://Sounds/капает кровь.ogg"
+dest_files=[ "res://.import/капает кровь.ogg-d26b3248b1e7d5cb9b247ce424ed0ff5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

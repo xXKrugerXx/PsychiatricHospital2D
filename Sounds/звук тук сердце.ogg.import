@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/звук тук сердце.ogg-9a00ccf61cb05de92e3f1305210dd19d.oggstr"
+
+[deps]
+
+source_file="res://Sounds/звук тук сердце.ogg"
+dest_files=[ "res://.import/звук тук сердце.ogg-9a00ccf61cb05de92e3f1305210dd19d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/шаги1.ogg-772be94fe04858de1fd7bd7374c9ae19.oggstr"
+
+[deps]
+
+source_file="res://Sounds/шаги1.ogg"
+dest_files=[ "res://.import/шаги1.ogg-772be94fe04858de1fd7bd7374c9ae19.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
