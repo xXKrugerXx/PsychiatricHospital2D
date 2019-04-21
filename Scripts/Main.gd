@@ -32,7 +32,7 @@ func fclicklg(indexlg : int):
 	else:
 		TranslationServer.set_locale('ru')
 	$HUDclickLE/ControlLgshow.show()
-	$HUDclickLE/ControlLgshow/Panel2/RichTextLabel.text = tr('Main_Menu_0')
+	$HUDclickLE/ControlLgshow/Panel2/RichTextLabel.bbcode_text = tr('Main_Menu_0')
 
 func fButtonAcLg():
 	$HUDclickLE/AnimationPlayer.play('mhend')
