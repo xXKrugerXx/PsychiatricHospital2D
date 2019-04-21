@@ -10,13 +10,14 @@
 [ext_resource path="res://Textures/flash lightning/flash_lightning_p1_1.png" type="Texture" id=8]
 [ext_resource path="res://Textures/flash lightning/flash_lightning_p2_1.png" type="Texture" id=9]
 [ext_resource path="res://Textures/flash lightning/flash_lightning_p3_1.png" type="Texture" id=10]
-[ext_resource path="res://Sounds/гром.wav" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/thunder.wav" type="AudioStream" id=11]
 [ext_resource path="res://Screens/Area2DSignalReturn.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Screens/AreaDoorenter.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Textures/maps/final_door.png" type="Texture" id=14]
 [ext_resource path="res://Screens/AreaDoorenterFinal.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Screens/randomspawns.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Textures/maps/Stairs.png" type="Texture" id=17]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "loop"

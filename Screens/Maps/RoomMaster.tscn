@@ -6,8 +6,10 @@
 [ext_resource path="res://Textures/maps/Room001.png" type="Texture" id=4]
 [ext_resource path="res://Textures/flash lightning/001_00.png" type="Texture" id=5]
 [ext_resource path="res://Textures/flash lightning/001_10.png" type="Texture" id=6]
-[ext_resource path="res://Sounds/гром.wav" type="AudioStream" id=7]
-[ext_resource path="res://Sounds/дождь(повтор).wav" type="AudioStream" id=8]
+[ext_resource path="res://Sounds/thunder.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sounds/rain_repeat.wav" type="AudioStream" id=8]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 300.681 )

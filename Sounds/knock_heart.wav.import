@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/knock_heart.wav-4013784a56aaf5f600487bd6f0e9904e.sample"
+
+[deps]
+
+source_file="res://Sounds/knock_heart.wav"
+dest_files=[ "res://.import/knock_heart.wav-4013784a56aaf5f600487bd6f0e9904e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

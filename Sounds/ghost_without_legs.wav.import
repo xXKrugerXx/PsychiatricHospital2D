@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ghost_without_legs.wav-1c0d3d22ee9d705abca814aec7e8e5cc.sample"
+
+[deps]
+
+source_file="res://Sounds/ghost_without_legs.wav"
+dest_files=[ "res://.import/ghost_without_legs.wav-1c0d3d22ee9d705abca814aec7e8e5cc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0
