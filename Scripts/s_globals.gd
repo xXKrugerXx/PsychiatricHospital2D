@@ -12,6 +12,7 @@ var is_ready_setting_sound : bool
 var is_keys_final_doors : bool
 var is_glow_start_room_023_exit : bool
 var is_os_android :bool = false
+var is_help_accept : bool = false
 
 func _ready() -> void:
 	OS_name()

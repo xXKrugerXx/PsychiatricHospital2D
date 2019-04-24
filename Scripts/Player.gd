@@ -35,6 +35,7 @@ var ispickup_wait : bool
 var ishudkeys : bool
 var ishudkeyswait : bool
 
+
 var os_arr_table_key_size_y : Array = [310, 430]
 
 func _ready():
@@ -49,6 +50,9 @@ func _ready():
 	ishudkeyswait = true
 	hud_settings.hide()
 	hud_settings_pc.hide()
+	
+	if s_globals.is_help_accept:
+			$HELP/Panel.hide()
 	
 	
 	###########HUD####################
@@ -86,6 +90,9 @@ func _physics_process(delta : float) -> void:
 
 
 func _input(event) -> void:
+	if !s_globals.is_os_android:
+		if !s_globals.is_help_accept:
+			return
 	if event.is_action_pressed("ui_left"):
 		indexspeed = 0
 	elif event.is_action_released("ui_left"):
@@ -263,9 +270,17 @@ func update_OS():
 		Settings_touch.show()
 		tex_flashlight.hide()
 		hudtablekeys.rect_size.y = os_arr_table_key_size_y[0]
+		$HELP/Panel.hide()
 	else:
+		$HELP/Panel/RichTextLabel.bbcode_text = tr('HELP_KEYS_S')
 		HBox_left_right_touch.hide()
 		VBox_click_touchs.hide()
 		Settings_touch.hide()
 		tex_flashlight.show()
 		hudtablekeys.rect_size.y = os_arr_table_key_size_y[1]
+		$HELP/Panel.show()
+
+
+func _on_TextureB_help_accept_button_up():
+	s_globals.is_help_accept = true
+	$HELP/Panel.hide()

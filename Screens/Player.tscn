@@ -1,12 +1,12 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=2]
 [ext_resource path="res://Textures/player/idle_0.png" type="Texture" id=3]
-[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=4]
-[ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=5]
-[ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=6]
-[ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=7]
+[ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=4]
+[ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=5]
+[ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=6]
+[ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=7]
 [ext_resource path="res://Textures/player/idle_flashlight_0.png" type="Texture" id=8]
 [ext_resource path="res://Textures/player/idle_flashlight_1.png" type="Texture" id=9]
 [ext_resource path="res://Textures/player/idle_flashlight_2.png" type="Texture" id=10]
@@ -47,6 +47,8 @@
 [ext_resource path="res://Screens/Settings.tscn" type="PackedScene" id=45]
 [ext_resource path="res://Screens/Settings_PC.tscn" type="PackedScene" id=46]
 [ext_resource path="res://Textures/particles/light lanternright_new.png" type="Texture" id=47]
+[ext_resource path="res://Fonts/reso_fonts/dynamicfont_20.tres" type="DynamicFont" id=48]
+[ext_resource path="res://Textures/hud/click_ok.png" type="Texture" id=49]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 28.6642
@@ -66,7 +68,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:enabled")
@@ -628,3 +630,40 @@ position = Vector2( 0, -90 )
 stream = ExtResource( 22 )
 bus = "Character"
 
+[node name="HELP" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Panel" type="Panel" parent="HELP"]
+self_modulate = Color( 0.466667, 0.466667, 0.466667, 0.192157 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -164.0
+margin_top = -152.0
+margin_right = 126.0
+margin_bottom = 181.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HELP/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -133.5
+margin_right = 133.5
+margin_bottom = 262.0
+custom_fonts/normal_font = ExtResource( 48 )
+bbcode_enabled = true
+bbcode_text = "[color=red]A[/color] горячая клавиша [color=green]слева[/color], [color=red]D[/color] горячая клавиша [color=green]справо[/color] ( ходить ), [color=red]F[/color] горячая клавиша [color=green]фонарь[/color], [color=red]E[/color] горячая клавиша [color=green]подобрать[/color], [color=red]R[/color] горячая клавиша [color=green]таблица ключи[/color], [color=red]space[/color] горячая клавиша [color=green]бег[/color], [color=red]esc[/color] горячая клавиша [color=green]настройки[/color]"
+text = "A горячая клавиша слева, D горячая клавиша справо ( ходить ), F горячая клавиша фонарь, E горячая клавиша подобрать, R горячая клавиша таблица ключи, space горячая клавиша бег, esc горячая клавиша настройки"
+
+[node name="TextureB_help_accept" type="TextureButton" parent="HELP/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -24.0
+margin_top = -58.0
+margin_right = 24.0
+margin_bottom = -10.0
+texture_normal = ExtResource( 49 )
+
+[connection signal="button_up" from="HELP/Panel/TextureB_help_accept" to="." method="_on_TextureB_help_accept_button_up"]
