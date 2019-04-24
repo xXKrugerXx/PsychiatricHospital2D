@@ -4,10 +4,8 @@
 [ext_resource path="res://Textures/hud/Endurance2.png" type="Texture" id=2]
 
 [node name="BarRun" type="TextureRect"]
-margin_left = 153.941
-margin_top = 137.651
-margin_right = 273.941
-margin_bottom = 152.651
+margin_right = 120.0
+margin_bottom = 15.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 __meta__ = {

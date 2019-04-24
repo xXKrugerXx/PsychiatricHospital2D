@@ -32,6 +32,9 @@ const player := preload("res://Screens/Player.tscn")
 
 func _ready() -> void:
 	randomize()
+	if !OS.get_name() == 'Android':
+		stardant_spawns = 8
+	
 	var p = player.instance()
 	for s in $signalstairs.get_children():
 		s.connect('signalstairs',self,'fsignalstairs')
@@ -77,9 +80,6 @@ func _ready() -> void:
 		st_glow.init($Pos_start_glow023.global_position)
 		self.add_child(st_glow)
 		s_globals.is_glow_start_room_023_exit = false
-	
-	
-	
 
 func fsignalstairs(index : int) -> void:
 	match index:
@@ -341,7 +341,6 @@ func spawns():
 	var posyrandom = rand_range(ysizest,ysizeend)
 	s.init(Vector2(posxrandom,posyrandom))
 	s.set('walk', s.get('walk') + int(enemis_walk_plus(1.4)))
-#	print(s.get_name(),' ',s.get('walk'), ' ', int(enemis_walk_plus(1.4)))
 	$spawns.add_child(s)
 
 func _on_Timer_ready_timeout():

@@ -132,6 +132,7 @@ margin_bottom = -20.0
 alignment = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
 margin_right = 236.0
 margin_bottom = 64.0
 alignment = 1
@@ -155,6 +156,7 @@ margin_bottom = 64.0
 rect_min_size = Vector2( 100, 0 )
 
 [node name="Keys" type="Control" parent="VBoxContainer/HBoxContainer2"]
+editor/display_folded = true
 margin_left = 172.0
 margin_right = 236.0
 margin_bottom = 64.0
@@ -173,13 +175,11 @@ margin_bottom = 108.0
 rect_min_size = Vector2( 0, 40 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-editor/display_folded = true
 margin_top = 112.0
 margin_right = 236.0
 margin_bottom = 176.0
 
 [node name="Flashlight" type="Control" parent="VBoxContainer/HBoxContainer"]
-editor/display_folded = true
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
@@ -216,7 +216,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -218.0
 margin_top = -247.0
-margin_bottom = 67.0
+margin_bottom = 63.0
 
 [node name="Panel" type="Panel" parent="tablekeys"]
 self_modulate = Color( 0.466667, 0.466667, 0.466667, 0.192157 )
@@ -250,7 +250,6 @@ margin_bottom = 500.0
 columns = 2
 
 [node name="001" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
-editor/display_folded = true
 margin_right = 96.0
 margin_bottom = 32.0
 alignment = 1
@@ -957,7 +956,6 @@ margin_bottom = 32.0
 texture = ExtResource( 37 )
 
 [node name="Hell" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
-editor/display_folded = true
 margin_left = 100.0
 margin_top = 432.0
 margin_right = 192.0
@@ -984,7 +982,6 @@ margin_bottom = 32.0
 texture = ExtResource( 38 )
 
 [node name="Book" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
-editor/display_folded = true
 margin_top = 468.0
 margin_right = 96.0
 margin_bottom = 500.0
@@ -1010,7 +1007,6 @@ margin_bottom = 32.0
 texture = ExtResource( 39 )
 
 [node name="DrDandy" type="HBoxContainer" parent="tablekeys/HUDTableKeys/GridContainer"]
-editor/display_folded = true
 margin_left = 100.0
 margin_top = 468.0
 margin_right = 192.0
@@ -1067,6 +1063,7 @@ valign = 1
 [node name="Tweentablekeys" type="Tween" parent="."]
 
 [node name="touchsettings" type="Control" parent="."]
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 0.509804 )
 anchor_left = 1.0
 anchor_right = 1.0
@@ -1083,4 +1080,17 @@ normal = ExtResource( 42 )
 pressed = ExtResource( 43 )
 shape = SubResource( 9 )
 action = "ui_settings"
+
+[node name="Tex_Flashlight" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.509804 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -124.0
+margin_top = -104.0
+margin_right = -60.0
+margin_bottom = -40.0
+texture = ExtResource( 9 )
 

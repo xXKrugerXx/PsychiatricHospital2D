@@ -7,15 +7,16 @@ export(float, 0, 5,0.1) var regspeedstamina = 1.5 # 1.5
 export(float, 0, 5,0.1) var minuscurrentstamina = 0.2
 
 onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
-
 onready var hudlabelkeys = $HUDcharacter/tablekeys/LabelKeys as Label
-
+onready var hudtablekeys = $HUDcharacter/tablekeys as Control 
 onready var hud_settings = $Settings/ColorRect as ColorRect
-
+onready var HBox_left_right_touch = $HUDcharacter/HBoxContainer as HBoxContainer
+onready var VBox_click_touchs = $HUDcharacter/VBoxContainer as VBoxContainer
+onready var Settings_touch = $HUDcharacter/touchsettings as Control
+onready var tex_flashlight = $HUDcharacter/Tex_Flashlight as TextureRect
 
 const tex_arr_flaslight : Array = [preload("res://Textures/touch/Flashlight_0.png"),
 						preload("res://Textures/touch/Flashlight_1.png")]
-
 
 const tex_arr_flasli_L_R : Array = [preload("res://Textures/particles/light lanternright_new.png"),
 						preload("res://Textures/particles/light lanternleft_new.png")]
@@ -33,7 +34,10 @@ var ispickup_wait : bool
 var ishudkeys : bool
 var ishudkeyswait : bool
 
+var os_arr_table_key_size_y : Array = [310, 430]
+
 func _ready():
+	update_OS()
 	indexspeed = 2
 	lightning = 0
 	amountrun = 0
@@ -43,7 +47,6 @@ func _ready():
 	ishudkeys = true
 	ishudkeyswait = true
 	hud_settings.hide()
-	
 	
 	
 	###########HUD####################
@@ -151,10 +154,12 @@ func flashlight() -> void:
 	if isflashlight:
 		isflashlight = false
 		$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[1]
+		tex_flashlight.texture = tex_arr_flaslight[1]
 		lightning = 1
 	else:
 		isflashlight = true
 		$HUDcharacter/VBoxContainer/HBoxContainer/Flashlight/TSButtonF.normal = tex_arr_flaslight[0]
+		tex_flashlight.texture = tex_arr_flaslight[0]
 		lightning = 0
 
 func init(pos) -> void:
@@ -245,4 +250,16 @@ func update_pickup():
 			yield($Timerwait_pickup,"timeout")
 			ispickup_wait = true
 
-
+func update_OS():
+	if s_globals.is_os_android:
+		HBox_left_right_touch.show()
+		VBox_click_touchs.show()
+		Settings_touch.show()
+		tex_flashlight.hide()
+		hudtablekeys.rect_size.y = os_arr_table_key_size_y[0]
+	else:
+		HBox_left_right_touch.hide()
+		VBox_click_touchs.hide()
+		Settings_touch.hide()
+		tex_flashlight.show()
+		hudtablekeys.rect_size.y = os_arr_table_key_size_y[1]
