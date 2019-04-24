@@ -34,7 +34,7 @@ func _ready() -> void:
 	
 
 func OS_name():
-	if OS.get_name() == 'Android':
+	if OS.get_name() == 'Android' or OS.get_name() == 'iOS':
 		is_os_android = true
 	else:
 		is_os_android = false
