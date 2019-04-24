@@ -1,12 +1,12 @@
 [gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=2]
+[ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=2]
 [ext_resource path="res://Textures/player/idle_0.png" type="Texture" id=3]
 [ext_resource path="res://Textures/player/idle_1.png" type="Texture" id=4]
 [ext_resource path="res://Textures/player/idle_2.png" type="Texture" id=5]
 [ext_resource path="res://Textures/player/idle_3.png" type="Texture" id=6]
-[ext_resource path="res://Textures/player/idle_5.png" type="Texture" id=7]
+[ext_resource path="res://Textures/player/idle_4.png" type="Texture" id=7]
 [ext_resource path="res://Textures/player/idle_flashlight_0.png" type="Texture" id=8]
 [ext_resource path="res://Textures/player/idle_flashlight_1.png" type="Texture" id=9]
 [ext_resource path="res://Textures/player/idle_flashlight_2.png" type="Texture" id=10]
@@ -65,7 +65,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Light2D:enabled")

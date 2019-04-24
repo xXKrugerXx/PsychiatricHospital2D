@@ -20,3 +20,7 @@ Ready_game,Играть снова?,Play Again?
 Exit_game,Выход из игры,Exit Game
 Final_game,финальная игра,The Final Game
 Exit_game_S,Хотите выйти из игры?,Want to quit the game?
+Settings_FC_0,Полноэкранный,Full Screen
+Settings_SS_0,Размер экрана,Screen Size
+Settings_SC_0,Экран,Screen
+Settings_AO_0,Aудио,Audio

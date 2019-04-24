@@ -1,0 +1,337 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/Settings_PC.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/3572.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Textures/hud/Tuning_Sound.png" type="Texture" id=3]
+[ext_resource path="res://Textures/hud/click_cancel.png" type="Texture" id=4]
+[ext_resource path="res://theme.tres" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 54
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 17
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 17
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 17
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="Settings_PC" type="CanvasLayer"]
+pause_mode = 2
+layer = 2
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0470588, 0.0470588, 0.0470588, 0.529412 )
+
+[node name="LabelPause" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+margin_top = 50.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "null"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -306.0
+margin_top = -160.0
+margin_right = 307.0
+margin_bottom = 198.0
+texture = ExtResource( 3 )
+
+[node name="TextureB_settings_exit" type="TextureButton" parent="ColorRect/NinePatchRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -56.0
+margin_top = 14.0
+margin_right = -8.0
+margin_bottom = 62.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 4 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/NinePatchRect"]
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -287.5
+margin_top = -125.0
+margin_right = 287.5
+margin_bottom = 148.0
+
+[node name="Control" type="Control" parent="ColorRect/NinePatchRect/ScrollContainer"]
+margin_right = 560.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 560, 340 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/NinePatchRect/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 5
+
+[node name="LabelSetting" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_right = 560.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 2 )
+text = "Settings "
+align = 1
+valign = 1
+
+[node name="HSeparator" type="HSeparator" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_top = 40.0
+margin_right = 560.0
+margin_bottom = 40.0
+custom_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_top = 45.0
+margin_right = 560.0
+margin_bottom = 73.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxContainer"]
+margin_right = 10.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="LabelScreen" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxContainer"]
+margin_left = 14.0
+margin_right = 560.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 6 )
+text = "Screen"
+valign = 1
+clip_text = true
+
+[node name="HBoxMB" type="HBoxContainer" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_top = 78.0
+margin_right = 560.0
+margin_bottom = 104.0
+custom_constants/separation = 10
+
+[node name="ReferenceRect" type="ReferenceRect" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxMB"]
+margin_bottom = 26.0
+
+[node name="OptionB_Sc_Size" type="OptionButton" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxMB"]
+margin_left = 10.0
+margin_right = 160.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 150, 0 )
+theme = ExtResource( 5 )
+custom_fonts/font = SubResource( 4 )
+flat = true
+align = 1
+
+[node name="LabelScreenSize" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxMB"]
+margin_left = 170.0
+margin_top = 1.0
+margin_right = 217.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 3 )
+text = "null"
+valign = 1
+
+[node name="HBoxFB" type="HBoxContainer" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_top = 109.0
+margin_right = 560.0
+margin_bottom = 133.0
+custom_constants/separation = 10
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxFB"]
+margin_bottom = 24.0
+
+[node name="CheckBoxFullSize" type="CheckBox" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxFB"]
+margin_left = 10.0
+margin_right = 34.0
+margin_bottom = 24.0
+flat = true
+align = 1
+
+[node name="LabelFullSize" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxFB"]
+margin_left = 44.0
+margin_top = 2.0
+margin_right = 86.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 5 )
+text = "null"
+
+[node name="HSeparator2" type="HSeparator" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_top = 138.0
+margin_right = 560.0
+margin_bottom = 138.0
+custom_constants/separation = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_top = 143.0
+margin_right = 560.0
+margin_bottom = 171.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxContainer2"]
+margin_right = 10.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="LabelAudio" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxContainer2"]
+margin_left = 14.0
+margin_right = 560.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 6 )
+text = "audio"
+valign = 1
+clip_text = true
+
+[node name="ReferenceRect" type="ReferenceRect" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_top = 176.0
+margin_right = 560.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="VBoxContainerLabel" type="VBoxContainer" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -45.0
+margin_right = 112.0
+margin_bottom = 45.0
+custom_constants/separation = 6
+alignment = 1
+
+[node name="LabelBGM" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainerLabel"]
+margin_top = 9.0
+margin_right = 112.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 7 )
+text = "BGM"
+align = 1
+valign = 1
+
+[node name="LabelSFX" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainerLabel"]
+margin_top = 35.0
+margin_right = 112.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 7 )
+text = "SFX"
+align = 1
+valign = 1
+
+[node name="LabelGhost" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainerLabel"]
+margin_top = 61.0
+margin_right = 112.0
+margin_bottom = 81.0
+custom_fonts/font = SubResource( 7 )
+text = "Ghost"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -440.0
+margin_top = -41.0
+margin_right = -20.0
+margin_bottom = 41.0
+theme = ExtResource( 5 )
+custom_constants/separation = 17
+alignment = 1
+
+[node name="HSlider_bgm" type="HSlider" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainer"]
+margin_top = 15.0
+margin_right = 420.0
+margin_bottom = 21.0
+min_value = -80.0
+max_value = 0.0
+value = -45.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="HSlider_sfx" type="HSlider" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainer"]
+margin_top = 38.0
+margin_right = 420.0
+margin_bottom = 44.0
+min_value = -80.0
+max_value = 0.0
+value = -45.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="HSlider_ghost" type="HSlider" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainer"]
+margin_top = 61.0
+margin_right = 420.0
+margin_bottom = 67.0
+min_value = -80.0
+max_value = 0.0
+value = -45.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="HSeparator3" type="HSeparator" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+margin_top = 281.0
+margin_right = 560.0
+margin_bottom = 281.0
+custom_constants/separation = 0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer"]
+editor/display_folded = true
+margin_top = 286.0
+margin_right = 560.0
+margin_bottom = 340.0
+custom_constants/separation = 4
+alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxContainer3"]
+margin_left = 196.0
+margin_right = 256.0
+margin_bottom = 54.0
+icon = ExtResource( 4 )
+flat = true
+align = 0
+
+[node name="LabelExitgame" type="Label" parent="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxContainer3"]
+margin_left = 260.0
+margin_top = 15.0
+margin_right = 363.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 8 )
+text = "Exit game"
+valign = 1
+
+[connection signal="button_up" from="ColorRect/NinePatchRect/TextureB_settings_exit" to="." method="_on_TextureB_settings_exit_button_up"]
+[connection signal="item_selected" from="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxMB/OptionB_Sc_Size" to="." method="_on_OptionB_Sc_Size_item_selected"]
+[connection signal="toggled" from="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxFB/CheckBoxFullSize" to="." method="_on_CheckBoxFullSize_toggled"]
+[connection signal="value_changed" from="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainer/HSlider_bgm" to="." method="_on_HSlider_bgm_value_changed"]
+[connection signal="value_changed" from="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainer/HSlider_sfx" to="." method="_on_HSlider_sfx_value_changed"]
+[connection signal="value_changed" from="ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainer/HSlider_ghost" to="." method="_on_HSlider_ghost_value_changed"]

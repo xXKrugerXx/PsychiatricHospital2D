@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 func _ready():
-	
 	$ColorRect/LabelPause.text = tr('Pause_G_0')
 	$ColorRect/NinePatchRect/Control/LabelSettings.text = tr('Settings_G_0')
 	$ColorRect/NinePatchRect/Control/VBoxContainerLabel/LabelGhost.text = tr('Sounds_G_0')
@@ -26,10 +25,6 @@ func loadSounds():
 	$ColorRect/NinePatchRect/Control/VBoxContainer/HSlider_bgm.value = AudioServer.get_bus_volume_db(1)
 	$ColorRect/NinePatchRect/Control/VBoxContainer/HSlider_sfx.value = AudioServer.get_bus_volume_db(2)
 	$ColorRect/NinePatchRect/Control/VBoxContainer/HSlider_ghost.value = AudioServer.get_bus_volume_db(3)
-
-
-#func _process(delta):
-#	print(AudioServer.get_bus_volume_db(1))
 
 
 
