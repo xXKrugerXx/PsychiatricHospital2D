@@ -70,6 +70,8 @@ func update_settings_pc_labels():
 	$ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxFB/LabelFullSize.text = tr('Settings_FC_0')
 	$ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxContainer2/LabelAudio.text = tr('Settings_AO_0')
 	$ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainerLabel/LabelGhost.text = tr('Sounds_G_0')
+	$ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxShowExit/ButtonYes.text = tr('Settings_Y_0')
+	$ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxShowExit/ButtonNo.text = tr('Settings_N_0')
 
 func readySounds(value):
 	$ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/ReferenceRect/VBoxContainer/HSlider_bgm.value = value
@@ -97,3 +99,13 @@ func _on_HSlider_ghost_value_changed(value):
 func _on_TextureB_settings_exit_button_up():
 	get_tree().paused = false
 	$ColorRect.hide()
+
+func _on_ButtonYes_button_up():
+	get_tree().quit()
+
+func _on_ButtonNo_button_up():
+	$ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxShowExit.hide()
+
+
+func _on_ButtonExitgame_button_up():
+	$ColorRect/NinePatchRect/ScrollContainer/Control/VBoxContainer/HBoxShowExit.show()

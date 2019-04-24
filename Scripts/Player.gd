@@ -10,6 +10,7 @@ onready var Bar_run = $HUDcharacter/BarRun/TextureProgress  as TextureProgress
 onready var hudlabelkeys = $HUDcharacter/tablekeys/LabelKeys as Label
 onready var hudtablekeys = $HUDcharacter/tablekeys as Control 
 onready var hud_settings = $Settings/ColorRect as ColorRect
+onready var hud_settings_pc = $Settings_PC/ColorRect as ColorRect
 onready var HBox_left_right_touch = $HUDcharacter/HBoxContainer as HBoxContainer
 onready var VBox_click_touchs = $HUDcharacter/VBoxContainer as VBoxContainer
 onready var Settings_touch = $HUDcharacter/touchsettings as Control
@@ -47,6 +48,7 @@ func _ready():
 	ishudkeys = true
 	ishudkeyswait = true
 	hud_settings.hide()
+	hud_settings_pc.hide()
 	
 	
 	###########HUD####################
@@ -109,6 +111,10 @@ func _input(event) -> void:
 	if event.is_action_pressed('ui_settings'):
 		get_tree().paused = true
 		hud_settings.show()
+	
+	if event.is_action_pressed('ui_settings_pc'):
+		get_tree().paused = true
+		hud_settings_pc.show()
 		
 
 
